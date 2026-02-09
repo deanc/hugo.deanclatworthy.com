@@ -1,0 +1,95 @@
+items:
+  - id: hastens
+    title: "Vepsäläinen: Hastens"
+    description: "I created the back-end for a small campaign site showing off a limited black edition of the iconic Hastens bed."
+  - id:silja_memories:
+    title: "Silja Line: Memories"
+    description: "A small facebook application allowing users to share their photo memories of cruising the Baltic Sea."
+  - id:hullabaloo:
+    title: "TallinkSilja: Hulabloo"
+    description: "I created the front-end and back-end to power a large campaign site for TallinkSilja. The site allowed users to watch a video and answer some questions. If they answered the questions correctly, they would have a small chance of winning one of 100s of prizes."
+  - id:jolla:
+    title: "Jolla"
+    description: "I coded the new homepage to co-incide with the international launch of the Jolla phone."
+  - id:naapurin_maalaiskana:
+    title: "Naapurin Maalaiskana"
+    description: "I coded the back-end to power Naapurin Maalaiskana’s new website."
+  - id:dna_summer:
+    title: "DNA: Summer campaign"
+    description: "A redesign of an existing DNA campaign site for the Summer."
+  - id:dna_rotating_hands:
+    title: "DNA: Rotating hands iPad ad"
+    description: "A cutting-edge iPad ad for DNA, published in Helsingin Sanomat’s digital magazine, utilising the accelerometer to simulate the user’s hands within the application and keep them level."
+  - id:leiras_calcichew:
+    title: "Leiras: Calcichew"
+    description: "An interactive front-end campaign site offering users the ability to see if they have a deficiency of calcium in their diet."
+  - id:hs_summer:
+    title: "Helsingin Sanomat: Summer campaign 2013"
+    description: "Another single page campaign site for Helsingin sanomat to promote their multi-platform subscription offerings"
+  - id:hs_spring:
+    title: "Helsingin Sanomat: Spring campaign 2013"
+    description: "A single page campaign site for Helsingin Sanomat to promote the sale of their subscription services."
+  - id:kone_maintenance:
+    title: "KONE: Maintenance"
+    description: "A small campaign website for KONE featuring a roulette style competition that educates users on how KONE provides maintenance for its elevators - id:and offers users a chance to win dinner at one of London’s top restaurants."
+  - id:porispere:
+    title: "Porispere"
+    description: "I created the front-end and back-end to power the website for a large music festival in Porispere."
+  - id:perspective_uk:
+    title: "Perspective UK"
+    description: "A short-term contracting role working on site to develop a suite of reporting tools for training providers throughout the UK."
+  - id:vizwoz:
+    title: "Vizwoz"
+    description: "Contracting role, including implementation of an intelligent swear filter to prevent children from swearing at each other and using inappropriate language, real-time moderation screens to monitor inappropriate language that may fall outside the filter, administration control panel to manage users and payments and misc. other modules."
+  - id:school_stickers:
+    title: "School Stickers"
+    description: "Implemented an internal system to log new orders and facilitate detailed statistical analysis on business data."
+  - id:npower:
+    title: "npower"
+    description: "npower are one of the UK’s biggest energy suppliers. Whilst there I was responsible for the implementation of designed photoshop mockups, using the latest web technologies including XHTML/CSS/Javascript."
+  - id:ultrashock:
+    title: "Ultrashock"
+    description: "UltraShock is one of the internet’s most established flash communities. The Spring 2008 redesign involved developing a completely new site front-end in FLEX and integrating nrg.be’s beautiful design into a newly upgraded forum. I helped integrate the forums functions into the flash front-end of the site including vBulletin login via flash, as well as implementing the sites design into a stock vBulletin. I also developed custom modifications for the forum once the design had been integrated."
+  - id:wcs:
+    title: "Warren County Schools"
+    description: "The Warren County Schools project was one of the biggest I had undertaken to date. The website was initially pitched to me with a detailed functional specification of how the site should work, and some design mockups. Working closely with my friends from VisualZen, I took their designs and implemented them using semantically correct, accessible, table-less designs. From there I developed a custom content management system which powered the whole front-end of the site via a control panel. Front-end features included a private portal for staff and board members, a calendar system and much more."
+  - id:upenn:
+    title: "University of Pennsylvania"
+    description: "Center for the Treatment and Study of Anxiety - id:This project required a custom content management system developed using PHP/MySQL to effectively manage hundreds of pages of research papers that the university published to do with their academic research. Faculty members needed a private administration area to upload their findings, and display them to a worldwide audience."
+  - id:teck_reviews:
+    title: "TECK Reviews"
+    description: "TECK Reviews started off as a small idea of mine after creating a design mockup for an independent outlet for software reviews. The idea escalated over the course of a summer, and I ended up with a fully fledged and powerful content management system to power the site. The design was done by myself. There was a community section where members of the site can share their experiences with hardware and software and get help if necessary."
+  - id:uk_music:
+    title: "UK Music"
+    description: "Minor consultancy work and guidance for programming team."
+  - id:wominx:
+    title: "WominX.NET"
+    description: "WominX.NET required a custom content management system which would help them manage all of their content on their website. This included galleries, monthly competitions, e-cards and a searchable news system. A custom design was implemented to both the homepage and the forums."
+  - id:motorsport_network:
+    title: "Motorsport Network"
+    description: "Installed misc. vBulletin modifications."
+  - id:computer_problems:
+    title: "ComputerProblems.org"
+    description: "Completed implementation of a news feed from the forums to homepage."
+  - id:ladies_man:
+    title: "LadiesMan"
+    description: "Implementation of a journal system into vBulletin software."
+  - id:rap_search:
+    title: "RapSearch"
+    description: "Installation of forums software and portal, implementation of a design throughout the site areas, installation of an ads system, misc custom forum modifications."
+  - id:diamond_chit_chat:
+    title: "DiamondChitChat"
+    description: "Installation of forums software and portal, implementation of a design throughout the site areas, installation of an ads system, misc custom forum modifications."
+  - id:rap_music:
+    title: "RapMusic.com"
+    description: "Design of custom homepage header."
+  - id:midi_buddy:
+    title: "MidiBuddy"
+    description: "Implementation of a virtual pay-per-midi system. Users pay for a midi with virtual points they earn for posting around the forums."
+  - id:my_travel_guide:
+    title: "My Travel Guide"
+    description: "Custom forum work including a member ranking system and portal modifications."
+  - id:wominx_forums:
+    title: "WominX.NET Forums"
+    description: "Upgrade of forums, custom modifications, installation of ads system and implementation of forums design."
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	{{ partial "head.html" . }}
+	<body>
+		{{ partialCached "header.html" . }}
+		<article>
+			<header>
+				<h1><a>{{ .Title }}</a></h1>
+			</header>
+
+			<p>
+				Something
+			</p>
+
+			<ul>
+				{{ range .Data.Pages }}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</article>
+		{{ partialCached "footer.html" . }}
+	</body>
+</html>
+

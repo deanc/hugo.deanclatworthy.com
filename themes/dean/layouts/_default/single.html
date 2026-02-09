@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	{{ partial "head.html" . }}
+	<body>
+		{{ partialCached "header.html" . }}
+
+			{{ if eq .Section "post" }}
+				<p class="go-back"><a class="button" href="/archive.html">&laquo; Back to all articles</a></p>
+			{{ else }}
+				<p class="go-back"><a class="button" href="/">&laquo; Back to homepage</a></p>
+			{{ end }}
+
+			<h1>{{ if .Params.emoji }}{{ .Params.emoji }} {{ end }}{{ .Title }}</h1>
+
+			{{ if eq .Section "post" }}
+			<p class="date">
+				{{ .Date.Format "01 January 2006" }}
+			</p>
+			{{ end }}
+
+			<article>
+				{{ .Content }}
+			</article>
+
+			{{ if eq .Section "post" }}
+			{{ template "_internal/disqus.html" . }}
+			{{ end }}
+
+
+		{{ partialCached "footer.html" . }}
+	</body>
+</html>

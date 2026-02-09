@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="home" lang="en">
+{{ partial "head.html" . }}
+<body>
+{{ partialCached "header.html" . }}
+
+<div id="introduction" class="flex">
+    <div class="logo">
+        <img id="mypic" srcset="{{ .Site.BaseURL }}/img/me_450.jpg 3x, {{ .Site.BaseURL }}/img/me_300.jpg 2x, {{ .Site.BaseURL }}/img/me_225.jpg 1.5x" src="{{ .Site.BaseURL }}/img/me_450.jpg" alt="My beautiful picture" width="150" height="150" />
+    </div>
+    <div class="other-info">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="lead">{{ .Site.Params.Tagline|safeHTML }}</p>
+        <div class="options">
+            <a class="button" href="{{ .Site.BaseURL }}/contact.html">🤗 Contact me</a>
+            <!--<div class="places">-->
+                <!--<a href="#"><img src="{{ .Site.BaseURL }}/img/svg/icon_github.svg" /></a>-->
+                <!--&lt;!&ndash;<a href="#"><img src="{{ .Site.BaseURL }}/img/svg/icon_twitter.svg" /></a>&ndash;&gt;-->
+                <!--<a href="#"><img src="{{ .Site.BaseURL }}/img/svg/icon_stackoverflow.svg" /></a>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<p>{{ .Site.Params.Homepage.Intro|safeHTML }}</p>
+
+<h2>🗂️ Skills</h2>
+<p>I'm always open to exploring new professional opportunities. Find out a bit more about <a href="/skills.html">what I can do and my skills</a>. Or head straight over to my <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/deanclatworthy/">LinkedIn profile</a>.</p>
+
+<h3>Certifications</h3>
+
+I am an <a href="https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f67a/public_url" target="_blank">AWS Certified Solutions Architect - Associate</a> and <a href="https://www.credly.com/badges/a03fa404-283d-469d-8d65-f74c7b970bfa/public_url" target="_blank">AWS Certified Cloud Practioner</a>.
+
+<h2>💻 Recent work</h2>
+
+<p>Here are a few of my most recent projects. Or <a href="/portfolio.html">view all the projects</a>.</p>
+
+{{ range $ind, $ele := $.Site.Data.portfolio.items }}
+    {{ if (lt $ind 4) }}
+        <a class="block" href="/portfolio.html#project-{{ $ele.id }}">
+            <h3>
+                {{ $ele.title }} <!-- <span class="awards">{{ if $ele.awards }}<em>🏆</em> {{ len $ele.awards}}{{ end }}</span> -->
+            </h3>
+        </a>
+    {{ end }}
+{{ end }}
+
+<h2>🗒️ My writings</h2>
+
+<p>From time to time I like to write about things. Here are the most recent. Or <a href="/archive.html">view all the articles</a>.</p>
+
+<div class="flex one two-700">
+    {{- range ( where site.RegularPages "Section" "post" | first 4 ) }}
+    <div>
+        <a class="block" href="{{ .Permalink }}">
+            <h3>
+                <!--<span class="stars">👓 3.0k</span>-->
+                {{ .Title }}
+            </h3>
+        </a>
+        <p>
+        {{ if gt (len .Summary) 120 }}
+
+            {{slicestr .Summary 0 120|safeHTML}}...
+        {{ else }}
+            {{ .Summary|safeHTML }}
+        {{ end }}
+        
+        </p>
+    </div>
+    {{ end }}
+</div>
+
+<h2>🛠️ Tools</h2>
+
+<p>I have open-sourced some things over the years. Please visit the <a href="/tools.html">tools</a> page to take a look.
+
+{{ partialCached "footer.html" . }}
+</body>
+</html>

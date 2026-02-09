@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="portfolio" lang="en">
+{{ partial "head.html" . }}
+<body>
+{{ partialCached "header.html" . }}
+
+    <div class="page-header">
+        <h1>{{ if .Params.emoji }}{{ .Params.emoji }} {{ end }}{{ .Title }}</h1>
+    </div>
+
+    {{ if eq .Section "post" }}
+    <div class="date">
+        <span>{{ .Date.Format "01 January 2006" }}</span>
+    </div>
+    {{ end }}
+
+    <article>
+        {{ .Content }}
+
+        {{ range $ind, $ele := $.Site.Data.portfolio.items }}
+
+            {{ if $ele.visible }}
+
+                <h3 id="project-{{ $ele.id }}">{{ $ele.title }}</h3>
+                <p>{{ if $ele.agency }}[Agency: {{ $ele.agency }}] {{end}}{{ $ele.description|markdownify }}</p>
+
+                {{ if $ele.technologies }}
+                <p>
+                Technologies used:
+                    {{ range $technology := $ele.technologies }}
+                        <span class="badge">{{ $technology }}</span>
+                    {{ end }}
+                </p>
+                {{ end }}
+
+
+                {{ if ( isset $ele "awards" ) }}
+                <p>
+                    <i class="fa fa-trophy" style="color: #ffcc33"></i> Awards won:
+                    {{ range $ai, $award := $ele.awards }}
+                        <a href="{{ .url }}">{{ .name }}</a>
+                    {{ end }}
+                </p>
+                {{ end }}
+
+                {{ if $ele.vimeo_id }}
+                    <div class="video-container">
+                        <iframe src="//player.vimeo.com/video/{{ $ele.vimeo_id }}?byline=0&badge=0&portrait=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                {{ end }}
+
+                {{ if $ele.thumbnails }}
+                    <div class="portfolio-assets flex four">
+                            {{ range $thumb := $ele.thumbnails }}
+                                <div><a href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}" target="_blank"><img src="{{ $thumb }}" class="portfolio-img thumbnail img-responsive" /></a></div>
+                            {{ end }}
+                    </div>
+                {{ end}}
+            {{ end }}
+
+        {{ end }}
+
+        <h3>Other projects</h3>
+
+        <p>Unfortunately the internet moves quickly. A lot of projects have a lifetime and are no longer online. Here is a list of
+            other clients and websites I have worked with that are no longer online and available to show anymore:</p>
+
+        <ul>
+        {{ range $ind, $ele := $.Site.Data.portfolio_other.items }}
+            <li><a id="project-{{ $ele.id }}"></a><strong>{{ $ele.title }}</strong> - {{ $ele.description }}</strong></li>
+        {{ end }}
+        </ul>
+    </article>
+
+
+
+    {{ if eq .Section "post" }}
+    {{ template "_internal/disqus.html" . }}
+    {{ end }}
+
+<p class="go-back"><a class="button" href="/">&laquo; Back to homepage</a></p>
+
+
+
+
+{{ partialCached "footer.html" . }}
+</body>
+</html>

@@ -1,0 +1,216 @@
+items:
+  - id: becauseofyou
+    title: "AdCouncil: BecauseOfYou"
+    agency: hasan & partners / TBD
+    description: >
+      In collaboration with TBD agency in San Fransisco, I developed the website for this anti-bullying campaign.
+    technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
+    visible: true
+  - id: sheboard
+    title: "Plan Finland: Sheboard"
+    agency: hasan & partners
+    description: >
+      Have you ever wondered about the difference in language you use to talk to boys and girls? We created a predictive
+      keyboard app which adjusts the language you use to talk about girls. For this project I developed the website for the
+      campaign (not the app).
+    technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
+    visible: true
+  - id: kone_machine_conversations_part_2
+    title: "KONE: Machine Conversations (Part 2)"
+    agency: hasan & partners
+    description: >
+      For the second part of Machine Conversations, we were tasked with promoting the launch of KONE's 24/7 Escalator
+      maintenance product. In order to do this we hooked an escalator into the same back-end system created for the original
+      machine conversations in order to allow the escalator to tweet.
+
+      We also filmed using 360 cameras an escalator ride, in order to embed a VR simulation of riding an escalator to the
+      website.
+
+    technologies: [VR, AWS SQS, IBM Bluemix Cloud, NodeJS, HTML5, JS, CSS, Wordpress]
+    visible: true
+  - id: kone_machine_conversations_part_1
+    title: "KONE: Machine Conversations (Part 1)"
+    agency: hasan & partners
+    description: >
+      Our pitch was to bring KONE's 24/7 connected services offering to life
+      in the form of converting the messages sent by their elevators into a live chat between the elevator
+      and KONE's Cloud maintenance. This was a huge undertaking involving close liason with KONE's R&D team.
+
+
+      Messages are forwarded from IBM Bluemix to a listening service which stores all messages and adds them into
+      an Amazon SQS queue. A series of worker processes then consume queue items and convert them into text
+      conversations and their respective audio. The website then consumes these messages from an API and displays
+      them.
+
+
+      An interesting part of this process is how to go from raw data into chat messages. Messages are represented
+      as a JSON object featuring all kinds of sensor data including what is happening to the elevator (moving floors, doors opening/closing etc.)
+      and then things such as the speed of the elevator and the vibration. This JSON is decoded and then fed into
+      Symfony's expression language. This allows content editors to generate chat messages based on what is actually
+      happening in the message. For example an expression might look like so:
+      `elevator.stop_floor >= 0 and elevator.duration >= 5 and elevator.duration <= 35` and the corresponding chat
+      message might be: `Arrived on floor elevator.stop_floor. Travel took elevator.duration seconds.` This allows
+      us to generate an unlimited amount of variation of content for the chat.
+    technologies: [PHP, MySQL, NodeJS, HTML5, CSS, JS, AWS S3, AWS SQS, IBM Bluemix Cloud]
+    vimeo_id: 262703629
+    emoji: ↕️
+    visible: true
+  - id: valio_suksi_ladulle
+    title: "Valio: Suksi Ladulle"
+    agency: hasan & partners
+    description: >
+      Similar to the Fazer Chocolate Hunt project, we utilised a database of outdoor shelter
+      locations to create pins on a map that people and their families could visit during the winter months leading up
+      to the world skiijumping championships - in order to claim the chance to win a range of prizes.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript]
+    visible: true
+  - id: fazer_chocolate_hunt
+    title: "Fazer: Chocolate Hunt"
+    agency: hasan & partners
+    description: >
+      For this project we placed virtual pins on a map throughout the course of a week, in a large
+      number of locations allowing people to rush to the pins each day and claim a token to be redeemed for free chocolate in
+      the Fazer cafe in central Helsinki.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript]
+    visible: true
+  - id: takeda_panamol_popeli
+    title: "Takeda: Panamol Pöpeli"
+    agency: hasan & partners
+    description: >
+      A web-based version of the classic memory game. Built as a single-page ReactJS app.
+    technologies: [HTML5, React, CSS]
+    visible: true
+  - id: tallinksilja_complaint_booth
+    title: "TallinkSilja: Complaint Booth + Banner"
+    agency: hasan & partners
+    description: >
+      We retrofitted an old English phone box with a fake phone, powered by Skype, in order to allow visitors to a complaint
+      booth to vent their general frustrations to a moderator on the other end of the phone. If the moderator determined
+      the complaint was interesting, they were able to remotely print a free cruise voucher using an internet-connected receipt printer.
+
+
+      We also created a banner which was featured on the front-page of many of Finland’s most popular websites, allowing
+      people to complaint about their day - and be emailed a free cruise by moderators if the complaint was interesting.
+      The banner served millions of views over the course of 5 days.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript, AWS]
+    awards:
+      - name: Best Ads on TV
+        url: http://www.bestadsontv.com/ad/78182/Tallink-Silja-Complaints-Booth
+    vimeo_id: 162279513
+    visible: true
+  - id: metsa_plan_b
+    title: "Metsä: Plan B"
+    agency: hasan & partners
+    description: >
+      I created a static website, built using Jekyll, to showcase for potential Metsä customers how iconic structures might
+      look and function if they were built out of wood.
+    technologies: [Jekyll, MySQL, HTML5, CSS, Javascript]
+    thumbnails: [/img/portfolio/metsa-planb/metsa-planb-1-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-2-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-3-thumbnail.jpg]
+    visible: true
+  - id: hasan_eurobest
+    title: "hasan & partners: Eurobest booth"
+    agency: hasan & partners
+    description: >
+      For the Eurobest 2014 Festival of Creativity, I was tasked with helping with the development of the hasan & partners stand at the Eurobest conference. This featured two installations:
+
+      * two beer taps, that are only opened once you charge two or more mobile phones (made by [perfect fools](http://perfectfools.se) & myself)
+      * a mobile phone powered slot machine to give away great prizes (made by me).
+    thumbnails: [/img/portfolio/eurobest-stand/eurobest-stand-4-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-3-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-2-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-1-thumbnail.jpg]
+    visible: true
+  - id: sanoma_big_things
+    title: "Sanoma: Big Things"
+    agency: hasan & partners
+    description: >
+      For the Eurobest 2014 Festival of Creativity, we created a website for Sanoma - Finland's
+      biggest media house - to showcase inspirational quotes to do with marketing.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript]
+    vimeo_id: 114347664
+    visible: false
+  - id: plan_sponsor_dreams
+    title: "Plan: Sponsor of dreams installation"
+    agency: hasan & partners
+    description: >
+      I created an integrated installation for Plan: Finland in Finland's most busiest shopping mall
+      which allows users to donate money into a box, and upon a successful donation it takes their photo. Photos are then displayed
+      in a loop on the installation when a user is not activating it, and also on all other digiscreens around the shopping mall.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript, Motion tracking]
+    vimeo_id: 109314118
+    visible: true
+  - id: metsa_tree_online
+    title: "Metsä: Tree Online"
+    agency: hasan & partners
+    description: >
+      Highly interactive and visual website for one of Finland's biggest companies. Featuring an
+      interactive video timeline and plenty of other visual eye candy. A community area was also created to allow Metsä
+       employees to share their knowledge about the interesting thing the company does. Praise must also go to my brilliant former colleague
+      [Johannes Neumeier](http://johannesneumeier.com/) who I worked very closely with on this project.
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript]
+    awards:
+      - name: FWA Public Shortlist
+        url: http://www.thefwa.com/shortlist/mets-tree-online
+    vimeo_id: 104848958
+    thumbnails: [/img/portfolio/metsa-tree/metsa-tree-homepage-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-interface-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-menu-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-thumbnail-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-navigation-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-content-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-community-search-thumbnail.jpg]
+    visible: true
+  - id: lidl_grillimeisteri
+    title: "Lidl: Grillimaisteri 2014"
+    agency: hasan & partners
+    description: >
+      Lidl asked us to create a new website for their 2014 activities for the Grillimaisteri brand.
+      I created a back-end for the site to manage all the content including recipes, products, competitions, blogs etc. I was
+      also responsible for the server configuration and deployment.
+    thumbnails: [/img/portfolio/lidl-grillimaisteri/lidl-grillimaisteri-frontpage-thumbnail.jpg, /img/portfolio/lidl-grillimaisteri/lidl-grillimaisteri-recipe-thumbnail.jpg, /img/portfolio/lidl-grillimaisteri/lidl-grillimaisteri-tour-dates-thumbnail.jpg]
+    visible: false
+  - id: plan_girls_day_printer
+    title: "Plan Finland: Girls Day Printer"
+    agency: hasan & partners
+    description: >
+      We were asked to create a campaign where every time an SMS donation is receieved, or the
+      website is shared using Facebook or tweeted, a tiny receipt printer in downtown Helsinki will print a few words of the
+      80,000 word report that is released every "Girls Day" by Plan Finland. This required integration from a website that I
+      was responsible for constructing and a printer software created by [Perfect Fools](http://perfectfools.se).
+    technologies: [PHP, MySQL, HTML5, CSS, Javascript]
+    vimeo_id: 107582361
+    thumbnails: [/img/portfolio/plan-printer/plan-girls-day-printer-2-thumbnail.jpg, /img/portfolio/plan-printer/plan-girls-day-printer-1-thumbnail.jpg]
+    visible: true
+  - id: kone_nanospace
+    title: "KONE: NanoSpace"
+    agency: hasan & partners
+    description: >
+      KONE required a highly interactive website, showing how replacement elevators can really benefit
+      building owners. Their new elevators require the same space as the old elevators, but are more spacious inside thanks to modern
+      technology. The website offered lots of interactive infographics showing the size difference, how the elevators are quieter and
+      more efficient.
+    thumbnails: [/img/portfolio/kone-mile/kone-mile-1-thumbnail.jpg, /img/portfolio/kone-mile/kone-mile-2-thumbnail.jpg, /img/portfolio/kone-mile/kone-mile-3-thumbnail.jpg]
+    visible: false
+  - id: hs_for_advertisers
+    title: "Helsingin Sanomat: For Advertisers"
+    agency: hasan & partners
+    description: >
+      Full front-end and light back-end implementation for the new Helsingin Sanomat business page,
+      aimed at promoting advertising opportunities in their digital media.
+    thumbnails: [/img/portfolio/hs-b2b/hs-b2b-1-thumbnail.jpg, /img/portfolio/hs-b2b/hs-b2b-2-thumbnail.jpg]
+    visible: false
+  - id: angrybirds_star_wars
+    title: "Angry Birds: Star Wars"
+    agency: Luxus
+    description: >
+      I helped to concept and subsequently implement the official website for Rovio&#8217;s new
+      title &#8220;Angry Birds: Star Wars&#8221;. Most of this work was HTML5/CSS3/JavaScript and using Twitter Bootstrap
+      for a responsive framework.
+    awards:
+      - name: 2 webby awards
+        url: http://www.webbyawards.com/winners/2013/web/general-website/games/angry-birds-star-wars/
+    thumbnails: [/img/portfolio/rovio-absw/rovio-absw-1-thumbnail.jpg, /img/portfolio/rovio-absw/rovio-absw-2-thumbnail.jpg]
+    visible: true
+  - id: iitala_store
+    title: "Iitala: Online web store"
+    agency: Luxus
+    description: >
+      Front end implementation for the Iittala online webstore. This involved a lengthy process of converting
+      wireframes to prototypes to a full front-end implementation into Iittala's CMS. The project lasted almost six months and
+      was a great success as one of the first responsive webstores for a leading Finnish brand.
+    thumbnails: [/img/portfolio/iittala/iittala-1-thumbnail.jpg, /img/portfolio/iittala/iittala-2-thumbnail.jpg, /img/portfolio/iittala/iittala-3-thumbnail.jpg, /img/portfolio/iittala/iittala-4-thumbnail.jpg, /img/portfolio/iittala/iittala-5-thumbnail.jpg, /img/portfolio/iittala/iittala-6-thumbnail.jpg]
+    visible: true
+
+
+

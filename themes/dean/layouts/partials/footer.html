@@ -1,0 +1,24 @@
+
+
+  <footer>
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.Author.Name }} | <a rel="nofollow noindex" href="#top">Back to top</a></p>
+  </footer>
+
+</main>
+
+{{ with resources.Get "js/form.js" }}
+  {{ $opts := dict "minify" true }}
+  {{ with . | js.Build $opts | fingerprint }}
+    <script async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+  {{ end }}
+{{ end }}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKE986PPRZ"></script>
+<script >
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKE986PPRZ');
+</script>

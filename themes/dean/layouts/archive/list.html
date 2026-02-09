@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+    </div>
+
+    {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
+        <div><strong>{{ .Key }}</strong></div>
+        <p>
+            {{ range .Pages }}
+            &#8226; <a href="{{ .Permalink }}">{{ .Title }}</a><br />
+            {{ end }}
+        </p>
+    {{ end }}
+
+    <p class="go-back"><a class="button" href="/">&laquo; Back to homepage</a></p>
+
+    {{ partial "footer.html" . }}
+</body>
+</html>
