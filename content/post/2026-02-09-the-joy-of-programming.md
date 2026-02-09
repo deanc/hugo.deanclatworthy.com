@@ -6,6 +6,7 @@ category:
 url: /2026/02/09/the-joy-of-programming/
 tags: [ai,agents,claude,chatgpt,codex,anthropic]
 date: 2026-02-09
+image: "/post-joy-of-programming.jpg"
 ---
 
 <img src="/post-joy-of-programming.jpg" alt="Header image" class="img-responsive">
