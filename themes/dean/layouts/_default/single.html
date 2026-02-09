@@ -19,6 +19,11 @@
 			{{ end }}
 
 			<article>
+				{{ if isset .Params "image" }}
+					{{ $img := .Params.image }}
+					{{ if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end }}
+					<p><img src="{{ $img | absURL }}" alt="{{ .Title }}" class="img-responsive"></p>
+				{{ end }}
 				{{ .Content }}
 			</article>
 

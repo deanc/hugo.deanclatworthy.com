@@ -9,8 +9,6 @@ date: 2026-02-09
 image: "/post-joy-of-programming.jpg"
 ---
 
-<img src="/post-joy-of-programming.jpg" alt="Header image" class="img-responsive">
-
 It’s 2026, and I’m writing this post without AI. That already feels like a confession.
 
 In the span of a year, AI has fundamentally changed how I work as a software engineer, architect, and consultant. We’ve gone from hallucination-prone Q&A toys to agents that can plan, debug, and implement features - largely on their own.
