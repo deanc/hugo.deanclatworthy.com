@@ -38,6 +38,14 @@ make build
 make clean
 ```
 
+## New post
+
+```bash
+make post TITLE="My Post Title"
+```
+
+This uses `$EDITOR` if set, otherwise `micro`. It prefixes the filename with the current date (e.g., `2026-02-09-my-post-title.md`). If `glow` is installed, it will render a terminal preview after editing.
+
 ## Deploy
 
 Deployment is handled by GitHub Actions on every push to `master`.
