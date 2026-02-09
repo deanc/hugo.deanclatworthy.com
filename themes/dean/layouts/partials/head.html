@@ -37,9 +37,13 @@
 	<meta property="og:site_name" content="{{ .Site.Params.SiteName }}">
 	{{ $ogImage := "" }}
 	{{ if isset .Params "og_image" }}
-		{{ $ogImage = (.Params.og_image | absURL) }}
+		{{ $img := .Params.og_image }}
+		{{ if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end }}
+		{{ $ogImage = ($img | absURL) }}
 	{{ else if isset .Params "image" }}
-		{{ $ogImage = (.Params.image | absURL) }}
+		{{ $img := .Params.image }}
+		{{ if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end }}
+		{{ $ogImage = ($img | absURL) }}
 	{{ else }}
 		{{ $ogImage = (printf "%s/img/share.jpg" .Site.BaseURL) }}
 	{{ end }}
