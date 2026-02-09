@@ -3,7 +3,7 @@ layout: post
 title: "The Joy of Programming"
 description: ""
 category:
-url: /2026/02/02/the-joy-of-programming/
+url: /2026/02/09/the-joy-of-programming/
 tags: [ai,agents,claude,chatgpt,codex,anthropic]
 date: 2026-02-09
 ---
