@@ -1,4 +1,0 @@
-rm -r public_prod/*
-hugo --minify --config config_prod.yml -D -d public_prod/
-cp -R public_prod/* /Volumes/personal/deanc.github.io/
-# TODO: move into directory and handle git stuff and git push and then move back to this dir

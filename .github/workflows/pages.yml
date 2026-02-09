@@ -24,8 +24,19 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.155.1'
           extended: true
+
+      - name: Hugo version
+        id: hugo-version
+        run: echo "version=$(hugo version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources/_gen
+          key: ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-${{ hashFiles('assets/**', 'config*.yml', 'config*.yaml', 'config*.toml', 'themes/**') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-
 
       - name: Build
         run: hugo --minify --config config_prod.yml -D
