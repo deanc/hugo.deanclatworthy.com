@@ -70,8 +70,85 @@ p {
   padding-bottom: 0.7em;
 }
 
+pre {
+  text-align: left;
+  padding: 0.3em 0.6em;
+  background: #f5f5f5;
+  border-radius: 0.2em;
+  overflow: auto;
+  max-width: 100%;
+}
+
+code {
+  padding: 0.3em 0.6em;
+  font-size: 0.85em;
+  background: #f5f5f5;
+}
+
+pre code {
+  display: block;
+  white-space: pre;
+  background: transparent;
+  padding: 0;
+}
+
+.highlight {
+  overflow-x: auto;
+}
+
+.highlight pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.highlight pre code,
+.highlight pre code span {
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}
+
 h1+p, h2+p {
   margin: .4em 0 .9em;
+}
+
+ .post-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.date {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 1.2em;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid #eee;
+}
+
+.post-content article p {
+  line-height: 1.75em;
+}
+
+.post-content article h2, .post-content article h3, .post-content article h4 {
+  margin-top: 1.4em;
+}
+
+.post-content article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2em auto;
+}
+
+.post-content article ul, .post-content article ol {
+  margin: 0 0 1em 1.2em;
+}
+
+.post-content article blockquote {
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  background: #fafafa;
+  border-left: 4px solid rgba(17, 17, 17, 0.2);
 }
 
 .flex {
@@ -136,6 +213,7 @@ hr {
   margin: 1.5em 0;
 }
 
+
 h3 span.awards {
   float: right;
   em {
@@ -157,6 +235,9 @@ h3 span.awards {
   }
   .go-back {
     left: 20px;
+  }
+  .post-content {
+    max-width: 100%;
   }
 }
 @media (max-width: 600px) {

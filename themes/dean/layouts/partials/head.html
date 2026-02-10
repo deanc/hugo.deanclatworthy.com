@@ -55,7 +55,7 @@
 
 	<!-- CSS -->
 	{{ partialCached "fonts.html" . }}
-	{{ $style := resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+	{{ $style := resources.Get "sass/main.scss" | css.Sass | css.PostCSS | resources.Minify | resources.Fingerprint }}
 	<link media="all" rel="stylesheet" href="{{ $style.Permalink }}">
 
 	<!-- Icons -->

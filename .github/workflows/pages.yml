@@ -26,6 +26,14 @@ jobs:
         with:
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install CSS tooling
+        run: npm install
+
       - name: Hugo version
         id: hugo-version
         run: echo "version=$(hugo version | awk '{print $2}')" >> "$GITHUB_OUTPUT"

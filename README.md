@@ -7,10 +7,18 @@ Source for deanclatworthy.com, built with Hugo and deployed via GitHub Pages usi
 ## Requirements
 
 - Hugo (extended). CI uses `0.155.1`.
+- Node.js 20+ (for CSS purge during build).
 
 ## Local development
 
 ```bash
+hugo server --config config.yml -D
+```
+
+If you see a PostCSS error, install the CSS tooling first:
+
+```bash
+npm install
 hugo server --config config.yml -D
 ```
 
@@ -23,6 +31,7 @@ make dev
 ## Build
 
 ```bash
+npm install
 hugo --minify --config config_prod.yml -D
 ```
 
