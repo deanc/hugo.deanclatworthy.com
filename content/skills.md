@@ -11,22 +11,25 @@ menu:
 
 On this page I'll detail my areas of expertise.
 
-## Back-end
+## ☁️ Cloud
+
+I am an [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f67a/public_url) and [AWS Certified Cloud Practioner](https://www.credly.com/badges/a03fa404-283d-469d-8d65-f74c7b970bfa/public_url).
+
+## 🗄️ Back-end
 
 #### Node.js
 
-JS is everywhere nowadays, with the back-end no exception. I've worked at startups, and at project-level
-building back-end services in NodeJS with a strong preference for Typescript.
+JavaScript is everywhere now — the back end included. I’ve built and shipped backend services in startup environments and on standalone projects using Node.js, and today everything I write is in TypeScript. It’s my default across the stack, bringing strong typing, clearer contracts, and long-term maintainability to every service I build.
 
 #### Serverless architecture
 
-More recently I have worked on projects using Serverless framework, deployed to Lambda @ AWS.
+I have extensive experience working with serverless architecture patterns, primarily in AWS. Step Functions, Lambda, EventBridge etc.
 
 #### PHP
 
-I've over 20 years of experience using PHP. I took an early interest in the language when trying to 
-modify forum software. Since then I've specialised in it, and built more websites than I can count 
-with it. The PHP ecosystem has changed drastically in the last few years. Gone are the days of 
+I've over 20 years of experience using PHP. I took an early interest in the language when trying to
+modify forum software. Since then I've specialised in it, and built more websites than I can count
+with it. The PHP ecosystem has changed drastically in the last few years. Gone are the days of
 includes, magic quotes and addslashes and PHP now has a fantastic toolset to build modern, maintainable and quick web applications. We now have namespaces, dependency management and incredibly well built components
 that can be put together to quickly and efficiently build applications.
 
@@ -43,7 +46,7 @@ multiple MySQL servers.
 
 I couldn't have learnt so much without this brilliant book: [High Performance MySQL](http://shop.oreilly.com/product/0636920022343.do)
 
-## Front-end
+## 📱 Front-end
 
 Throughout my career I've often been responsible for developing the front-end of many of my projects as well as the
 back-end. I like to think that my front-end skillset is equally as sharp as my back-end skillset. I've been writing
@@ -52,14 +55,10 @@ that kind of time debugging why webkit keeps flickering animations, or an androi
 slowly.
 
 I've plenty of experience writing vanilla Javascript, but am familiar with many JS frameworks including:
-[AngularJS](https://angularjs.org/), [React](http://facebook.github.io/react/) & others.
-
-## Cloud
-
-I am an [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f67a/public_url) and [AWS Certified Cloud Practioner](https://www.credly.com/badges/a03fa404-283d-469d-8d65-f74c7b970bfa/public_url).
+[Vue](https://vuejs.org/), [React](http://facebook.github.io/react/) & others.
 
 
-## Systems architecture & design
+## 🛠️ Systems architecture & design
 
 One of the most important skills I have learned to focus on is planning and system design. It is important to plan and
 design a system that will meet all the goals of the project. This can often include making sure the application is
@@ -67,7 +66,7 @@ designed in such a way that it's easily maintained and modified, that it scales 
 problems that may occur further down the line. Having had many years of experience I have learnt to identify very early
 on in the life cycle of a project what potential pitfalls might occur and address the risks before they happen.
 
-## Misc
+## 📦 Misc
 
 #### Mobile application development
 
@@ -78,6 +77,7 @@ I have used react native to build a few small mobile applications.
 Whilst not my no.1 programming languages, I have experimented and used the other following programming languages:
 
 - Java
+- Golang
 - Bash
 - C#.NET
 - Lisp
