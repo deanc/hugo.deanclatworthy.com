@@ -4,7 +4,7 @@ author: Dean
 layout: post
 url: /2010/04/jump-in-camp/
 image:
-  - //deanclatworthy.com/img/uploads/2010/04/4499556648_5a5da0a301-150x150.jpg
+  - //deanclatworthy.com/img/uploads/2010/04/4499556648_5a5da0a301.jpg
 dsq_thread_id:
   - 794530145
 categories:
@@ -12,7 +12,7 @@ categories:
   - PHP
 date: 2010-04-13
 ---
-[<img class="alignnone size-full wp-image-45" title="4499556648_5a5da0a301" src="//deanclatworthy.com/img/uploads/2010/04/4499556648_5a5da0a301.jpg" alt="" width="500" height="332" />][1]  
+
 (Thanks to [Derick Rethans][2] for the picture)
 
 **Introductions**
@@ -65,10 +65,10 @@ I think everyone agreed the event was a resounding success and everyone learnt a
 
 **Photos**
 
-<http://www.flickr.com/photos/derickrethans/4499789952/> (Derick)  
-<http://www.flickr.com/photos/derickrethans/4499556648/> (Derick)  
-[http://yuriy-zaytsev.smugmug.com/Professional/jumpincamp/11828007\_YXa7U#836070437\_nZ9YS][21] (Yuri)  
-<http://www.facebook.com/album.php?aid=2057793&id=1385949843> (Vitaly)  
+<http://www.flickr.com/photos/derickrethans/4499789952/> (Derick)
+<http://www.flickr.com/photos/derickrethans/4499556648/> (Derick)
+[http://yuriy-zaytsev.smugmug.com/Professional/jumpincamp/11828007\_YXa7U#836070437\_nZ9YS][21] (Yuri)
+<http://www.facebook.com/album.php?aid=2057793&id=1385949843> (Vitaly)
 <http://picasaweb.google.ch/109246690083550473241/JumpInCampBeerDinner?feat=directlink>
 
 If anyone has any more photos please send me a [tweet][22]
