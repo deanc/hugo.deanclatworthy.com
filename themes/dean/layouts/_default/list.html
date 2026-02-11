@@ -13,7 +13,7 @@
 			</p>
 
 			<ul>
-				{{ range .Data.Pages }}
+				{{ range ( where .Data.Pages "Draft" false ) }}
 				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 				{{ end }}
 			</ul>
@@ -21,4 +21,3 @@
 		{{ partialCached "footer.html" . }}
 	</body>
 </html>
-

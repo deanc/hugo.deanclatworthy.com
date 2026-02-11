@@ -32,7 +32,7 @@ make dev
 
 ```bash
 npm install
-hugo --minify --config config_prod.yml -D
+hugo --minify --config config_prod.yml
 ```
 
 Or:

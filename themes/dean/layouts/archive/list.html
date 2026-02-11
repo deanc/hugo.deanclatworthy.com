@@ -8,7 +8,7 @@
         <h1>{{ .Title }}</h1>
     </div>
 
-    {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
+    {{ range ( ( where .Site.RegularPages "Draft" false ).GroupByPublishDate "2006" ) }}
         <div><strong>{{ .Key }}</strong></div>
         <p>
             {{ range .Pages }}

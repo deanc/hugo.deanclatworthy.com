@@ -50,7 +50,7 @@ I am an <a href="https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f
 <p>From time to time I like to write about things. Here are the most recent. Or <a href="/archive.html">view all the articles</a>.</p>
 
 <div class="flex one two-700">
-    {{- range ( where site.RegularPages "Section" "post" | first 4 ) }}
+    {{- range ( where ( where site.RegularPages "Section" "post" ) "Draft" false | first 4 ) }}
     <div>
         <a class="block" href="{{ .Permalink }}">
             <h3>

@@ -47,7 +47,7 @@ jobs:
             ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-
 
       - name: Build
-        run: hugo --minify --config config_prod.yml -D
+        run: hugo --minify --config config_prod.yml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
