@@ -1,0 +1,135 @@
+{{- $siteURL := .Site.BaseURL -}}
+{{- $siteName := or .Site.Params.SiteName .Site.Title -}}
+{{- $authorName := or .Site.Params.Author.Name .Site.Title -}}
+{{- $defaultDescription := .Site.Params.Tagline | plainify | strings.TrimSpace -}}
+
+{{- if .IsHome -}}
+  {{- $sameAs := slice -}}
+  {{- with .Site.Params.Social -}}
+    {{- with .Github }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+    {{- with .Linkedin }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+    {{- with .Twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- end -}}
+
+  {{- $person := dict
+    "@type" "Person"
+    "@id" (printf "%s#person" $siteURL)
+    "name" $authorName
+    "url" $siteURL
+    "image" (printf "%simg/portrait.jpg" $siteURL)
+    "description" ($defaultDescription | htmlUnescape)
+  -}}
+  {{- if gt (len $sameAs) 0 -}}
+    {{- $person = merge $person (dict "sameAs" $sameAs) -}}
+  {{- end -}}
+
+  {{- $website := dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" $siteURL)
+    "url" $siteURL
+    "name" $siteName
+    "description" ($defaultDescription | htmlUnescape)
+    "publisher" (dict "@id" (printf "%s#person" $siteURL))
+  -}}
+
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $person) | jsonify | safeJS }}</script>
+{{- end -}}
+
+{{- if and .IsPage (eq .Section "post") -}}
+  {{- $description := $defaultDescription -}}
+  {{- if .Params.description -}}
+    {{- $description = .Params.description | plainify | strings.TrimSpace -}}
+  {{- else if .Description -}}
+    {{- $description = .Description | plainify | strings.TrimSpace -}}
+  {{- else if .Summary -}}
+    {{- $description = .Summary | plainify | strings.TrimSpace -}}
+  {{- else if .Plain -}}
+    {{- $description = .Plain | plainify | strings.TrimSpace -}}
+  {{- end -}}
+
+  {{- $image := printf "%simg/share.jpg" $siteURL -}}
+  {{- if isset .Params "og_image" -}}
+    {{- $img := .Params.og_image -}}
+    {{- if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end -}}
+    {{- $image = ($img | absURL) -}}
+  {{- else if isset .Params "image" -}}
+    {{- $img := .Params.image -}}
+    {{- if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end -}}
+    {{- $image = ($img | absURL) -}}
+  {{- end -}}
+
+  {{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" ($description | htmlUnescape | truncate 160)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "mainEntityOfPage" .Permalink
+    "url" .Permalink
+    "author" (dict "@type" "Person" "name" $authorName "url" $siteURL)
+    "publisher" (dict "@type" "Person" "name" $authorName "url" $siteURL)
+    "image" (slice $image)
+  -}}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}
+
+{{- if eq .Layout "portfolio" -}}
+  {{- $items := slice -}}
+  {{- $position := 0 -}}
+  {{- range $item := .Site.Data.portfolio.items -}}
+    {{- if $item.visible -}}
+      {{- $position = add $position 1 -}}
+      {{- $entry := dict
+        "@type" "CreativeWork"
+        "name" $item.title
+        "url" (printf "%sportfolio.html#project-%s" $siteURL $item.id)
+        "description" ($item.description | plainify | htmlUnescape | strings.TrimSpace | truncate 160)
+      -}}
+      {{- if $item.agency -}}
+        {{- $entry = merge $entry (dict "producer" (dict "@type" "Organization" "name" $item.agency)) -}}
+      {{- end -}}
+      {{- if $item.thumbnails -}}
+        {{- $entry = merge $entry (dict "image" (slice ((index $item.thumbnails 0) | absURL))) -}}
+      {{- end -}}
+
+      {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "item" $entry
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "name" .Title
+    "url" .Permalink
+    "description" (.Description | plainify | htmlUnescape | strings.TrimSpace | truncate 160)
+    "mainEntity" (dict
+      "@type" "ItemList"
+      "name" "Portfolio Projects"
+      "itemListElement" $items
+    )
+  -}}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}
+
+{{- if eq .RelPermalink "/contact.html" -}}
+  {{- $description := $defaultDescription -}}
+  {{- if .Description -}}
+    {{- $description = .Description | plainify | strings.TrimSpace -}}
+  {{- end -}}
+
+  {{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "ContactPage"
+    "name" .Title
+    "url" .Permalink
+    "description" ($description | htmlUnescape | truncate 160)
+    "isPartOf" (dict "@type" "WebSite" "name" $siteName "url" $siteURL)
+    "about" (dict "@type" "Person" "name" $authorName "url" $siteURL)
+  -}}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}
