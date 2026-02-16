@@ -47,7 +47,12 @@
 	<meta name="description" content="{{ $description }}" />
 	<meta property="og:description" content="{{ $description }}" />
 
+	{{ $canonicalURL := .Permalink }}
+	{{ if .IsHome }}
+		{{ $canonicalURL = .Site.BaseURL | absURL }}
+	{{ end }}
 	<meta property="og:url" content="{{ .Permalink }}">
+	<link rel="canonical" href="{{ $canonicalURL }}">
 	<meta property="og:site_name" content="{{ .Site.Params.SiteName }}">
 	{{ $ogImage := "" }}
 	{{ if isset .Params "og_image" }}
