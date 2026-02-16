@@ -9,7 +9,13 @@
 			</header>
 
 			<p>
-				Something
+				{{ if .Data.Term }}
+					Posts filed under <strong>{{ .Data.Term }}</strong>.
+				{{ else if eq .Type "archive" }}
+					Browse all published articles.
+				{{ else }}
+					Browse posts in this section.
+				{{ end }}
 			</p>
 
 			<ul>
