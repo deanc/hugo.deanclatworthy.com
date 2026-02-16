@@ -6,13 +6,13 @@
 
 <div id="introduction" class="flex">
     <div class="logo">
-        <img id="mypic" srcset="{{ .Site.BaseURL }}/img/me_450.jpg 3x, {{ .Site.BaseURL }}/img/me_300.jpg 2x, {{ .Site.BaseURL }}/img/me_225.jpg 1.5x" src="{{ .Site.BaseURL }}/img/me_450.jpg" alt="My beautiful picture" width="150" height="150" />
+        <img id="mypic" srcset="{{ "img/me_450.jpg" | relURL }} 3x, {{ "img/me_300.jpg" | relURL }} 2x, {{ "img/me_225.jpg" | relURL }} 1.5x" src="{{ "img/me_450.jpg" | relURL }}" alt="My beautiful picture" width="150" height="150" />
     </div>
     <div class="other-info">
         <h1>{{ .Site.Title }}</h1>
         <p class="lead">{{ .Site.Params.Tagline|safeHTML }}</p>
         <div class="options">
-            <a class="button" href="{{ .Site.BaseURL }}/contact.html">🤗 Contact me</a>
+            <a class="button" href="{{ "contact.html" | relURL }}">🤗 Contact me</a>
             <!--<div class="places">-->
                 <!--<a href="#"><img src="{{ .Site.BaseURL }}/img/svg/icon_github.svg" /></a>-->
                 <!--&lt;!&ndash;<a href="#"><img src="{{ .Site.BaseURL }}/img/svg/icon_twitter.svg" /></a>&ndash;&gt;-->
