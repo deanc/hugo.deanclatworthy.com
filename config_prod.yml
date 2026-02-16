@@ -48,3 +48,15 @@ minify:
 services:
   disqus:
     shortname: deanclatworthy
+
+related:
+  includeNewer: true
+  threshold: 10
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 80
+    - name: keywords
+      weight: 60

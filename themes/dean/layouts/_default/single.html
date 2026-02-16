@@ -29,6 +29,20 @@
 				</article>
 
 				{{ if eq .Section "post" }}
+				{{ $related := .Site.RegularPages.Related . | first 4 }}
+				{{ with $related }}
+				<section class="related-posts">
+					<h2>Related posts</h2>
+					<ul>
+						{{ range . }}
+						<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
+				</section>
+				{{ end }}
+				{{ end }}
+
+				{{ if eq .Section "post" }}
 				{{ template "_internal/disqus.html" . }}
 				{{ end }}
 			{{ partialCached "footer.html" . }}
