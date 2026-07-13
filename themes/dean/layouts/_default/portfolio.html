@@ -44,8 +44,35 @@
                 {{ end }}
 
                 {{ if $ele.vimeo_id }}
+                    {{ $preview := resources.Get (printf "img/portfolio/video-previews/%v.jpg" $ele.vimeo_id) }}
                     <div class="video-container">
-                        <iframe src="//player.vimeo.com/video/{{ $ele.vimeo_id }}?byline=0&badge=0&portrait=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <a
+                            class="video-placeholder"
+                            href="https://vimeo.com/{{ $ele.vimeo_id }}"
+                            data-vimeo-id="{{ $ele.vimeo_id }}"
+                            data-video-title="{{ $ele.title }}"
+                            aria-label="Play video: {{ $ele.title }}"
+                        >
+                            {{ with $preview }}
+                                {{ $previewSmall := .Resize "480x webp q82" }}
+                                {{ $previewLarge := .Resize "640x webp q82" }}
+                                <img
+                                    class="video-preview"
+                                    src="{{ $previewLarge.RelPermalink }}"
+                                    srcset="{{ $previewSmall.RelPermalink }} 480w, {{ $previewLarge.RelPermalink }} 640w"
+                                    sizes="(max-width: 900px) calc(100vw - 40px), 780px"
+                                    width="{{ .Width }}"
+                                    height="{{ .Height }}"
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            {{ end }}
+                            <span class="video-placeholder-label">
+                                <span aria-hidden="true">▶</span>
+                                Play video
+                            </span>
+                        </a>
                     </div>
                 {{ end }}
 
@@ -82,6 +109,13 @@
 
 
 
+
+{{ with resources.Get "js/video-embed.js" }}
+    {{ $opts := dict "minify" true }}
+    {{ with . | js.Build $opts | fingerprint }}
+        <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
+{{ end }}
 
 {{ partial "footer.html" . }}
 </body>
