@@ -6,10 +6,12 @@
 
 </main>
 
-{{ with resources.Get "js/form.js" }}
-  {{ $opts := dict "minify" true }}
-  {{ with . | js.Build $opts | fingerprint }}
-    <script async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{ if eq .RelPermalink "/contact.html" }}
+  {{ with resources.Get "js/form.js" }}
+    {{ $opts := dict "minify" true }}
+    {{ with . | js.Build $opts | fingerprint }}
+      <script async src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
   {{ end }}
 {{ end }}
 
