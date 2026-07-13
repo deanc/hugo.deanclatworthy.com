@@ -81,7 +81,12 @@
                             {{ range $thumbIndex, $thumb := $ele.thumbnails }}
                                 {{ $image := imageConfig (printf "themes/dean/static%s" $thumb) }}
                                 <div>
-                                    <a href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}" target="_blank" rel="noopener">
+                                    <a
+                                        href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}"
+                                        data-image-dialog-trigger
+                                        aria-haspopup="dialog"
+                                        aria-controls="portfolio-image-dialog"
+                                    >
                                         <img
                                             src="{{ $thumb }}"
                                             class="portfolio-img thumbnail img-responsive"
@@ -112,6 +117,18 @@
         </ul>
     </article>
 
+<dialog
+    id="portfolio-image-dialog"
+    class="image-dialog"
+    data-image-dialog
+    aria-label="Image preview"
+>
+    <form method="dialog">
+        <button class="image-dialog-close" type="submit" aria-label="Close image preview">&times;</button>
+    </form>
+    <img alt="" />
+</dialog>
+
 
 
     {{ if eq .Section "post" }}
@@ -123,7 +140,7 @@
 
 
 
-{{ with resources.Get "js/video-embed.js" }}
+{{ with resources.Get "js/portfolio.js" }}
     {{ $opts := dict "minify" true }}
     {{ with . | js.Build $opts | fingerprint }}
         <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
