@@ -269,6 +269,46 @@ html.portfolio {
   }
 }
 
+.image-dialog {
+  max-width: calc(100vw - 2em);
+  max-height: calc(100vh - 2em);
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  img {
+    display: block;
+    max-width: calc(100vw - 2em);
+    max-height: calc(100vh - 2em);
+  }
+
+  form {
+    position: absolute;
+    z-index: 1;
+    top: 0.5em;
+    right: 0.5em;
+    margin: 0;
+  }
+
+  .image-dialog-close {
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    font: inherit;
+    font-size: 1.25em;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
 hr {
   border: none;
   background: #000;
