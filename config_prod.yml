@@ -1,5 +1,5 @@
 BaseURL: "https://deanclatworthy.com"
-LanguageCode: "en-us"
+locale: "en-us"
 title: "Hello. I'm Dean Clatworthy"
 tagline:
 uglyURLs: "true"

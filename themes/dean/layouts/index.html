@@ -35,7 +35,7 @@ I am an <a href="https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f
 
 <p>Here are a few of my most recent projects. Or <a href="/portfolio.html">view all the projects</a>.</p>
 
-{{ range $ind, $ele := $.Site.Data.portfolio.items }}
+{{ range $ind, $ele := hugo.Data.portfolio.items }}
     {{ if (lt $ind 4) }}
         <a class="block" href="/portfolio.html#project-{{ $ele.id }}">
             <h3>

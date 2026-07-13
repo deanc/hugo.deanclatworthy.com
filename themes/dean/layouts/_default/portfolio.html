@@ -17,7 +17,7 @@
     <article>
         {{ .Content }}
 
-        {{ range $ind, $ele := $.Site.Data.portfolio.items }}
+        {{ range $ind, $ele := hugo.Data.portfolio.items }}
 
             {{ if $ele.visible }}
 
@@ -66,7 +66,7 @@
             other clients and websites I have worked with that are no longer online and available to show anymore:</p>
 
         <ul>
-        {{ range $ind, $ele := $.Site.Data.portfolio_other.items }}
+        {{ range $ind, $ele := hugo.Data.portfolio_other.items }}
             <li><a id="project-{{ $ele.id }}"></a><strong>{{ $ele.title }}</strong> - {{ $ele.description }}</strong></li>
         {{ end }}
         </ul>

@@ -17,31 +17,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
+          hugo-version: "0.164.0"
           extended: true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24.18.0"
+          cache: npm
 
       - name: Install CSS tooling
-        run: npm install
+        run: npm ci
 
       - name: Hugo version
         id: hugo-version
         run: echo "version=$(hugo version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
 
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
-          path: resources/_gen
+          path: |
+            resources/_gen
+            ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-${{ hashFiles('assets/**', 'config*.yml', 'config*.yaml', 'config*.toml', 'themes/**') }}
           restore-keys: |
             ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-
@@ -50,7 +56,7 @@ jobs:
         run: hugo --minify --config config_prod.yml
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -63,4 +69,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

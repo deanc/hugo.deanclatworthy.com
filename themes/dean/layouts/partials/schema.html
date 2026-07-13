@@ -77,7 +77,7 @@
 {{- if eq .Layout "portfolio" -}}
   {{- $items := slice -}}
   {{- $position := 0 -}}
-  {{- range $item := .Site.Data.portfolio.items -}}
+  {{- range $item := hugo.Data.portfolio.items -}}
     {{- if $item.visible -}}
       {{- $position = add $position 1 -}}
       {{- $entry := dict
