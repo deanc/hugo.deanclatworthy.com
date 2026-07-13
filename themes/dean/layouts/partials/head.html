@@ -4,7 +4,7 @@
 	<title>
 		{{ if isset .Params "og_title" }}
 		{{ .Params.og_title }}
-		{{ else if eq .RelPermalink "/" }}
+		{{ else if .IsHome }}
 		{{ .Site.Params.TitleSuffix }}
 		{{ else if eq .Section "post" }}
 		{{ .Title }}
@@ -14,7 +14,7 @@
 
 	{{ if isset .Params "og_title" }}
 	<meta property="og:title" content="{{ .Params.og_title }}" />
-	{{ else if eq .RelPermalink "/" }}
+	{{ else if .IsHome }}
 	<meta property="og:title" content="{{ .Site.Params.TitleSuffix }}" />
 	{{ else if eq .Section "post" }}
 	<meta property="og:title" content="{{ .Title }}" />
@@ -56,7 +56,7 @@
 	{{ if .IsHome }}
 		{{ $canonicalURL = .Site.BaseURL | absURL }}
 	{{ end }}
-	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:url" content="{{ $canonicalURL }}">
 	<link rel="canonical" href="{{ $canonicalURL }}">
 	<meta property="og:site_name" content="{{ .Site.Params.SiteName }}">
 	{{ $ogImage := "" }}
@@ -75,7 +75,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	{{ if isset .Params "og_title" }}
 	<meta name="twitter:title" content="{{ .Params.og_title }}" />
-	{{ else if eq .RelPermalink "/" }}
+	{{ else if .IsHome }}
 	<meta name="twitter:title" content="{{ .Site.Params.TitleSuffix }}" />
 	{{ else if eq .Section "post" }}
 	<meta name="twitter:title" content="{{ .Title }}" />

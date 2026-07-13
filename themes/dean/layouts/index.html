@@ -58,15 +58,7 @@ I am an <a href="https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f
                 {{ .Title }}
             </h3>
         </a>
-        <p>
-        {{ if gt (len .Summary) 120 }}
-
-            {{slicestr .Summary 0 120|safeHTML}}...
-        {{ else }}
-            {{ .Summary|safeHTML }}
-        {{ end }}
-
-        </p>
+        <p>{{ .Summary | plainify | truncate 120 }}</p>
     </div>
     {{ end }}
 </div>
