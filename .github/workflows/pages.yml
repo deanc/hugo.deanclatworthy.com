@@ -17,8 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -47,12 +45,14 @@ jobs:
         with:
           path: |
             resources/_gen
-            ${{ env.HUGO_CACHEDIR }}
+            ${{ runner.temp }}/hugo_cache
           key: ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-${{ hashFiles('assets/**', 'config*.yml', 'config*.yaml', 'config*.toml', 'themes/**') }}
           restore-keys: |
             ${{ runner.os }}-hugo-${{ steps.hugo-version.outputs.version }}-resources-
 
       - name: Build
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
         run: hugo --minify --config config_prod.yml
 
       - name: Upload artifact
