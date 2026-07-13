@@ -45,7 +45,7 @@
 				{{ if eq .Section "post" }}
 				{{ template "_internal/disqus.html" . }}
 				{{ end }}
-			{{ partialCached "footer.html" . }}
+			{{ partial "footer.html" . }}
 			{{ if eq .Section "post" }}</div>{{ end }}
 	</body>
 </html>
