@@ -44,6 +44,7 @@
                 {{ end }}
 
                 {{ if $ele.vimeo_id }}
+                    {{ $preview := resources.Get (printf "img/portfolio/video-previews/%v.jpg" $ele.vimeo_id) }}
                     <div class="video-container">
                         <a
                             class="video-placeholder"
@@ -52,8 +53,25 @@
                             data-video-title="{{ $ele.title }}"
                             aria-label="Play video: {{ $ele.title }}"
                         >
-                            <span aria-hidden="true">▶</span>
-                            Play video
+                            {{ with $preview }}
+                                {{ $previewSmall := .Resize "480x webp q82" }}
+                                {{ $previewLarge := .Resize "640x webp q82" }}
+                                <img
+                                    class="video-preview"
+                                    src="{{ $previewLarge.RelPermalink }}"
+                                    srcset="{{ $previewSmall.RelPermalink }} 480w, {{ $previewLarge.RelPermalink }} 640w"
+                                    sizes="(max-width: 900px) calc(100vw - 40px), 780px"
+                                    width="{{ .Width }}"
+                                    height="{{ .Height }}"
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            {{ end }}
+                            <span class="video-placeholder-label">
+                                <span aria-hidden="true">▶</span>
+                                Play video
+                            </span>
                         </a>
                     </div>
                 {{ end }}
