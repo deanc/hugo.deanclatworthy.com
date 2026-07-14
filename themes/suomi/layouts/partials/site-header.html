@@ -1,0 +1,23 @@
+<a class="skip-link" href="#content">Skip to content</a>
+
+<header class="site-header page-width">
+  <a class="wordmark" href="{{ "/" | relURL }}" aria-label="Dean Clatworthy, homepage">Dean Clatworthy <span>/ Software architect &amp; engineer</span></a>
+  <div class="header-actions">
+    <nav aria-label="Primary navigation">
+      <a href="{{ "portfolio.html" | relURL }}"{{ if eq .RelPermalink "/portfolio.html" }} aria-current="page"{{ end }}>Work</a>
+      <a href="{{ "archive.html" | relURL }}"{{ if or (eq .RelPermalink "/archive.html") (eq .Section "post") }} aria-current="page"{{ end }}>Writing</a>
+      <a href="{{ "skills.html" | relURL }}"{{ if eq .RelPermalink "/skills.html" }} aria-current="page"{{ end }}>Skills</a>
+      <a href="{{ "about.html" | relURL }}"{{ if eq .RelPermalink "/about.html" }} aria-current="page"{{ end }}>About</a>
+      <a href="{{ "contact.html" | relURL }}"{{ if eq .RelPermalink "/contact.html" }} aria-current="page"{{ end }}>Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" data-theme-toggle>
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.7 8.7 0 1 0 20.2 15.3Z"/>
+      </svg>
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+      </svg>
+    </button>
+  </div>
+</header>

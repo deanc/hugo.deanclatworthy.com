@@ -1,0 +1,51 @@
+<div class="season-scene autumn-scene" role="img" aria-label="A rich Finnish autumn landscape with a red lakeside cottage, golden birches, deep blue water, northern lights and detailed leaves drifting from the canopy.">
+  {{ partial "scene-art.html" (dict "season" "autumn") }}
+
+  <svg class="aurora-layer aurora-layer-autumn" viewBox="0 0 1536 1024" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="autumn-aurora-green" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="#a7ffd4" stop-opacity="0"/>
+        <stop offset=".55" stop-color="#70e9ae" stop-opacity=".6"/>
+        <stop offset="1" stop-color="#a9ffd0" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="autumn-aurora-soft" x="-25%" y="-35%" width="150%" height="170%">
+        <feGaussianBlur stdDeviation="17"/>
+      </filter>
+    </defs>
+    <g class="aurora-ribbon aurora-ribbon-one" filter="url(#autumn-aurora-soft)">
+      <path d="M497 276c49-61 83-139 119-169-12 74-2 126 28 171-48-33-96-34-147-2Zm132 6c45-67 72-158 111-190-13 80-4 137 28 181-46-31-91-29-139 9Zm137-3c38-57 72-116 117-144-29 51-31 96-4 135-38-19-75-16-113 9Z" fill="url(#autumn-aurora-green)"/>
+    </g>
+    <path class="aurora-glow aurora-glow-autumn" d="M490 286c101-43 174-39 244-2 64 34 125 30 194-13" fill="none" stroke="#8df4ba" stroke-width="17" stroke-linecap="round" filter="url(#autumn-aurora-soft)"/>
+  </svg>
+
+  <svg class="scene-motion autumn-motion" viewBox="0 0 1536 1024" aria-hidden="true">
+    <defs>
+      <linearGradient id="leaf-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6ce58"/><stop offset=".55" stop-color="#de8f1e"/><stop offset="1" stop-color="#9b4e19"/></linearGradient>
+      <linearGradient id="leaf-ruska" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e98a31"/><stop offset=".55" stop-color="#c84c29"/><stop offset="1" stop-color="#74311f"/></linearGradient>
+      <linearGradient id="leaf-amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0b83e"/><stop offset=".6" stop-color="#cc6f20"/><stop offset="1" stop-color="#75401c"/></linearGradient>
+    </defs>
+    <g class="falling-leaf leaf-one" style="--leaf-x:150px;--leaf-y:-20px;--leaf-drift:95px;--leaf-sway:-30px;--leaf-fall:570px;--leaf-scale:1.5">
+      <g class="leaf-tumble"><path d="M0-12 3-9 6-10 7-6 11-4 9 0 11 3 7 5 5 9 1 8-2 12-5 8-9 7-9 3-12 0-9-4-7-8-3-9Z" fill="url(#leaf-gold)" stroke="#6b421b" stroke-width="1"/><path d="M-3 9 6-8M-1 5l-6-3M2 1l6 2M4-3l-5-3" fill="none" stroke="#8b5720" stroke-width=".75" stroke-linecap="round"/><path d="m-3 9-4 6" stroke="#60401f" stroke-width="1" stroke-linecap="round"/></g>
+    </g>
+    <g class="falling-leaf leaf-two" style="--leaf-x:335px;--leaf-y:-50px;--leaf-drift:-80px;--leaf-sway:42px;--leaf-fall:650px;--leaf-scale:1.25">
+      <g class="leaf-tumble"><path d="M0-11C7-10 11-5 10 2 9 8 4 11-2 10-8 9-11 4-9-2-7-8-4-10 0-11Z" fill="url(#leaf-ruska)" stroke="#64341c" stroke-width="1"/><path d="M-3 10 3-9M-1 5l-6-3M1 1l7-2M2-3l-5-3" fill="none" stroke="#843f1d" stroke-width=".75"/><path d="m-3 10-3 5" stroke="#64341c"/></g>
+    </g>
+    <g class="falling-leaf leaf-three" style="--leaf-x:1180px;--leaf-y:-25px;--leaf-drift:105px;--leaf-sway:-46px;--leaf-fall:610px;--leaf-scale:1.45">
+      <g class="leaf-tumble"><path d="M0-13 3-7 8-10 7-4 13-3 8 1 12 5 5 5 3 11 0 7-4 12-4 5-11 6-7 1-12-2-6-3-7-9-2-7Z" fill="url(#leaf-gold)" stroke="#74501e" stroke-width="1"/><path d="M0 8V-10M0 1l-8-3M0 1l9-3M0 5l-5 5M0 5l5 5" fill="none" stroke="#92611f" stroke-width=".75"/><path d="M0 8v7" stroke="#74501e"/></g>
+    </g>
+    <g class="falling-leaf leaf-four" style="--leaf-x:1390px;--leaf-y:-70px;--leaf-drift:-115px;--leaf-sway:38px;--leaf-fall:720px;--leaf-scale:1.2">
+      <g class="leaf-tumble"><path d="M0-12C6-11 10-7 10-1 10 6 6 11 0 12-6 11-10 6-10-1-10-7-6-11 0-12Z" fill="url(#leaf-ruska)" stroke="#653120" stroke-width="1"/><path d="M0 10V-10M0 3l-7-4M0 4l7-5M0-3l-5-4" fill="none" stroke="#843d25" stroke-width=".75"/><path d="M0 10v5" stroke="#653120"/></g>
+    </g>
+    <g class="falling-leaf leaf-five" style="--leaf-x:470px;--leaf-y:-90px;--leaf-drift:70px;--leaf-sway:-28px;--leaf-fall:490px;--leaf-scale:1">
+      <g class="leaf-tumble"><path d="M0-11 3-8 6-9 7-5 10-3 8 1 10 4 6 6 3 10 0 8-3 11-5 7-9 5-8 1-10-2-7-5-6-9-2-8Z" fill="url(#leaf-amber)" stroke="#72531f" stroke-width="1"/><path d="M-2 9 4-9M0 4l-6-2M1 1l6 2M2-3l-4-3" fill="none" stroke="#987126" stroke-width=".75"/><path d="m-2 9-3 5" stroke="#72531f"/></g>
+    </g>
+    <g class="falling-leaf leaf-six" style="--leaf-x:1020px;--leaf-y:-80px;--leaf-drift:-65px;--leaf-sway:32px;--leaf-fall:520px;--leaf-scale:1.1">
+      <g class="leaf-tumble"><path d="M0-12C7-10 11-5 10 2 9 8 4 11-2 10-8 9-11 4-9-2-7-8-4-11 0-12Z" fill="url(#leaf-amber)" stroke="#673b19" stroke-width="1"/><path d="M-3 10 3-10M-1 6l-6-4M1 2l7-2M2-3l-5-3" fill="none" stroke="#8a4c1c" stroke-width=".75"/><path d="m-3 10-3 5" stroke="#673b19"/></g>
+    </g>
+
+    <g stroke-width="7">
+      <path class="smoke autumn-smoke" d="M560 505c-17-22 14-33 2-56-11-22 5-34 19-48"/>
+      <path class="smoke autumn-smoke smoke-late" d="M560 505c-17-22 14-33 2-56-11-22 5-34 19-48"/>
+    </g>
+  </svg>
+</div>

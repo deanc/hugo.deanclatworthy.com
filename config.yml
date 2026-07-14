@@ -17,7 +17,7 @@ disableKinds: ["taxonomy"]
 
 Params:
   SiteName: DeanClatworthy.com
-  TitleSuffix: Dean Clatworthy | Web Developer
+  TitleSuffix: Dean Clatworthy | Software Architect & Engineer
   Tagline: "I build web services for a living. <code>Full-stack</code>, <code>Cloud</code>, <code>Databases</code>"
   Author:
     Name: Dean Clatworthy

@@ -1,0 +1,87 @@
+{{ define "main" }}
+<article class="portfolio-page page-width">
+  <header class="page-heading">
+    <p class="eyebrow">Selected work</p>
+    <h1>{{ .Title }}</h1>
+    <div class="page-intro prose">{{ .Content }}</div>
+  </header>
+
+  <div class="project-list">
+    {{ range hugo.Data.portfolio.items }}
+      {{ if .visible }}
+      <section class="project" id="project-{{ .id }}">
+        <div class="project-heading">
+          <h2>{{ .title }}</h2>
+          {{ with .agency }}<p>{{ . }}</p>{{ end }}
+        </div>
+        <div class="project-body">
+          <div class="prose">{{ .description | markdownify }}</div>
+          {{ with .technologies }}
+          <ul class="technology-list" aria-label="Technologies used">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+          {{ with .awards }}
+          <p class="project-awards"><strong>Awards:</strong> {{ range $index, $award := . }}{{ if $index }}, {{ end }}<a href="{{ $award.url }}">{{ $award.name }}</a>{{ end }}</p>
+          {{ end }}
+          {{ if .vimeo_id }}
+          {{ $preview := resources.Get (printf "img/portfolio/video-previews/%v.jpg" .vimeo_id) }}
+          <div class="video-container">
+            <a
+              class="video-placeholder"
+              href="https://vimeo.com/{{ .vimeo_id }}"
+              data-vimeo-id="{{ .vimeo_id }}"
+              data-video-title="{{ .title }}"
+              aria-label="Play video: {{ .title }}"
+            >
+              {{ with $preview }}
+                {{ $previewSmall := .Resize "480x webp q82" }}
+                {{ $previewLarge := .Resize "800x webp q82" }}
+                <img
+                  class="video-preview"
+                  src="{{ $previewLarge.RelPermalink }}"
+                  srcset="{{ $previewSmall.RelPermalink }} 480w, {{ $previewLarge.RelPermalink }} 800w"
+                  sizes="(max-width: 720px) calc(100vw - 32px), 690px"
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                >
+              {{ end }}
+              <span class="video-placeholder-label">
+                <span class="video-play-icon" aria-hidden="true">▶</span>
+                Play video
+              </span>
+            </a>
+          </div>
+          {{ end }}
+          {{ with .thumbnails }}
+          <div class="project-images">
+            {{ range $index, $thumb := . }}
+            <a href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}" target="_blank" rel="noopener">
+              <img src="{{ $thumb }}" alt="Project screenshot {{ add $index 1 }}" loading="lazy" decoding="async">
+            </a>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <details class="other-projects">
+    <summary>Earlier projects</summary>
+    <ul>
+      {{ range hugo.Data.portfolio_other.items }}
+      <li{{ with .id }} id="project-{{ . }}"{{ end }}><strong>{{ .title }}</strong> — {{ .description }}</li>
+      {{ end }}
+    </ul>
+  </details>
+</article>
+
+{{ with resources.Get "js/video-embed.js" | minify | fingerprint }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ end }}

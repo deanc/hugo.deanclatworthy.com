@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="listing-page page-width">
+  <header class="page-heading">
+    <p class="eyebrow">Writing</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-intro">Notes on software, systems, the web and life in Finland.</p>
+  </header>
+  <div class="archive-years">
+    {{ range ((where (where .Site.RegularPages "Draft" false) "Section" "post").GroupByPublishDate "2006") }}
+    <section class="archive-year" aria-labelledby="year-{{ .Key }}">
+      <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
+      <div class="archive-list">
+        {{ range .Pages }}
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan" }}</time>
+          <span>{{ .Title }}</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

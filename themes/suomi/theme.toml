@@ -1,0 +1,10 @@
+name = "Suomi"
+license = "MIT"
+description = "A lightweight Finland-inspired theme for DeanClatworthy.com"
+homepage = "https://deanclatworthy.com"
+tags = ["portfolio", "minimal", "responsive", "finland"]
+features = ["animated seasonal scenes", "minimal page-specific javascript", "responsive inner pages"]
+
+[author]
+name = "Dean Clatworthy"
+homepage = "https://deanclatworthy.com"

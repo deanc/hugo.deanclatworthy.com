@@ -1,0 +1,51 @@
+<div class="season-scene winter-scene" role="img" aria-label="A luminous Finnish winter landscape with a warm red lakeside cottage, snow-covered pines, a frozen lake, northern lights and gently falling detailed snowflakes.">
+  {{ partial "scene-art.html" (dict "season" "winter") }}
+
+  <svg class="aurora-layer aurora-layer-winter" viewBox="0 0 1536 1024" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="winter-aurora-green" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="#9fffd0" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#75f6b8" stop-opacity=".72"/>
+        <stop offset="1" stop-color="#b8ffd5" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="winter-aurora-violet" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="#d8b4ff" stop-opacity="0"/>
+        <stop offset=".58" stop-color="#c792ef" stop-opacity=".42"/>
+        <stop offset="1" stop-color="#a5e8ff" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="winter-aurora-soft" x="-20%" y="-30%" width="140%" height="160%">
+        <feGaussianBlur stdDeviation="15"/>
+      </filter>
+    </defs>
+    <g class="aurora-ribbon aurora-ribbon-one" filter="url(#winter-aurora-soft)">
+      <path d="M402 299C442 243 463 151 501 128c-18 70-19 126 9 176-38-37-70-32-108-5Zm123 11c48-69 71-181 107-215-12 95-6 157 30 218-50-49-91-38-137-3Zm145 5c51-69 75-169 117-205-17 92-9 153 25 199-45-36-91-31-142 6Z" fill="url(#winter-aurora-green)"/>
+    </g>
+    <g class="aurora-ribbon aurora-ribbon-two" filter="url(#winter-aurora-soft)">
+      <path d="M731 315c44-68 71-167 107-199-10 79-1 139 28 181 45-75 82-136 132-169-38 65-43 117-22 160 46-54 84-79 132-91-50 37-76 73-87 109-106-27-205-24-310 9Z" fill="url(#winter-aurora-violet)"/>
+    </g>
+    <path class="aurora-glow aurora-glow-winter" d="M390 306c122-55 204-46 287 1 73 42 161 38 248-4 70-33 122-71 196-105" fill="none" stroke="#91ffd0" stroke-width="20" stroke-linecap="round" filter="url(#winter-aurora-soft)"/>
+  </svg>
+
+  <svg class="scene-motion winter-motion" viewBox="0 0 1536 1024" aria-hidden="true">
+    <defs>
+      <g id="winter-flake-shape" fill="none" stroke="#f8fdff" stroke-width="1.8" stroke-linecap="round">
+        <path d="M0-9V9M-8-4.5 8 4.5M-8 4.5 8-4.5"/>
+        <path d="m0-9-2.5 3M0-9l2.5 3M0 9l-2.5-3M0 9l2.5-3M-8-4.5l4 .2M-8-4.5l1.8 3.5M8 4.5l-4-.2M8 4.5 6.2 1M-8 4.5l4-.2M-8 4.5-6.2 1M8-4.5l-4 .2M8-4.5 6.2-1"/>
+      </g>
+    </defs>
+
+    <use href="#winter-flake-shape" class="snowflake snowflake-one"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-two"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-three"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-four"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-five"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-six"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-seven"/>
+    <use href="#winter-flake-shape" class="snowflake snowflake-eight"/>
+
+    <g stroke-width="8">
+      <path class="smoke winter-smoke" d="M560 505c-17-22 14-33 2-56-11-22 5-34 19-48"/>
+      <path class="smoke winter-smoke smoke-late" d="M560 505c-17-22 14-33 2-56-11-22 5-34 19-48"/>
+    </g>
+  </svg>
+</div>
