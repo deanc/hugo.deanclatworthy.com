@@ -66,6 +66,11 @@ designed in such a way that it's easily maintained and modified, that it scales 
 problems that may occur further down the line. Having had many years of experience I have learnt to identify very early
 on in the life cycle of a project what potential pitfalls might occur and address the risks before they happen.
 
+## 🤖 AI & agentic development
+
+I have hands-on experience using large language models (LLMs) through agent harnesses, with a comprehensive understanding
+of how to design and build effective, reusable agent skills and workflows.
+
 ## 📦 Misc
 
 #### Mobile application development
