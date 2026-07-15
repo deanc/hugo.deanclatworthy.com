@@ -712,7 +712,25 @@ a { color: inherit; }
 .link-list a:hover span:first-child,
 .link-list a:focus-visible span:first-child { text-decoration: underline; }
 
-.link-list a span:last-child { font-size: 30px; }
+.link-list a > span:last-child { font-size: 30px; }
+
+.unpublished-label {
+  display: inline-flex;
+  align-items: center;
+  margin-left: .35em;
+  padding: .2em .5em;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  background: var(--soft);
+  color: var(--ink);
+  font-size: .55em;
+  font-weight: 650;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
 
 .link-list .section-all-link {
   min-height: 58px;
