@@ -69,11 +69,41 @@
             </a>
           </div>
           {{ end }}
+          {{ $projectTitle := .title }}
           {{ with .thumbnails }}
           <div class="project-images">
             {{ range $index, $thumb := . }}
-            <a href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}" target="_blank" rel="noopener">
-              <img src="{{ $thumb }}" alt="Project screenshot {{ add $index 1 }}" loading="lazy" decoding="async">
+            <a
+              href="{{ replace $thumb "-thumbnail.jpg" ".jpg" }}"
+              target="_blank"
+              rel="noopener"
+              data-image-dialog-trigger
+              aria-haspopup="dialog"
+              aria-controls="portfolio-image-dialog"
+            >
+              {{ with resources.Get (strings.TrimPrefix "/" $thumb) }}
+                {{ $smallAvif := .Resize "240x avif q58" }}
+                {{ $largeAvif := .Resize "400x avif q58" }}
+                {{ $smallWebp := .Resize "240x webp q76" }}
+                {{ $largeWebp := .Resize "400x webp q76" }}
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="{{ $smallAvif.RelPermalink }} 240w, {{ $largeAvif.RelPermalink }} 400w"
+                    sizes="(max-width: 480px) calc(100vw - 32px), (max-width: 760px) calc((100vw - 42px) / 2), 224px"
+                  >
+                  <img
+                    src="{{ $largeWebp.RelPermalink }}"
+                    srcset="{{ $smallWebp.RelPermalink }} 240w, {{ $largeWebp.RelPermalink }} 400w"
+                    sizes="(max-width: 480px) calc(100vw - 32px), (max-width: 760px) calc((100vw - 42px) / 2), 224px"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="{{ $projectTitle }} screenshot {{ add $index 1 }}"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
+              {{ end }}
             </a>
             {{ end }}
           </div>
@@ -107,7 +137,22 @@
   </details>
 </article>
 
+<dialog
+  id="portfolio-image-dialog"
+  class="image-dialog"
+  data-image-dialog
+  aria-label="Project image preview"
+>
+  <form method="dialog">
+    <button class="image-dialog-close" type="submit" aria-label="Close image preview">&times;</button>
+  </form>
+  <img alt="">
+</dialog>
+
 {{ with resources.Get "js/video-embed.js" | minify | fingerprint }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ with resources.Get "js/image-dialog.js" | minify | fingerprint }}
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 {{ end }}

@@ -87,17 +87,25 @@ function currentDayPhase(now = new Date()) {
   return "night";
 }
 
+function responsiveSrcset(stem, format) {
+  return `${stem}-720.${format} 720w, ${stem}-1100.${format} 1100w, ${stem}.${format} 1536w`;
+}
+
 function setLayerSource(layer, stack, phase) {
   const source = layer.querySelector("source");
   const image = layer.querySelector("img");
-  source.srcset = stack.dataset[`${phase}Avif`];
-  image.src = stack.dataset[`${phase}Webp`];
+  const stem = stack.dataset[`${phase}Stem`];
+  source.srcset = responsiveSrcset(stem, "avif");
+  image.srcset = responsiveSrcset(stem, "webp");
+  image.src = `${stem}.webp`;
   return image;
 }
 
 function clearLayer(layer) {
   layer.querySelector("source").removeAttribute("srcset");
-  layer.querySelector("img").removeAttribute("src");
+  const image = layer.querySelector("img");
+  image.removeAttribute("srcset");
+  image.removeAttribute("src");
   delete layer.dataset.phase;
 }
 

@@ -3,28 +3,36 @@
 {{- $dawnStem := printf "img/finland-%s-scene-dawn-wide" $season -}}
 {{- $duskStem := printf "img/finland-%s-scene-dusk-wide" $season -}}
 {{- $nightStem := printf "img/finland-%s-scene-night-wide" $season -}}
+{{- $sizes := "(max-width: 720px) calc(100vw - 32px), min(calc(100vw - 54px), 1080px)" -}}
 <div class="scene-art-stack"
   data-season="{{ $season }}"
-  data-dawn-avif="{{ printf "%s.avif" $dawnStem | relURL }}"
-  data-dawn-webp="{{ printf "%s.webp" $dawnStem | relURL }}"
-  data-day-avif="{{ printf "%s.avif" $dayStem | relURL }}"
-  data-day-webp="{{ printf "%s.webp" $dayStem | relURL }}"
-  data-dusk-avif="{{ printf "%s.avif" $duskStem | relURL }}"
-  data-dusk-webp="{{ printf "%s.webp" $duskStem | relURL }}"
-  data-night-avif="{{ printf "%s.avif" $nightStem | relURL }}"
-  data-night-webp="{{ printf "%s.webp" $nightStem | relURL }}">
+  data-dawn-stem="{{ $dawnStem | relURL }}"
+  data-day-stem="{{ $dayStem | relURL }}"
+  data-dusk-stem="{{ $duskStem | relURL }}"
+  data-night-stem="{{ $nightStem | relURL }}">
   <picture class="scene-art scene-art-layer is-visible" aria-hidden="true">
-    <source type="image/avif">
-    <img width="1536" height="1024" alt="" decoding="async">
+    <source type="image/avif" sizes="{{ $sizes }}">
+    <img width="1536" height="1024" sizes="{{ $sizes }}" alt="" decoding="async">
   </picture>
   <picture class="scene-art scene-art-layer" aria-hidden="true">
-    <source type="image/avif">
-    <img width="1536" height="1024" alt="" decoding="async">
+    <source type="image/avif" sizes="{{ $sizes }}">
+    <img width="1536" height="1024" sizes="{{ $sizes }}" alt="" decoding="async">
   </picture>
 </div>
 <noscript>
   <picture class="scene-art" aria-hidden="true">
-    <source srcset="{{ printf "%s.avif" $dayStem | relURL }}" type="image/avif">
-    <img src="{{ printf "%s.webp" $dayStem | relURL }}" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+    <source
+      srcset="{{ printf "%s-720.avif 720w, %s-1100.avif 1100w, %s.avif 1536w" ($dayStem | relURL) ($dayStem | relURL) ($dayStem | relURL) }}"
+      sizes="{{ $sizes }}"
+      type="image/avif">
+    <img
+      src="{{ printf "%s.webp" $dayStem | relURL }}"
+      srcset="{{ printf "%s-720.webp 720w, %s-1100.webp 1100w, %s.webp 1536w" ($dayStem | relURL) ($dayStem | relURL) ($dayStem | relURL) }}"
+      sizes="{{ $sizes }}"
+      width="1536"
+      height="1024"
+      alt=""
+      loading="lazy"
+      decoding="async">
   </picture>
 </noscript>
