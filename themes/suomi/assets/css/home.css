@@ -968,6 +968,19 @@ a { color: inherit; }
   }
 }
 
+@media (min-width: 721px) and (max-width: 900px) {
+  .wordmark {
+    line-height: 1.12;
+  }
+
+  .wordmark span {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 720px) {
   .page-width { width: min(100% - 32px, var(--page)); }
 
@@ -1042,11 +1055,14 @@ a { color: inherit; }
   .project-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 540px) {
   .site-header { display: block; }
   .header-actions { align-items: flex-start; margin-top: 16px; }
   .site-header nav { flex: 1; flex-wrap: wrap; justify-content: flex-start; }
   .theme-toggle { width: 34px; height: 34px; margin-top: -7px; }
+}
+
+@media (max-width: 460px) {
   .wide-only { display: none; }
   .season-picker {
     top: 8px;
