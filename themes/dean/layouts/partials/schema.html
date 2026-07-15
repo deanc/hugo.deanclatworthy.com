@@ -1,7 +1,7 @@
 {{- $siteURL := .Site.BaseURL -}}
 {{- $siteName := or .Site.Params.SiteName .Site.Title -}}
 {{- $authorName := or .Site.Params.Author.Name .Site.Title -}}
-{{- $defaultDescription := .Site.Params.Tagline | plainify | strings.TrimSpace -}}
+{{- $defaultDescription := .Site.Params.MetaDescription | default .Site.Params.Tagline | plainify | strings.TrimSpace -}}
 
 {{- if .IsHome -}}
   {{- $sameAs := slice -}}

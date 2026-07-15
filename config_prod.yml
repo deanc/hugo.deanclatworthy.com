@@ -15,8 +15,9 @@ markup:
 disableKinds: ["taxonomy"]
 
 Params:
-  SiteName: DeanClatworthy.com
+  SiteName: Dean Clatworthy
   TitleSuffix: Dean Clatworthy | Software Architect & Engineer
+  MetaDescription: "Dean Clatworthy is a software architect and engineer in Helsinki, building dependable web services and thoughtful digital products."
   Tagline: "I build web services for a living. <code>Full-stack</code>, <code>Cloud</code>, <code>Databases</code>"
   Author:
     Name: Dean Clatworthy
