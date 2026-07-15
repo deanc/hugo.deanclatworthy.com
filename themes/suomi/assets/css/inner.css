@@ -445,6 +445,62 @@
 .prose button:hover { background: var(--surface); color: var(--ink); }
 .sadfasdf { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 
+.contact-socials {
+  max-width: 680px;
+  margin-top: 64px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ink);
+}
+
+.contact-socials .contact-socials-label {
+  margin: 0 0 9px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contact-socials h2 {
+  margin: 0 0 24px;
+  font-size: clamp(30px, 4vw, 40px);
+}
+
+.contact-social-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.prose .contact-social-links a {
+  display: flex;
+  min-height: 108px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--soft);
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.prose .contact-social-links a:hover,
+.prose .contact-social-links a:focus-visible {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.contact-social-links strong,
+.contact-social-links small { display: block; }
+.contact-social-links strong { font-size: 20px; }
+.contact-social-links small { margin-top: 3px; color: var(--muted); font-size: 14px; }
+.contact-social-links a > span:last-child { font-size: 25px; }
+
+@media (max-width: 520px) {
+  .contact-social-links { grid-template-columns: 1fr; }
+}
+
 /* Skills */
 
 .skills-page {

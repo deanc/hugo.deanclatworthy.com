@@ -4,7 +4,7 @@
 {{ else }}
 <article class="prose-page page-width{{ if eq .Section "post" }} article-page{{ end }}">
   <header class="page-heading">
-    <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}Dean Clatworthy{{ end }}</p>
+    <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}{{ with .Params.eyebrow }}{{ . }}{{ else }}Dean Clatworthy{{ end }}{{ end }}</p>
     <h1>{{ .Title }}</h1>
     {{ if eq .Section "post" }}
     <div class="article-meta">

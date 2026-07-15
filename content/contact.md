@@ -1,6 +1,7 @@
 ---
 date: "2015-10-14T14:10:32+03:00"
 title: "Contact"
+eyebrow: "Get in touch"
 emoji: "✉️"
 description: "Please get in touch if you have any enquiries about my work availability or pretty much anything."
 menu:
@@ -10,7 +11,7 @@ menu:
 ---
 
 
-To get in touch with me, you can fill in the form below, or try and [tweet me](http://twitter.com/deanclatworthy).
+To get in touch, fill in the form below and I’ll get back to you.
 
 <!-- <iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://deanclatworthy.wufoo.com/embed/z1ebrzqu0rxgi74/def/&header=hide"></iframe> -->
 
@@ -25,3 +26,18 @@ To get in touch with me, you can fill in the form below, or try and [tweet me](h
   <button id="my-form-button">Submit</button>
   <p id="my-form-status"></p>
 </form>
+
+<section class="contact-socials" aria-labelledby="contact-socials-title">
+  <p class="contact-socials-label">Elsewhere</p>
+  <h2 id="contact-socials-title">Connect with me online.</h2>
+  <div class="contact-social-links">
+    <a href="https://www.linkedin.com/in/deanclatworthy/" rel="noopener" target="_blank">
+      <span><strong>LinkedIn</strong><small>Professional profile</small></span>
+      <span aria-hidden="true">↗</span>
+    </a>
+    <a href="https://x.com/deanclatworthy" rel="noopener" target="_blank">
+      <span><strong>X</strong><small>@deanclatworthy</small></span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>

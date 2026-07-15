@@ -1,5 +1,6 @@
 ---
 title: "About me"
+eyebrow: "Profile"
 description: "Software architect and engineer in Helsinki, building dependable web services and thoughtful digital products."
 ---
 
