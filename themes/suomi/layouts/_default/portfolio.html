@@ -28,7 +28,14 @@
           </ul>
           {{ end }}
           {{ with .awards }}
-          <p class="project-awards"><strong>Awards:</strong> {{ range $index, $award := . }}{{ if $index }}, {{ end }}<a href="{{ $award.url }}">{{ $award.name }}</a>{{ end }}</p>
+          <div class="project-awards">
+            <strong>Project awards</strong>
+            <ul>
+              {{ range . }}
+              <li><a href="{{ .url }}" rel="noopener" target="_blank"><span aria-hidden="true">★</span>{{ .name }}<span aria-hidden="true">↗</span></a></li>
+              {{ end }}
+            </ul>
+          </div>
           {{ end }}
           {{ if .vimeo_id }}
           {{ $preview := resources.Get (printf "img/portfolio/video-previews/%v.jpg" .vimeo_id) }}
@@ -76,6 +83,19 @@
       {{ end }}
     {{ end }}
   </div>
+
+  <section class="portfolio-linkedin" aria-labelledby="portfolio-linkedin-title">
+    <div>
+      <p class="eyebrow">LinkedIn</p>
+      <h2 id="portfolio-linkedin-title">Let&rsquo;s stay connected.</h2>
+    </div>
+    <div>
+      <p>Follow what I&rsquo;m working on, keep in touch or start a conversation with me on LinkedIn.</p>
+      <a class="primary-action" href="https://www.linkedin.com/in/deanclatworthy/" rel="noopener" target="_blank">
+        Connect on LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
 
   <details class="other-projects">
     <summary>Earlier projects</summary>

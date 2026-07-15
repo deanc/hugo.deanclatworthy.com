@@ -344,7 +344,48 @@
 .technology-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; padding: 0; list-style: none; }
 .technology-list li { padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
 .project-link { text-underline-offset: 3px; }
-.project-awards { font-size: 16px; }
+.project-awards {
+  margin-top: 28px;
+  padding: 17px 18px 18px;
+  border-left: 3px solid var(--ink);
+  border-radius: 0 4px 4px 0;
+  background: var(--soft);
+}
+
+.project-awards > strong {
+  display: block;
+  margin-bottom: 11px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.project-awards ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-awards a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 14px;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.project-awards a:hover,
+.project-awards a:focus-visible { border-color: var(--ink); }
+.project-awards a span:first-child { font-size: 11px; }
+.project-awards a span:last-child { color: var(--muted); font-size: 12px; }
 .video-container {
   position: relative;
   height: 0;
@@ -417,6 +458,36 @@
 }
 .project-images { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 26px; }
 .project-images img { display: block; width: 100%; height: auto; border-radius: 3px; }
+
+.portfolio-linkedin {
+  display: grid;
+  grid-template-columns: minmax(210px, .7fr) minmax(0, 1.6fr);
+  gap: clamp(40px, 7vw, 90px);
+  align-items: end;
+  margin-top: clamp(54px, 8vw, 88px);
+  padding: clamp(38px, 5vw, 52px) 0;
+  border-block: 1px solid var(--ink);
+}
+
+.portfolio-linkedin .eyebrow { margin-bottom: 14px; }
+
+.portfolio-linkedin h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 45px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.portfolio-linkedin > div:last-child > p {
+  max-width: 590px;
+  margin: 0 0 23px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.portfolio-linkedin .primary-action { gap: 12px; }
 
 .other-projects { margin-top: 46px; border: 1px solid var(--ink); border-radius: 4px; }
 .other-projects summary { padding: 18px 22px; cursor: pointer; font-weight: 650; }
@@ -662,6 +733,12 @@
   .project-heading,
   .project-body { min-width: 0; }
   .project-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .portfolio-linkedin {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    align-items: start;
+  }
 
   .skills-index ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .skill-card {

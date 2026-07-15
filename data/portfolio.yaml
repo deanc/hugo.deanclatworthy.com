@@ -51,8 +51,11 @@ items:
     title: "AdCouncil: BecauseOfYou"
     agency: hasan & partners / TBD
     description: >
-      In collaboration with TBD agency in San Fransisco, I developed the website for this anti-bullying campaign.
+      In collaboration with TBD agency in San Francisco, I developed the website for this anti-bullying campaign.
     technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
+    awards:
+      - name: INDIE Award — Public Good
+        url: https://www.linkedin.com/posts/tbdadvertising_gotbd-becauseofyou-bullyingprevention-activity-6595731736968212480-1zrp
     visible: true
   - id: sheboard
     title: "Plan Finland: Sheboard"
@@ -62,6 +65,9 @@ items:
       keyboard app which adjusts the language you use to talk about girls. For this project I developed the website for the
       campaign (not the app).
     technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
+    awards:
+      - name: PR Bronze Lion at Cannes Lions
+        url: https://www.plan-international.fr/actualites/une-nouvelle-application-pour-smartphones-le-clavier-intuitif-qui-lutte-contre-les-stereotypes-de-genre/
     visible: true
   - id: kone_machine_conversations_part_2
     title: "KONE: Machine Conversations (Part 2)"
@@ -82,7 +88,7 @@ items:
     description: >
       Our pitch was to bring KONE's 24/7 connected services offering to life
       in the form of converting the messages sent by their elevators into a live chat between the elevator
-      and KONE's Cloud maintenance. This was a huge undertaking involving close liason with KONE's R&D team.
+      and KONE's Cloud maintenance. This was a huge undertaking involving close liaison with KONE's R&D team.
 
 
       Messages are forwarded from IBM Bluemix to a listening service which stores all messages and adds them into
@@ -100,6 +106,15 @@ items:
       message might be: `Arrived on floor elevator.stop_floor. Travel took elevator.duration seconds.` This allows
       us to generate an unlimited amount of variation of content for the chat.
     technologies: [PHP, MySQL, NodeJS, HTML5, CSS, JS, AWS S3, AWS SQS, IBM Bluemix Cloud]
+    awards:
+      - name: Grand One Grand Prix 2018
+        url: https://2018.grandone.fi/
+      - name: Effie Finland Gold 2017
+        url: https://effie.org/pt/news/effie-awards-finland-2017-koskenkorva-and-altia-win-grand-effie/
+      - name: Epica Gold 2017
+        url: https://www.markves.com/about
+      - name: Eurobest Bronze 2017
+        url: https://www.markves.com/about
     vimeo_id: 262703629
     emoji: ↕️
     visible: true
@@ -109,7 +124,7 @@ items:
     description: >
       Similar to the Fazer Chocolate Hunt project, we utilised a database of outdoor shelter
       locations to create pins on a map that people and their families could visit during the winter months leading up
-      to the world skiijumping championships - in order to claim the chance to win a range of prizes.
+      to the world ski jumping championships - in order to claim the chance to win a range of prizes.
     technologies: [PHP, MySQL, HTML5, CSS, Javascript]
     visible: true
   - id: fazer_chocolate_hunt
@@ -138,12 +153,16 @@ items:
 
 
       We also created a banner which was featured on the front-page of many of Finland’s most popular websites, allowing
-      people to complaint about their day - and be emailed a free cruise by moderators if the complaint was interesting.
+      people to complain about their day - and be emailed a free cruise by moderators if the complaint was interesting.
       The banner served millions of views over the course of 5 days.
     technologies: [PHP, MySQL, HTML5, CSS, Javascript, AWS]
     awards:
       - name: Best Ads on TV
         url: http://www.bestadsontv.com/ad/78182/Tallink-Silja-Complaints-Booth
+      - name: Grand One Gold 2016 — Digital Outdoor
+        url: https://jussipekkala.com/about/
+      - name: Vuoden Huiput Silver — Integrated
+        url: https://jussipekkala.com/about/
     vimeo_id: 162279513
     visible: true
   - id: metsa_plan_b
@@ -153,6 +172,15 @@ items:
       I created a static website, built using Jekyll, to showcase for potential Metsä customers how iconic structures might
       look and function if they were built out of wood.
     technologies: [Jekyll, MySQL, HTML5, CSS, Javascript]
+    awards:
+      - name: Effie Finland Silver 2015
+        url: https://www.metsagroup.com/metsawood/news-and-publications/news/2015/plan-b-campaign-wins-silver-in-effie-awards-finland/
+      - name: Epica Bronze 2015
+        url: https://winners.epica-awards.com/2015/winner/56-02787-DIG/hasan-partners/metsa-wood-plan-b
+      - name: Eurobest Bronze 2015
+        url: https://awards.eurobest.com/winners/2015/pr/entry.cfm?entryid=2434&award=0
+      - name: 2× Vuoden Huiput Silver 2015
+        url: https://fi.linkedin.com/in/salla-tuomi-a1ba0640
     thumbnails: [/img/portfolio/metsa-planb/metsa-planb-1-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-2-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-3-thumbnail.jpg]
     visible: true
   - id: hasan_eurobest
@@ -178,7 +206,7 @@ items:
     title: "Plan: Sponsor of dreams installation"
     agency: hasan & partners
     description: >
-      I created an integrated installation for Plan: Finland in Finland's most busiest shopping mall
+      I created an integrated installation for Plan: Finland in Finland's busiest shopping mall
       which allows users to donate money into a box, and upon a successful donation it takes their photo. Photos are then displayed
       in a loop on the installation when a user is not activating it, and also on all other digiscreens around the shopping mall.
     technologies: [PHP, MySQL, HTML5, CSS, Javascript, Motion tracking]
@@ -212,7 +240,7 @@ items:
     title: "Plan Finland: Girls Day Printer"
     agency: hasan & partners
     description: >
-      We were asked to create a campaign where every time an SMS donation is receieved, or the
+      We were asked to create a campaign where every time an SMS donation is received, or the
       website is shared using Facebook or tweeted, a tiny receipt printer in downtown Helsinki will print a few words of the
       80,000 word report that is released every "Girls Day" by Plan Finland. This required integration from a website that I
       was responsible for constructing and a printer software created by [Perfect Fools](http://perfectfools.se).
@@ -251,7 +279,7 @@ items:
     thumbnails: [/img/portfolio/rovio-absw/rovio-absw-1-thumbnail.jpg, /img/portfolio/rovio-absw/rovio-absw-2-thumbnail.jpg]
     visible: true
   - id: iitala_store
-    title: "Iitala: Online web store"
+    title: "Iittala: Online web store"
     agency: Luxus
     description: >
       Front end implementation for the Iittala online webstore. This involved a lengthy process of converting
@@ -259,4 +287,3 @@ items:
       was a great success as one of the first responsive webstores for a leading Finnish brand.
     thumbnails: [/img/portfolio/iittala/iittala-1-thumbnail.jpg, /img/portfolio/iittala/iittala-2-thumbnail.jpg, /img/portfolio/iittala/iittala-3-thumbnail.jpg, /img/portfolio/iittala/iittala-4-thumbnail.jpg, /img/portfolio/iittala/iittala-5-thumbnail.jpg, /img/portfolio/iittala/iittala-6-thumbnail.jpg]
     visible: true
-
