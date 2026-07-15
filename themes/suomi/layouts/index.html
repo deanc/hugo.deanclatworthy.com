@@ -38,8 +38,7 @@
           </fieldset>
         </div>
 
-        {{- if hugo.IsServer }}
-        <div class="day-phase-picker" data-day-phase-picker aria-label="Development lighting preview">
+        <div class="day-phase-picker" data-day-phase-picker aria-label="Choose time of day">
           <span>Light</span>
           <button type="button" data-phase="auto" aria-pressed="true">Auto</button>
           <button type="button" data-phase="dawn" aria-pressed="false">Dawn</button>
@@ -47,7 +46,6 @@
           <button type="button" data-phase="dusk" aria-pressed="false">Dusk</button>
           <button type="button" data-phase="night" aria-pressed="false">Night</button>
         </div>
-        {{- end }}
       </div>
     </section>
 
