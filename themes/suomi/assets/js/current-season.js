@@ -3,8 +3,13 @@ const phaseNames = ["dawn", "day", "dusk", "night"];
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const phasePicker = document.querySelector("[data-day-phase-picker]");
 const sceneWrap = document.querySelector(".scene-wrap");
+const sceneExperience = document.querySelector("[data-season-experience]");
+const sceneLoader = document.querySelector("[data-scene-loader]");
+const seasonInputs = [...document.querySelectorAll('input[name="season"]')];
 let manualPhase = null;
 let sceneInView = false;
+let seasonBusy = false;
+let loaderTimer;
 
 const helsinkiClock = new Intl.DateTimeFormat("en", {
   timeZone: "Europe/Helsinki",
@@ -96,8 +101,14 @@ function clearLayer(layer) {
   delete layer.dataset.phase;
 }
 
+async function imageIsReady(image) {
+  try { await image.decode(); } catch (_) { /* A failed decode is checked below. */ }
+  return image.complete && image.naturalWidth > 0;
+}
+
 async function showPhase(stack, phase, animate = true) {
-  if (!phaseNames.includes(phase) || stack.dataset.phase === phase) return;
+  if (!phaseNames.includes(phase)) return false;
+  if (stack.dataset.phase === phase) return true;
 
   const scene = stack.closest(".season-scene");
   const layers = [...stack.querySelectorAll(".scene-art-layer")];
@@ -111,8 +122,12 @@ async function showPhase(stack, phase, animate = true) {
   const image = setLayerSource(target, stack, phase);
   target.dataset.phase = phase;
 
-  try { await image.decode(); } catch (_) { /* The load event remains a safe fallback. */ }
-  if (stack.dataset.transitionToken !== token) return;
+  const loaded = await imageIsReady(image);
+  if (stack.dataset.transitionToken !== token) return false;
+  if (!loaded) {
+    clearLayer(target);
+    return false;
+  }
 
   stack.dataset.phase = phase;
   scene.dataset.dayPhase = phase;
@@ -124,7 +139,7 @@ async function showPhase(stack, phase, animate = true) {
       next.classList.remove("is-visible");
       clearLayer(next);
     }
-    return;
+    return true;
   }
 
   stack.classList.add("is-transitioning");
@@ -139,17 +154,84 @@ async function showPhase(stack, phase, animate = true) {
       stack.classList.remove("is-transitioning");
     }
   }, 1900);
+  return true;
+}
+
+function stackForSeason(season) {
+  return document.querySelector(`.scene-art-stack[data-season="${season}"]`);
 }
 
 function activeStack() {
   const selected = document.querySelector('input[name="season"]:checked');
-  return document.querySelector(`.scene-art-stack[data-season="${selected.id.replace("season-", "")}"]`);
+  return stackForSeason(selected.id.replace("season-", ""));
 }
 
 function refreshTime(animate = true) {
   const phase = manualPhase || currentDayPhase();
   document.documentElement.dataset.dayPhase = phase;
-  showPhase(activeStack(), phase, animate && sceneInView && !document.hidden);
+  return showPhase(activeStack(), phase, animate && sceneInView && !document.hidden);
+}
+
+function setSceneBusy(busy) {
+  seasonBusy = busy;
+  sceneWrap?.toggleAttribute("aria-busy", busy);
+  seasonInputs.forEach(input => { input.disabled = busy; });
+  phasePicker?.querySelectorAll("button").forEach(button => { button.disabled = busy; });
+}
+
+function queueLoader() {
+  clearTimeout(loaderTimer);
+  loaderTimer = setTimeout(() => { sceneLoader.hidden = false; }, 140);
+}
+
+function hideLoader() {
+  clearTimeout(loaderTimer);
+  sceneLoader.hidden = true;
+}
+
+function transitionToPanel(currentPanel, targetPanel) {
+  if (currentPanel === targetPanel) return Promise.resolve();
+
+  targetPanel.classList.add("is-transitioning-in");
+  if (reducedMotion.matches) return Promise.resolve();
+
+  return new Promise(resolve => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      targetPanel.classList.add("is-visible");
+      setTimeout(resolve, 950);
+    }));
+  });
+}
+
+async function selectSeason(input) {
+  const season = input.id.replace("season-", "");
+  const targetPanel = document.querySelector(`.season-panel-${season}`);
+  const currentPanel = document.querySelector(".season-panel.is-active");
+  if (targetPanel === currentPanel) return;
+
+  const phase = manualPhase || currentDayPhase();
+  const targetStack = stackForSeason(season);
+  const needsLoad = targetStack.dataset.phase !== phase;
+  const currentSeason = currentPanel.className.match(/season-panel-(winter|spring|summer|autumn)/)?.[1];
+
+  setSceneBusy(true);
+  if (needsLoad) queueLoader();
+  document.documentElement.dataset.dayPhase = phase;
+
+  const loaded = await showPhase(targetStack, phase, false);
+  hideLoader();
+
+  if (!loaded) {
+    document.querySelector(`#season-${currentSeason}`).checked = true;
+    setSceneBusy(false);
+    return;
+  }
+
+  await transitionToPanel(currentPanel, targetPanel);
+  currentPanel.classList.remove("is-active");
+  targetPanel.classList.add("is-active");
+  targetPanel.classList.remove("is-transitioning-in", "is-visible");
+  setSceneBusy(false);
 }
 
 function updateMotionState() {
@@ -169,6 +251,10 @@ const nowParts = clockParts();
 const automaticSeason = currentSeason(nowParts);
 const automaticSeasonInput = document.querySelector(`#season-${automaticSeason}`);
 automaticSeasonInput.checked = true;
+sceneExperience?.classList.add("is-enhanced");
+document.querySelectorAll(".season-panel").forEach(panel => {
+  panel.classList.toggle("is-active", panel.classList.contains(`season-panel-${automaticSeason}`));
+});
 refreshTime(false);
 
 if (sceneWrap && "IntersectionObserver" in window) {
@@ -182,8 +268,8 @@ if (sceneWrap && "IntersectionObserver" in window) {
   updateMotionState();
 }
 
-document.querySelectorAll('input[name="season"]').forEach(input => {
-  input.addEventListener("change", () => refreshTime(false));
+seasonInputs.forEach(input => {
+  input.addEventListener("change", () => selectSeason(input));
 });
 
 phasePicker?.addEventListener("click", event => {
@@ -195,11 +281,11 @@ phasePicker?.addEventListener("click", event => {
 });
 
 setInterval(() => {
-  if (!document.hidden) refreshTime();
+  if (!document.hidden && !seasonBusy) refreshTime();
 }, 60000);
 
 reducedMotion.addEventListener?.("change", updateMotionState);
 document.addEventListener("visibilitychange", () => {
   updateMotionState();
-  if (!document.hidden) refreshTime(sceneInView);
+  if (!document.hidden && !seasonBusy) refreshTime(sceneInView);
 });

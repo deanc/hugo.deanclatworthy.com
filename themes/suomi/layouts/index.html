@@ -21,12 +21,17 @@
       <a class="primary-action" href="{{ "contact.html" | relURL }}">Get in touch</a>
     </section>
 
-    <section class="season-experience page-width" aria-label="Interactive Finnish landscape through the seasons">
+    <section class="season-experience page-width" data-season-experience aria-label="Interactive Finnish landscape through the seasons">
       <div class="scene-wrap motion-paused">
-        <div class="season-panel season-panel-winter">{{ partial "winter-scene.html" . }}</div>
-        <div class="season-panel season-panel-spring">{{ partial "spring-scene.html" . }}</div>
-        <div class="season-panel season-panel-summer">{{ partial "summer-scene.html" . }}</div>
-        <div class="season-panel season-panel-autumn">{{ partial "autumn-scene.html" . }}</div>
+        <div class="season-panel season-panel-winter{{ if eq $currentSeason "winter" }} is-active{{ end }}">{{ partial "winter-scene.html" . }}</div>
+        <div class="season-panel season-panel-spring{{ if eq $currentSeason "spring" }} is-active{{ end }}">{{ partial "spring-scene.html" . }}</div>
+        <div class="season-panel season-panel-summer{{ if eq $currentSeason "summer" }} is-active{{ end }}">{{ partial "summer-scene.html" . }}</div>
+        <div class="season-panel season-panel-autumn{{ if eq $currentSeason "autumn" }} is-active{{ end }}">{{ partial "autumn-scene.html" . }}</div>
+
+        <div class="scene-loader" data-scene-loader role="status" aria-live="polite" hidden>
+          <span class="scene-loader-spinner" aria-hidden="true"></span>
+          <span>Loading scene</span>
+        </div>
 
         <div class="season-picker">
           <fieldset>
