@@ -17,7 +17,7 @@ with this few pages & posts Jekyll takes between 5-10 seconds to generate my tin
 
 For those of you currently running Jekyll before you decide to switch, make sure first of all that you configure it 
 correctly first, specifically making sure you only 
-[include/exclude relevent files from your build process](http://jekyllrb.com/docs/configuration/). If you have, and 
+[include/exclude relevant files from your build process](http://jekyllrb.com/docs/configuration/). If you have, and
 it's still too slow for your taste and you feel like trying something new then carry on reading below.
 
 I'm not going to go through every little detail here on setting up hugo. The documentation is awesome so go

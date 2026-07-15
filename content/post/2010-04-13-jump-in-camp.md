@@ -39,7 +39,7 @@ After a few hours coding, we began the first of two surprise activities: Alpine 
 *   Cow milking &#8211; Having reluctantly milked a cow in the past, I was relieved to find out (for the cow's sake as much as mine) that we would be milking a fake cow. Josh Holmes stole the show on this one apparently having been a dairy farmer in his colourful past.
 *   Blow darts &#8211; Blow a dart down a tube into a target. [Derick Rethans][13] was so accurate he actually hit one of his darts with another
 *   Skiing &#8211; 5 men, 2 planks of wood and one excellent exercise in co-ordination.
-*   Archery &#8211; Having broke the first bow with my brute English strength I undertook the task of using the second extremely strong bow only reserved for the strongest of archers. Yuri Yatsev gets an apology here for leaving him bruised the next day having to pull the crossbow back for everyone :p
+*   Archery &#8211; Having broke the first bow with my brute English strength I undertook the task of using the second extremely strong bow only reserved for the strongest of archers. Yuriy Zaytsev gets an apology here for leaving him bruised the next day having to pull the crossbow back for everyone :p
 
 Whilst my team didn't win, the team that did kindly shared their victory prize of champagne with the rest of the group which was a nice touch! Another delicious dinner wrapped up a superb evening of fun and games.
 
@@ -51,7 +51,7 @@ Next up was [Alex Weinstein][16] who introduced us to a fantastic tool that's co
 
 The last talk of the day came from Claudio Caldato who caught my interest with a [PHP SDK for interacting with SQL Server Reporting Services][18]. You can do some fantastic things with reporting services so it's nice that we no longer have to rely on using .NET to interact with it. Great job!
 
-After all the talks and final round of coding was done we were finally told about our surprise dinner which would involve going to a brewery to make our own beer. We learnt about the history of beer and kudos must go to all the people who made the double entrendres whilst learning about the brewing process ;-) The highlight of the night came when we were tasked with bottling our own beer. A simple task one might imagine, but without strong hands and patience you can end up spraying litres of beer all over yourself and anyone nearby. Mark from OSC managed to seemingly empty a whole tank of beer on to himself and everyone else in the room. Pictures, videos and other viral material of this will come soon I am sure. Here's a picture of my beer:
+After all the talks and final round of coding was done we were finally told about our surprise dinner which would involve going to a brewery to make our own beer. We learnt about the history of beer and kudos must go to all the people who made the double entendres whilst learning about the brewing process ;-) The highlight of the night came when we were tasked with bottling our own beer. A simple task one might imagine, but without strong hands and patience you can end up spraying litres of beer all over yourself and anyone nearby. Mark from OSC managed to seemingly empty a whole tank of beer on to himself and everyone else in the room. Pictures, videos and other viral material of this will come soon I am sure. Here's a picture of my beer:
 
 [<img class="alignnone size-medium wp-image-43" title="beer" src="//deanclatworthy.com/img/uploads/2010/04/beer-225x300.gif" alt="" width="225" height="300" />][19]
 
@@ -61,7 +61,7 @@ Jason Stowe from the SQL Server team gave us a great round up on the features av
 
 **Summary**
 
-I think everyone agreed the event was a resounding success and everyone learnt a great deal about the technologies Microsoft has been working on. The location, facilities and support that Microsoft gave everyone at the conference worked extremely well. Everyone from Microsoft was helpful, receptive to feedback and friendly throughout the camp which can only go to help improving the relationship Microsoft has within the open source community. A big thanks must go to Yuriy Zaytsev, Nicole Zahnd and Josh Holmes who did an excellent job putting the even together and hopefully we'll see this event repeated some time in the future!
+I think everyone agreed the event was a resounding success and everyone learnt a great deal about the technologies Microsoft has been working on. The location, facilities and support that Microsoft gave everyone at the conference worked extremely well. Everyone from Microsoft was helpful, receptive to feedback and friendly throughout the camp which can only go to help improving the relationship Microsoft has within the open source community. A big thanks must go to Yuriy Zaytsev, Nicole Zahnd and Josh Holmes who did an excellent job putting the event together and hopefully we'll see this event repeated some time in the future!
 
 **Photos**
 

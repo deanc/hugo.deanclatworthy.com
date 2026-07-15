@@ -31,5 +31,5 @@ Save it and `chmod +x bbc1.sh`. Usage: `./bbc1.sh`. This'll open VLC and stream 
 
 To watch BBC2 just change `bbcone` to `bbctwo` (I suggest making a `bbc2.sh` script or parameterize the script yourself).
 
-I haven't yet found a way to pipe the output of this over airplay to a receiever. If anyone has any suggestions I'd love to hear them as currently
+I haven't yet found a way to pipe the output of this over airplay to a receiver. If anyone has any suggestions I'd love to hear them as currently
 I'm only able to mirror using my macbook's screen sharing to my tv (via airplay).

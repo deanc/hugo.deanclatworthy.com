@@ -24,7 +24,7 @@ Those of you lucky folks on VPS's and your own boxes aren't bound by these limit
 
 My solution was to use the fantastic, and **free** service provided by [Cloudflare][2]. Essentially, what Cloudflare does is cache your whole site, optimise your static assets automatically and then delivers it efficiently using their Content Delivery Network (CDN). They also provided different levels of protection from hacking, so you are less likely to be attacked by an SQL injection or XSS attack on your WordPress install when security issues arise. I've not had any practical experience using this feature though.
 
-The huge advantage of Cloudflare is that it serves your website for you, not your hosting provider. Everything is still hosted on your servers, but as Clouldflare caches it, they can deliver the page and assets for you, meaning you don't use as much bandwidth. Furthermore, as they have servers distributed all over the world they can deliver your content to your users in a more efficient way than you can by detecting where the user came from and delivering it from the closest location possible to them.
+The huge advantage of Cloudflare is that it serves your website for you, not your hosting provider. Everything is still hosted on your servers, but as Cloudflare caches it, they can deliver the page and assets for you, meaning you don't use as much bandwidth. Furthermore, as they have servers distributed all over the world they can deliver your content to your users in a more efficient way than you can by detecting where the user came from and delivering it from the closest location possible to them.
 
 So to summarise:
 

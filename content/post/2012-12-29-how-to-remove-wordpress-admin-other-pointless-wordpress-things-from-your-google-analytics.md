@@ -15,7 +15,7 @@ I have spent the last few hours taking a look at the Google Analytics for my blo
 2.  Click 'Admin' in the top right.
 3.  Choose the account you wish to apply this filter to.
 4.  Chose the correct property (domain) you wish to apply this filter for.
-5.  Choose the relevent profile you have set up. Normally there is only one here unless you're doing anything custom.
+5.  Choose the relevant profile you have set up. Normally there is only one here unless you're doing anything custom.
 6.  Click the 'Filters' tab and add a new filter. Set up like so:
 <br><img class="alignnone size-full wp-image-274" alt="Exclude wp-admin from Google Analytics" src="/img/uploads/2012/12/Screen-Shot-2012-12-29-at-3.46.12-PM.png" /></a>
 7.  Add another filter to exclude hits to the login script:

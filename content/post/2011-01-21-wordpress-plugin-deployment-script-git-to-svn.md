@@ -16,7 +16,7 @@ date: 2011-01-21
 
 **Long Version:**
 
-Recently at work I was required to build a wordpress plugin. After trawling through the documentation to figure out what I needed to do, it became apparent that to get my plugin listed in the WordPress plugins directory I would be required to host the code in their SVN repository. Along with most developers nowadays, I've switched to Git (for numerous reasons), so I was left with the dilemna of how to manage my plugin within git and host it on Github, but sync all changes to the SVN repository whenever a new version was ready. There's quite a lot of work involved when trying to do this so I wanted to automate the whole thing. The result is a bash script shown below which will:
+Recently at work I was required to build a wordpress plugin. After trawling through the documentation to figure out what I needed to do, it became apparent that to get my plugin listed in the WordPress plugins directory I would be required to host the code in their SVN repository. Along with most developers nowadays, I've switched to Git (for numerous reasons), so I was left with the dilemma of how to manage my plugin within git and host it on Github, but sync all changes to the SVN repository whenever a new version was ready. There's quite a lot of work involved when trying to do this so I wanted to automate the whole thing. The result is a bash script shown below which will:
 
 1.  Check that the version numbers in your readme.txt match up with those in your PHP file.
 2.  Commit the latest outstanding changes to your git repository if any are left

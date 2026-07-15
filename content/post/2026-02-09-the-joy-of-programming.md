@@ -21,7 +21,7 @@ This shift has led to many outcomes. I spend most of my time:
 On the whole, when using frontier models such as Claude Opus & OpenAI GPT-Codex it does a fantastic job of planning features, and implementing them. Success varies on how well the problem domain is understood, and how good the context you provide it is. The more you put in, the more you get out.
 
 Whilst a lot of people are focusing on the discussion around
-what this means for the job market and whether it will lead to lay-offs, I've mainly feeling a little sad about what it means for the job itself.
+what this means for the job market and whether it will lead to lay-offs, I've mainly been feeling a little sad about what it means for the job itself.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Many people assuming I meant job loss anxiety but that&#39;s just one presentation. I&#39;m seeing near-manic episodes triggered by watching software shift from scarce to abundant. Compulsive behaviors around agent usage. Dissociative awe at the temporal compression of change. It&#39;s not… <a href="https://t.co/UkdjxtALut">https://t.co/UkdjxtALut</a></p>&mdash; Tom Dale (@tomdale) <a href="https://twitter.com/tomdale/status/2019828626972131441?ref_src=twsrc%5Etfw">February 6, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
