@@ -19,5 +19,3 @@ and helped them become more successful as an online entity.
 <i class="fa fa-trophy" style="color: #ffcc33"></i> I have won numerous awards for my work and will try to highlight them below.
 
 Below are some of my most recent clients & projects.
-
-***
