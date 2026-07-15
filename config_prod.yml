@@ -15,6 +15,7 @@ markup:
 disableKinds: ["taxonomy"]
 
 Params:
+  AnalyticsID: "G-BKE986PPRZ"
   SiteName: Dean Clatworthy
   TitleSuffix: Dean Clatworthy | Software Architect & Engineer
   MetaDescription: "Dean Clatworthy is a software architect and engineer in Helsinki, building dependable web services and thoughtful digital products."
