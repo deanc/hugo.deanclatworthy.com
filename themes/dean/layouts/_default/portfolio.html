@@ -38,7 +38,7 @@
                 <p>
                     <i class="fa fa-trophy" style="color: #ffcc33"></i> Awards won:
                     {{ range $ai, $award := $ele.awards }}
-                        <a href="{{ .url }}">{{ .name }}</a>
+                        {{ with .url }}<a href="{{ . }}">{{ $award.name }}</a>{{ else }}{{ .name }}{{ end }}
                     {{ end }}
                 </p>
                 {{ end }}

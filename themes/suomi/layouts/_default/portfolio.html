@@ -31,8 +31,14 @@
           <div class="project-awards">
             <strong>Project awards</strong>
             <ul>
-              {{ range . }}
-              <li><a href="{{ .url }}" rel="noopener" target="_blank"><span aria-hidden="true">★</span>{{ .name }}<span aria-hidden="true">↗</span></a></li>
+              {{ range $award := . }}
+              <li>
+                {{ with $award.url }}
+                <a href="{{ . }}" rel="noopener" target="_blank"><span aria-hidden="true">★</span>{{ $award.name }}<span aria-hidden="true">↗</span></a>
+                {{ else }}
+                <span class="award-label"><span aria-hidden="true">★</span>{{ $award.name }}</span>
+                {{ end }}
+              </li>
               {{ end }}
             </ul>
           </div>

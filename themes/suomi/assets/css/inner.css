@@ -396,7 +396,8 @@
   list-style: none;
 }
 
-.project-awards a {
+.project-awards a,
+.project-awards .award-label {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -411,7 +412,8 @@
 
 .project-awards a:hover,
 .project-awards a:focus-visible { border-color: var(--ink); }
-.project-awards a span:first-child { font-size: 11px; }
+.project-awards a span:first-child,
+.project-awards .award-label span:first-child { font-size: 11px; }
 .project-awards a span:last-child { color: var(--muted); font-size: 12px; }
 .video-container {
   position: relative;

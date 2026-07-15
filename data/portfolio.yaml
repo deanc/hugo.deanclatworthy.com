@@ -55,7 +55,6 @@ items:
     technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
     awards:
       - name: INDIE Award — Public Good
-        url: https://www.linkedin.com/posts/tbdadvertising_gotbd-becauseofyou-bullyingprevention-activity-6595731736968212480-1zrp
     visible: true
   - id: sheboard
     title: "Plan Finland: Sheboard"
@@ -108,13 +107,10 @@ items:
     technologies: [PHP, MySQL, NodeJS, HTML5, CSS, JS, AWS S3, AWS SQS, IBM Bluemix Cloud]
     awards:
       - name: Grand One Grand Prix 2018
-        url: https://2018.grandone.fi/
+        url: https://grandone.fi/aiemmat-vuodet/
       - name: Effie Finland Gold 2017
-        url: https://effie.org/pt/news/effie-awards-finland-2017-koskenkorva-and-altia-win-grand-effie/
       - name: Epica Gold 2017
-        url: https://www.markves.com/about
       - name: Eurobest Bronze 2017
-        url: https://www.markves.com/about
     vimeo_id: 262703629
     emoji: ↕️
     visible: true
@@ -158,11 +154,9 @@ items:
     technologies: [PHP, MySQL, HTML5, CSS, Javascript, AWS]
     awards:
       - name: Best Ads on TV
-        url: http://www.bestadsontv.com/ad/78182/Tallink-Silja-Complaints-Booth
+        url: https://www.bestadsontv.com/ad/78182/Tallink-Silja-Complaints-Booth
       - name: Grand One Gold 2016 — Digital Outdoor
-        url: https://jussipekkala.com/about/
       - name: Vuoden Huiput Silver — Integrated
-        url: https://jussipekkala.com/about/
     vimeo_id: 162279513
     visible: true
   - id: metsa_plan_b
@@ -179,8 +173,10 @@ items:
         url: https://winners.epica-awards.com/2015/winner/56-02787-DIG/hasan-partners/metsa-wood-plan-b
       - name: Eurobest Bronze 2015
         url: https://awards.eurobest.com/winners/2015/pr/entry.cfm?entryid=2434&award=0
-      - name: 2× Vuoden Huiput Silver 2015
-        url: https://fi.linkedin.com/in/salla-tuomi-a1ba0640
+      - name: Vuoden Huiput Silver 2015 — Digital Marketing
+        url: https://www.vuodenhuiput.fi/fi-FI/vuoden-huiput-2015/tulokset/hopeahuippu/0500CRJ/
+      - name: Vuoden Huiput Silver 2015 — Integrated Marketing Communications
+        url: https://www.vuodenhuiput.fi/fi-FI/vuoden-huiput-2015/tulokset/integroitu-markkinointiviestinta/0100LDT/
     thumbnails: [/img/portfolio/metsa-planb/metsa-planb-1-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-2-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-3-thumbnail.jpg]
     visible: true
   - id: hasan_eurobest
@@ -223,7 +219,6 @@ items:
     technologies: [PHP, MySQL, HTML5, CSS, Javascript]
     awards:
       - name: FWA Public Shortlist
-        url: http://www.thefwa.com/shortlist/mets-tree-online
     vimeo_id: 104848958
     thumbnails: [/img/portfolio/metsa-tree/metsa-tree-homepage-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-interface-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-menu-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-thumbnail-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-navigation-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-video-content-thumbnail.jpg, /img/portfolio/metsa-tree/metsa-tree-community-search-thumbnail.jpg]
     visible: true
@@ -274,8 +269,8 @@ items:
       title &#8220;Angry Birds: Star Wars&#8221;. Most of this work was HTML5/CSS3/JavaScript and using Twitter Bootstrap
       for a responsive framework.
     awards:
-      - name: 2 webby awards
-        url: http://www.webbyawards.com/winners/2013/web/general-website/games/angry-birds-star-wars/
+      - name: 2× Webby Awards
+        url: https://www.webbyawards.com/press/press-releases/the-17th-annual-webby-award-winners-announced/
     thumbnails: [/img/portfolio/rovio-absw/rovio-absw-1-thumbnail.jpg, /img/portfolio/rovio-absw/rovio-absw-2-thumbnail.jpg]
     visible: true
   - id: iitala_store
