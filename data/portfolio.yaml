@@ -1,4 +1,52 @@
 items:
+  - id: asteroid_healthcare_notifications
+    title: "Healthcare: Global notifications platform"
+    agency: Asteroid
+    description: >
+      I worked on the migration of a large-scale notifications platform from a queue-based architecture to Kafka.
+      Operating across multiple global deployments, the system delivers hundreds of thousands of push notifications,
+      SMS messages and emails each day. The new event-driven architecture was designed to support that scale with
+      greater resilience and flexibility.
+    technologies: [Kafka, Event-driven architecture, Push notifications, SMS, Email]
+    visible: true
+  - id: asteroid_pet_store_modernisation
+    title: "E-commerce: Pet store platform modernisation"
+    agency: Asteroid
+    description: >
+      I led the engineering team and defined the architecture for moving a major online pet store away from a legacy
+      PHP monolith running on Kubernetes towards a more agile AWS-based platform. Rather than attempting a high-risk
+      rewrite, we incrementally carved out high-impact domains and took full ownership of them, beginning with checkout,
+      payments and post-order processing. AWS Step Functions orchestrated these critical workflows, improving performance
+      and reliability, while a redesigned front end delivered stronger results in A/B testing.
+    technologies: [AWS, AWS Step Functions, PHP, Kubernetes, A/B testing]
+    visible: true
+  - id: wunderdog_airline_payments
+    title: "Airline: E-commerce payments platform"
+    agency: Wunderdog
+    description: >
+      I worked in the payments team behind Finland's largest e-commerce platform, helping to develop and maintain
+      the services that power a high-volume, business-critical checkout experience. The platform used a serverless
+      architecture on AWS, with payment processing integrated through Adyen and a React front end.
+    technologies: [React, AWS Lambda, Serverless Framework, DynamoDB, Amazon S3, Adyen]
+    visible: true
+  - id: wunderdog_genetics_ordering
+    title: "Healthcare: Genetics ordering platform"
+    agency: Wunderdog
+    description: >
+      I contributed new features to a large clinical application used by geneticists and physicians to order genetic
+      testing panels. Working across its React and Go codebases, I helped evolve a complex healthcare workflow while
+      keeping the experience dependable for specialist users.
+    technologies: [React, Go]
+    visible: true
+  - id: wunderdog_healthcare_modernisation
+    title: "Healthcare: Application modernisation and ICD-10"
+    agency: Wunderdog
+    description: >
+      I helped modernise a legacy PHP application by rebuilding it with React and Node.js, containerising it with
+      Docker and deploying it to an OpenShift cluster. I also implemented an ICD-10 database and supporting application,
+      using PostgreSQL and Knex to provide a maintainable foundation for structured medical classification data.
+    technologies: [React, Node.js, PostgreSQL, Knex, Docker, OpenShift, PHP, ICD-10]
+    visible: true
   - id: becauseofyou
     title: "AdCouncil: BecauseOfYou"
     agency: hasan & partners / TBD
@@ -211,6 +259,4 @@ items:
       was a great success as one of the first responsive webstores for a leading Finnish brand.
     thumbnails: [/img/portfolio/iittala/iittala-1-thumbnail.jpg, /img/portfolio/iittala/iittala-2-thumbnail.jpg, /img/portfolio/iittala/iittala-3-thumbnail.jpg, /img/portfolio/iittala/iittala-4-thumbnail.jpg, /img/portfolio/iittala/iittala-5-thumbnail.jpg, /img/portfolio/iittala/iittala-6-thumbnail.jpg]
     visible: true
-
-
 
