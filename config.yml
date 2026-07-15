@@ -3,7 +3,7 @@ locale: "en-us"
 title: "Hello. I'm Dean Clatworthy"
 tagline:
 uglyURLs: "true"
-theme: dean
+theme: suomi
 summaryLength: 25
 
 markup:
