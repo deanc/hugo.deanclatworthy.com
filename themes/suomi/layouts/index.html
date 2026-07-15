@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+{{ partial "site-head.html" . }}
+<body>
+  {{- $dateKey := int (now.Format "102") -}}
+  {{- $currentSeason := "winter" -}}
+  {{- if and (ge $dateKey 320) (lt $dateKey 621) -}}
+    {{- $currentSeason = "spring" -}}
+  {{- else if and (ge $dateKey 621) (lt $dateKey 922) -}}
+    {{- $currentSeason = "summer" -}}
+  {{- else if and (ge $dateKey 922) (lt $dateKey 1221) -}}
+    {{- $currentSeason = "autumn" -}}
+  {{- end -}}
+  {{ partial "site-header.html" . }}
+
+  <main id="content">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <!-- Previous heading: Clear thinking.<br>Dependable systems. -->
+      <h1 id="hero-title">Thoughtful software.<br>Built for the long term.</h1>
+      <p>I design and build maintainable web services<br class="wide-only"> across cloud, back-end and front-end.</p>
+      <a class="primary-action" href="{{ "contact.html" | relURL }}">Get in touch</a>
+    </section>
+
+    <section class="season-experience page-width" aria-label="Interactive Finnish landscape through the seasons">
+      <div class="scene-wrap motion-paused">
+        <div class="season-panel season-panel-winter">{{ partial "winter-scene.html" . }}</div>
+        <div class="season-panel season-panel-spring">{{ partial "spring-scene.html" . }}</div>
+        <div class="season-panel season-panel-summer">{{ partial "summer-scene.html" . }}</div>
+        <div class="season-panel season-panel-autumn">{{ partial "autumn-scene.html" . }}</div>
+
+        <div class="season-picker">
+          <fieldset>
+            <legend class="visually-hidden">Choose a season</legend>
+            <label for="season-winter"><input id="season-winter" type="radio" name="season"{{ if eq $currentSeason "winter" }} checked{{ end }}> Winter</label>
+            <label for="season-spring"><input id="season-spring" type="radio" name="season"{{ if eq $currentSeason "spring" }} checked{{ end }}> Spring</label>
+            <label for="season-summer"><input id="season-summer" type="radio" name="season"{{ if eq $currentSeason "summer" }} checked{{ end }}> Summer</label>
+            <label for="season-autumn"><input id="season-autumn" type="radio" name="season"{{ if eq $currentSeason "autumn" }} checked{{ end }}> Autumn</label>
+          </fieldset>
+        </div>
+
+        {{- if hugo.IsServer }}
+        <div class="day-phase-picker" data-day-phase-picker aria-label="Development lighting preview">
+          <span>Light</span>
+          <button type="button" data-phase="auto" aria-pressed="true">Auto</button>
+          <button type="button" data-phase="dawn" aria-pressed="false">Dawn</button>
+          <button type="button" data-phase="day" aria-pressed="false">Day</button>
+          <button type="button" data-phase="dusk" aria-pressed="false">Dusk</button>
+          <button type="button" data-phase="night" aria-pressed="false">Night</button>
+        </div>
+        {{- end }}
+      </div>
+    </section>
+
+    {{- with resources.Get "js/current-season.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+    {{- end }}
+
+    <section class="home-about page-width" aria-labelledby="about-title">
+      <p class="section-label">About me</p>
+      <div>
+        <h2 id="about-title">A pragmatic builder with a long view.</h2>
+        <div>
+          <p>I&rsquo;m Dean, a software architect and engineer based in Helsinki. I turn complicated ideas into dependable systems, with equal care for the people using them and the teams maintaining them.</p>
+          <a href="{{ "about.html" | relURL }}">More about me <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid page-width">
+      <div id="work" class="link-list">
+        <h2>Selected work</h2>
+        {{- range first 3 (where hugo.Data.portfolio.items "visible" true) }}
+        <a href="{{ "portfolio.html" | relURL }}#project-{{ .id }}">
+          <span>{{ replace .title " (Part 2)" "" }}</span><span aria-hidden="true">→</span>
+        </a>
+        {{- end }}
+        <a class="section-all-link" href="{{ "portfolio.html" | relURL }}">
+          <strong>View all work</strong><span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div id="writing" class="link-list">
+        <h2>Writing</h2>
+        {{- range slice "post/2026-02-11-resident-not-recognised" "post/2026-02-11-integration-isn-t-an-evening-class" "post/2026-02-09-the-joy-of-programming" }}
+        {{- with site.GetPage . }}
+        <a href="{{ .RelPermalink }}">
+          <span>{{ .Title }}</span><span aria-hidden="true">→</span>
+        </a>
+        {{- end }}
+        {{- end }}
+        <a class="section-all-link" href="{{ "archive.html" | relURL }}">
+          <strong>Read all writing</strong><span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <a class="skills page-width" href="{{ "skills.html" | relURL }}" aria-label="Explore my skills and experience">
+      <span class="skills-intro"><small>Skills &amp; experience</small>See how I work</span>
+      <span>AWS</span>
+      <span>TypeScript</span>
+      <span>Node.js</span>
+      <span>Architecture</span>
+      <span class="skills-arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  {{ partial "site-footer.html" . }}
+</body>
+</html>

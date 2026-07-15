@@ -1,0 +1,30 @@
+{{- $season := .season -}}
+{{- $dayStem := printf "img/finland-%s-scene-wide" $season -}}
+{{- $dawnStem := printf "img/finland-%s-scene-dawn-wide" $season -}}
+{{- $duskStem := printf "img/finland-%s-scene-dusk-wide" $season -}}
+{{- $nightStem := printf "img/finland-%s-scene-night-wide" $season -}}
+<div class="scene-art-stack"
+  data-season="{{ $season }}"
+  data-dawn-avif="{{ printf "%s.avif" $dawnStem | relURL }}"
+  data-dawn-webp="{{ printf "%s.webp" $dawnStem | relURL }}"
+  data-day-avif="{{ printf "%s.avif" $dayStem | relURL }}"
+  data-day-webp="{{ printf "%s.webp" $dayStem | relURL }}"
+  data-dusk-avif="{{ printf "%s.avif" $duskStem | relURL }}"
+  data-dusk-webp="{{ printf "%s.webp" $duskStem | relURL }}"
+  data-night-avif="{{ printf "%s.avif" $nightStem | relURL }}"
+  data-night-webp="{{ printf "%s.webp" $nightStem | relURL }}">
+  <picture class="scene-art scene-art-layer is-visible" aria-hidden="true">
+    <source type="image/avif">
+    <img width="1536" height="1024" alt="" decoding="async">
+  </picture>
+  <picture class="scene-art scene-art-layer" aria-hidden="true">
+    <source type="image/avif">
+    <img width="1536" height="1024" alt="" decoding="async">
+  </picture>
+</div>
+<noscript>
+  <picture class="scene-art" aria-hidden="true">
+    <source srcset="{{ printf "%s.avif" $dayStem | relURL }}" type="image/avif">
+    <img src="{{ printf "%s.webp" $dayStem | relURL }}" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+  </picture>
+</noscript>

@@ -1,0 +1,53 @@
+{{ $sections := after 1 (split .RawContent "\n## ") }}
+{{ $cleanTitles := dict
+  "☁️ Cloud" "Cloud"
+  "🗄️ Back-end" "Back-end"
+  "📱 Front-end" "Front-end"
+  "🛠️ Systems architecture & design" "Systems architecture"
+  "🤖 AI & agentic development" "AI & agentic development"
+  "📦 Misc" "Additional experience"
+}}
+<article class="skills-page page-width">
+  <header class="skills-hero">
+    <p class="eyebrow">Capabilities</p>
+    <h1>From a useful interface to the systems behind it.</h1>
+    <p class="skills-lede">I design and build dependable digital products across the stack—bringing more than two decades of hands-on engineering to cloud platforms, software architecture and the details people actually use.</p>
+  </header>
+
+  <nav class="skills-index" aria-label="On this page">
+    <ol>
+      {{ range $index, $section := $sections }}
+        {{ $lines := split $section "\n" }}
+        {{ $rawTitle := index $lines 0 }}
+        {{ $title := default $rawTitle (index $cleanTitles $rawTitle) }}
+        <li><a href="#capability-{{ add $index 1 }}">{{ $title }}</a></li>
+      {{ end }}
+    </ol>
+  </nav>
+
+  <div class="skills-grid">
+    {{ range $index, $section := $sections }}
+      {{ $lines := split $section "\n" }}
+      {{ $rawTitle := index $lines 0 }}
+      {{ $title := default $rawTitle (index $cleanTitles $rawTitle) }}
+      {{ $body := delimit (after 1 $lines) "\n" }}
+      <section class="skill-card" id="capability-{{ add $index 1 }}" aria-labelledby="capability-title-{{ add $index 1 }}">
+        <header>
+          <span aria-hidden="true">0{{ add $index 1 }}</span>
+          <h2 id="capability-title-{{ add $index 1 }}">{{ $title }}</h2>
+        </header>
+        <div class="skill-card-body">
+          {{ $body | markdownify }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+
+  <aside class="skills-cta" aria-labelledby="skills-cta-title">
+    <div>
+      <p class="eyebrow">Work together</p>
+      <h2 id="skills-cta-title">Interested in working together?</h2>
+    </div>
+    <a class="primary-action" href="{{ "contact.html" | relURL }}">Get in touch <span aria-hidden="true">→</span></a>
+  </aside>
+</article>

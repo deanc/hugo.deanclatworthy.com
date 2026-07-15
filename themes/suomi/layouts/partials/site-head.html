@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  {{ hugo.Generator }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" data-theme-color>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem("suomi-theme"); } catch (_) {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      if (theme === "dark") {
+        document.documentElement.dataset.theme = "dark";
+        document.querySelector("[data-theme-color]").content = "#07131f";
+      }
+    })();
+  </script>
+  {{- $title := .Site.Params.TitleSuffix -}}
+  {{- if not .IsHome -}}
+    {{- $title = printf "%s | %s" .Title .Site.Params.TitleSuffix -}}
+  {{- end }}
+  <title>{{ $title }}</title>
+  {{- $description := .Site.Params.Tagline | plainify | strings.TrimSpace -}}
+  {{- with .Params.description }}{{ $description = . | plainify | strings.TrimSpace }}{{ end -}}
+  {{- if and (not .IsHome) (not .Params.description) .Summary }}{{ $description = .Summary | plainify | strings.TrimSpace }}{{ end -}}
+  <meta name="description" content="{{ $description | truncate 160 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | relURL }}">
+  {{- with resources.Get "css/home.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{- end }}
+  {{- if not .IsHome }}
+    {{- with resources.Get "css/inner.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+    {{- end }}
+  {{- end }}
+  {{- with resources.Get "js/theme-toggle.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{- end }}
+</head>

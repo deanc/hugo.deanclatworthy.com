@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ if and .File (eq .File.BaseFileName "skills") }}
+  {{ partial "skills-page.html" . }}
+{{ else }}
+<article class="prose-page page-width{{ if eq .Section "post" }} article-page{{ end }}">
+  <header class="page-heading">
+    <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}Dean Clatworthy{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "post" }}
+    <div class="article-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+    {{ else }}
+      {{ with .Params.description }}<p class="page-intro">{{ . }}</p>{{ end }}
+    {{ end }}
+  </header>
+
+  {{ if isset .Params "image" }}
+    {{ $img := .Params.image }}
+    {{ if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end }}
+    <img class="article-hero" src="{{ $img | relURL }}" alt="" loading="eager">
+  {{ end }}
+
+  <div class="prose{{ if eq .Section "post" }} article-prose{{ end }}">
+    {{ .Content }}
+  </div>
+
+  {{ if eq .Section "post" }}
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+    <aside class="related-posts" aria-labelledby="related-title">
+      <h2 id="related-title">Continue reading</h2>
+      <ul>
+        {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a></li>{{ end }}
+      </ul>
+    </aside>
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}
+{{ end }}
