@@ -2,6 +2,8 @@ const root = document.documentElement;
 const toggle = document.querySelector("[data-theme-toggle]");
 const themeColor = document.querySelector("[data-theme-color]");
 const colorPreference = matchMedia("(prefers-color-scheme: dark)");
+const themeMotionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+let themeTransitionActive = false;
 
 function storedTheme() {
   try {
@@ -32,7 +34,42 @@ function applyTheme(theme, persist = true) {
 applyTheme(storedTheme() || preferredTheme(), false);
 
 toggle?.addEventListener("click", () => {
-  applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+  if (themeTransitionActive) return;
+
+  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+  if (!document.startViewTransition || themeMotionPreference.matches) {
+    applyTheme(nextTheme);
+    return;
+  }
+
+  const bounds = toggle.getBoundingClientRect();
+  const x = bounds.left + bounds.width / 2;
+  const y = bounds.top + bounds.height / 2;
+  const radius = Math.hypot(
+    Math.max(x, innerWidth - x),
+    Math.max(y, innerHeight - y)
+  );
+
+  root.style.setProperty("--theme-transition-x", `${x}px`);
+  root.style.setProperty("--theme-transition-y", `${y}px`);
+  root.style.setProperty("--theme-transition-radius", `${radius}px`);
+  root.dataset.themeTransition = "active";
+  toggle.classList.add("is-switching");
+  themeTransitionActive = true;
+
+  const finish = () => {
+    delete root.dataset.themeTransition;
+    toggle.classList.remove("is-switching");
+    themeTransitionActive = false;
+  };
+
+  try {
+    const transition = document.startViewTransition(() => applyTheme(nextTheme));
+    transition.finished.then(finish, finish);
+  } catch (_) {
+    finish();
+    applyTheme(nextTheme);
+  }
 });
 
 addEventListener("storage", event => {
