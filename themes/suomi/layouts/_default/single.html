@@ -3,6 +3,12 @@
   {{ partial "skills-page.html" . }}
 {{ else }}
 <article class="prose-page page-width{{ if eq .Section "post" }} article-page{{ end }}">
+  {{ if and (eq .Section "post") .Draft hugo.IsDevelopment }}
+  <aside class="draft-notice" role="status">
+    <strong>Unpublished draft</strong>
+    <span>This page is visible only in Hugo development mode.</span>
+  </aside>
+  {{ end }}
   <header class="page-heading">
     <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}{{ with .Params.eyebrow }}{{ . }}{{ else }}Dean Clatworthy{{ end }}{{ end }}</p>
     <h1>{{ .Title }}</h1>
