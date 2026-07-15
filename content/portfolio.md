@@ -3,6 +3,9 @@ date: "2015-10-14T14:10:32+03:00"
 title: "Portfolio of Dean Clatworthy"
 emoji: "💻"
 description: "See all my previous work, and projects."
+current_role:
+    company: "Asteroid"
+    position: "partner and consultant"
 menu:
     main:
         weight: 30

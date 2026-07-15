@@ -4,6 +4,12 @@
     <p class="eyebrow">Selected work</p>
     <h1>{{ .Title }}</h1>
     <div class="page-intro prose">{{ .Content }}</div>
+    {{ with .Params.current_role }}
+    <aside class="current-role" aria-label="Current role">
+      <strong>Current role</strong>
+      <p>I&rsquo;m currently working at {{ .company }} as a {{ .position }}.</p>
+    </aside>
+    {{ end }}
   </header>
 
   <div class="project-list">

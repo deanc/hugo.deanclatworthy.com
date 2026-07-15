@@ -33,6 +33,24 @@
 .page-intro > :first-child { margin-top: 0; }
 .page-intro > :last-child { margin-bottom: 0; }
 
+.current-role {
+  max-width: 760px;
+  margin-top: 32px;
+  padding: 18px 22px;
+  border-left: 3px solid var(--ink);
+  background: var(--soft);
+}
+
+.current-role strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.current-role p { margin: 0; font-size: 18px; line-height: 1.5; }
+
 .prose-page,
 .listing-page,
 .portfolio-page { padding-bottom: clamp(66px, 9vw, 112px); }
