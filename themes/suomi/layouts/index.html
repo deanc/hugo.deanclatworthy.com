@@ -84,12 +84,11 @@
 
       <div id="writing" class="link-list">
         <h2>Writing</h2>
-        {{- range slice "post/2026-02-11-resident-not-recognised" "post/2026-02-11-integration-isn-t-an-evening-class" "post/2026-02-09-the-joy-of-programming" }}
-        {{- with site.GetPage . }}
+        {{- $posts := where site.RegularPages.ByDate.Reverse "Section" "post" }}
+        {{- range first 3 (where $posts "Draft" false) }}
         <a href="{{ .RelPermalink }}">
           <span>{{ .Title }}</span><span aria-hidden="true">→</span>
         </a>
-        {{- end }}
         {{- end }}
         <a class="section-all-link" href="{{ "archive.html" | relURL }}">
           <strong>Read more writing</strong><span aria-hidden="true">→</span>
