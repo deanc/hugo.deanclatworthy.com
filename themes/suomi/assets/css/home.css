@@ -118,6 +118,8 @@ a { color: inherit; }
   white-space: nowrap;
 }
 
+.wordmark span { font-weight: 400; }
+
 .site-header nav,
 .site-footer nav {
   display: flex;
@@ -1020,7 +1022,6 @@ a { color: inherit; }
     display: block;
     margin-top: 3px;
     font-size: 14px;
-    font-weight: 500;
   }
 }
 
