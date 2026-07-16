@@ -212,6 +212,7 @@
 .article-prose li { padding-left: .2em; }
 
 .article-prose a {
+  color: var(--accent);
   text-decoration-color: color-mix(in srgb, currentColor 48%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: .16em;

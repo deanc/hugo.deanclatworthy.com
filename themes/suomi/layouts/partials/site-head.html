@@ -15,6 +15,20 @@
         document.documentElement.dataset.theme = "dark";
         document.querySelector("[data-theme-color]").content = "#07131f";
       }
+
+      if (document.documentElement.hasAttribute("data-season")) {
+        try {
+          const preference = JSON.parse(localStorage.getItem("suomi-season"));
+          const seasons = ["winter", "spring", "summer", "autumn"];
+          if (seasons.includes(preference?.season) && preference.expiresAt > Date.now()) {
+            document.documentElement.dataset.season = preference.season;
+          } else {
+            localStorage.removeItem("suomi-season");
+          }
+        } catch (_) {
+          try { localStorage.removeItem("suomi-season"); } catch (_) {}
+        }
+      }
     })();
   </script>
   {{- $title := .Site.Params.TitleSuffix -}}

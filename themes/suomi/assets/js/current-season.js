@@ -1,4 +1,7 @@
 const HELSINKI = { latitude: 60.1699, longitude: 24.9384 };
+const SEASON_PREFERENCE_KEY = "suomi-season";
+const SEASON_PREFERENCE_TTL = 24 * 60 * 60 * 1000;
+const seasonNames = ["winter", "spring", "summer", "autumn"];
 const phaseNames = ["dawn", "day", "dusk", "night"];
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const phasePicker = document.querySelector("[data-day-phase-picker]");
@@ -10,6 +13,28 @@ let manualPhase = null;
 let sceneInView = false;
 let seasonBusy = false;
 let loaderTimer;
+
+function storedSeason() {
+  try {
+    const preference = JSON.parse(localStorage.getItem(SEASON_PREFERENCE_KEY));
+    if (seasonNames.includes(preference?.season) && preference.expiresAt > Date.now()) {
+      return preference.season;
+    }
+    localStorage.removeItem(SEASON_PREFERENCE_KEY);
+  } catch (_) {
+    try { localStorage.removeItem(SEASON_PREFERENCE_KEY); } catch (_) {}
+  }
+  return null;
+}
+
+function storeSeason(season) {
+  try {
+    localStorage.setItem(SEASON_PREFERENCE_KEY, JSON.stringify({
+      season,
+      expiresAt: Date.now() + SEASON_PREFERENCE_TTL,
+    }));
+  } catch (_) {}
+}
 
 const helsinkiClock = new Intl.DateTimeFormat("en", {
   timeZone: "Europe/Helsinki",
@@ -235,11 +260,13 @@ async function selectSeason(input) {
     return;
   }
 
+  document.documentElement.dataset.season = season;
   await transitionToPanel(currentPanel, targetPanel);
   currentPanel.classList.remove("is-active");
   targetPanel.classList.add("is-active");
   targetPanel.classList.remove("is-transitioning-in", "is-visible");
   setSceneBusy(false);
+  storeSeason(season);
 }
 
 function updateMotionState() {
@@ -257,11 +284,13 @@ function updatePhasePicker(selected) {
 
 const nowParts = clockParts();
 const automaticSeason = currentSeason(nowParts);
-const automaticSeasonInput = document.querySelector(`#season-${automaticSeason}`);
-automaticSeasonInput.checked = true;
+const initialSeason = storedSeason() || automaticSeason;
+const initialSeasonInput = document.querySelector(`#season-${initialSeason}`);
+document.documentElement.dataset.season = initialSeason;
+initialSeasonInput.checked = true;
 sceneExperience?.classList.add("is-enhanced");
 document.querySelectorAll(".season-panel").forEach(panel => {
-  panel.classList.toggle("is-active", panel.classList.contains(`season-panel-${automaticSeason}`));
+  panel.classList.toggle("is-active", panel.classList.contains(`season-panel-${initialSeason}`));
 });
 refreshTime(false);
 

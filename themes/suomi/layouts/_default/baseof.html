@@ -1,5 +1,6 @@
+{{- $currentSeason := partial "current-season.html" . -}}
 <!doctype html>
-<html lang="en">
+<html lang="en" data-season="{{ $currentSeason }}">
 {{ partial "site-head.html" . }}
 <body>
   {{ partial "site-header.html" . }}

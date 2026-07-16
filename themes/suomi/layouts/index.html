@@ -1,16 +1,8 @@
+{{- $currentSeason := partial "current-season.html" . -}}
 <!doctype html>
-<html lang="en">
+<html lang="en" data-season="{{ $currentSeason }}">
 {{ partial "site-head.html" . }}
 <body>
-  {{- $dateKey := int (now.Format "102") -}}
-  {{- $currentSeason := "winter" -}}
-  {{- if and (ge $dateKey 320) (lt $dateKey 621) -}}
-    {{- $currentSeason = "spring" -}}
-  {{- else if and (ge $dateKey 621) (lt $dateKey 922) -}}
-    {{- $currentSeason = "summer" -}}
-  {{- else if and (ge $dateKey 922) (lt $dateKey 1221) -}}
-    {{- $currentSeason = "autumn" -}}
-  {{- end -}}
   {{ partial "site-header.html" . }}
 
   <main id="content">

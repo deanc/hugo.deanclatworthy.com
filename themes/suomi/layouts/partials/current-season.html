@@ -1,0 +1,10 @@
+{{- $dateKey := int (now.Format "102") -}}
+{{- $season := "winter" -}}
+{{- if and (ge $dateKey 320) (lt $dateKey 621) -}}
+  {{- $season = "spring" -}}
+{{- else if and (ge $dateKey 621) (lt $dateKey 922) -}}
+  {{- $season = "summer" -}}
+{{- else if and (ge $dateKey 922) (lt $dateKey 1221) -}}
+  {{- $season = "autumn" -}}
+{{- end -}}
+{{- return $season -}}

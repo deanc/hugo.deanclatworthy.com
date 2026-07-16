@@ -1,15 +1,29 @@
 :root {
+  --palette-hue: 211.304;
   --ink: #071d35;
   --muted: #52606d;
   --line: #a8b6c5;
   --soft: #f0f3f6;
   --surface: #fff;
   --article-ink: #132a42;
+  --accent: #2f5518;
   --on-ink: #fff;
   --page: 1080px;
   --sans: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
   --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
   color-scheme: light;
+}
+
+:root[data-season="spring"] { --palette-hue: 78; }
+:root[data-season="summer"] { --palette-hue: 142; }
+:root[data-season="autumn"] { --palette-hue: 28; }
+
+:root[data-season]:not([data-season="winter"]) {
+  --ink: hsl(var(--palette-hue) 76.6667% 11.7647%);
+  --muted: hsl(var(--palette-hue) 14.1361% 37.451%);
+  --line: hsl(var(--palette-hue) 20% 71.5686%);
+  --soft: hsl(var(--palette-hue) 25% 95.2941%);
+  --article-ink: hsl(var(--palette-hue) 55.2941% 16.6667%);
 }
 
 :root[data-theme="dark"] {
@@ -19,8 +33,19 @@
   --soft: #12293e;
   --surface: #07131f;
   --article-ink: #d2dee8;
+  --accent: #b7dc68;
   --on-ink: #07131f;
   color-scheme: dark;
+}
+
+:root[data-theme="dark"][data-season]:not([data-season="winter"]) {
+  --ink: hsl(var(--palette-hue) 53.3333% 94.1176%);
+  --muted: hsl(var(--palette-hue) 19.4444% 71.7647%);
+  --line: hsl(var(--palette-hue) 20% 40.1961%);
+  --soft: hsl(var(--palette-hue) 55% 15.6863%);
+  --surface: hsl(var(--palette-hue) 63.1579% 7.451%);
+  --article-ink: hsl(var(--palette-hue) 32.3529% 86.6667%);
+  --on-ink: var(--surface);
 }
 
 * { box-sizing: border-box; }
