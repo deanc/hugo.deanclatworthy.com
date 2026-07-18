@@ -432,7 +432,8 @@ a { color: inherit; }
 
 .scene-art-stack,
 .scene-art,
-.scene-art img {
+.scene-art img,
+.scene-signature {
   position: absolute;
   inset: 0;
   display: block;
@@ -441,6 +442,22 @@ a { color: inherit; }
 }
 
 .scene-art img { object-fit: cover; }
+
+.scene-art-stack { --signature-ink: #fff; }
+
+.scene-signature {
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.scene-signature path {
+  fill: var(--signature-ink);
+}
+
+/* Snow at the shared signature anchor needs a dark ink; every other scene uses white. */
+.scene-art-stack[data-season="winter"]:not([data-phase]),
+.scene-art-stack[data-season="winter"][data-phase="day"] { --signature-ink: #1c3d59; }
 
 .scene-art-layer {
   opacity: 0;
