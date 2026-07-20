@@ -31,13 +31,15 @@
       }
     })();
   </script>
+  {{- $pageTitle := .Title | plainify | strings.TrimSpace -}}
+  {{- with .Params.seo_title }}{{ $pageTitle = . | plainify | strings.TrimSpace }}{{ end -}}
   {{- $title := .Site.Params.TitleSuffix -}}
   {{- if not .IsHome -}}
-    {{- $title = printf "%s | %s" .Title .Site.Params.Author.Name -}}
+    {{- $title = printf "%s | %s" $pageTitle .Site.Params.Author.Name -}}
   {{- end }}
   <title>{{ $title }}</title>
   {{- $socialTitle := $title -}}
-  {{- if not .IsHome }}{{ $socialTitle = .Title }}{{ end -}}
+  {{- if not .IsHome }}{{ $socialTitle = $pageTitle }}{{ end -}}
   {{- with .Params.og_title }}{{ $socialTitle = . | plainify | strings.TrimSpace }}{{ end -}}
   {{- $description := .Site.Params.MetaDescription | default .Site.Params.Tagline | plainify | strings.TrimSpace -}}
   {{- if not .IsHome -}}
@@ -73,6 +75,9 @@
   {{- end -}}
   <meta name="description" content="{{ $description | truncate 160 }}">
   <meta name="author" content="{{ .Site.Params.Author.Name }}">
+  {{- if eq .Kind "404" }}
+  <meta name="robots" content="noindex, follow">
+  {{- end }}
   <link rel="canonical" href="{{ $canonicalURL }}">
   <meta property="og:title" content="{{ $socialTitle }}">
   <meta property="og:description" content="{{ $description }}">

@@ -1,5 +1,7 @@
 ---
 title: Migrating from apache to nginx (wordpress edition)
+seo_title: "Migrate WordPress from Apache to nginx"
+description: "A practical guide to migrating WordPress from Apache to nginx with PHP-FPM, server blocks, WordPress rewrite rules, and secure PHP handling."
 author: Dean
 layout: post
 url: /2013/02/migrating-from-apache-to-nginx-wordpress-edition/

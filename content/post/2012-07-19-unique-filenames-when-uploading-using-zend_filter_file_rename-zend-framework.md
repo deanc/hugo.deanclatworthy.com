@@ -1,10 +1,15 @@
 ---
 title: Unique filenames when uploading using Zend_Filter_File_Rename (Zend Framework)
+seo_title: "Unique Upload Filenames in Zend Framework"
+description: "How to prevent uploaded files from being overwritten by generating unique names with Zend_Form, Zend_File_Transfer, and Zend_Filter_File_Rename."
 author: Dean
 layout: post
 url: /2012/07/unique-filenames-when-uploading-using-zend_filter_file_rename-zend-framework/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/matrix.jpg
+  - /img/uploads/2011/07/matrix.jpg
+image_alt: "Streams of green digits resembling the Matrix"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794523075
 categories:

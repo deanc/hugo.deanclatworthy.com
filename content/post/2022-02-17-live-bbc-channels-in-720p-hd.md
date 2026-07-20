@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Stream live BBC channels in HD using streamlink"
-description: ""
+seo_title: "Stream BBC Channels in HD"
+description: "How to stream live BBC One and BBC Two in 720p through VLC using Streamlink and BBC iPlayer credentials on the command line."
 category:
 url: /2022/02/17/live-bbc-channels-in-720p-hd/
 tags: [bbc,hd,720p,streamlink,macos]

@@ -1,5 +1,7 @@
 ---
 title: How to install different locales on a fresh debian installation
+seo_title: "Install Locales on Debian"
+description: "A quick command-line tip for selecting, generating, and installing additional locales on a fresh Debian system."
 author: Dean
 layout: post
 url: /2013/05/how-to-install-different-locales-on-a-fresh-debian-installation/

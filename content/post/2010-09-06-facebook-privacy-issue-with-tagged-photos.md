@@ -1,5 +1,6 @@
 ---
 title: Facebook privacy issue with tagged photos
+description: "An examination of how a friend's album privacy setting could override who sees photos you are tagged in on Facebook."
 author: Dean
 layout: post
 url: /2010/09/facebook-privacy-issue-with-tagged-photos/

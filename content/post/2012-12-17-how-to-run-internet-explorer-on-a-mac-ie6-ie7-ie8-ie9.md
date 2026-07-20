@@ -1,5 +1,7 @@
 ---
 title: How to run Internet Explorer on a Mac (IE6, IE7, IE8, IE9, IE10, IE11)
+seo_title: "Run Internet Explorer on a Mac"
+description: "How to install Microsoft's Internet Explorer test virtual machines for IE6 through IE11 on a Mac using the ievms script and VirtualBox."
 author: Dean
 layout: post
 url: /2012/12/how-to-run-internet-explorer-on-a-mac-ie6-ie7-ie8-ie9/

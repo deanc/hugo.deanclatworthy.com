@@ -1,5 +1,7 @@
 ---
 title: Intel X25-M SSD's don't work with Mac OSX 10.8.3
+seo_title: "Intel X25-M SSD Fix for OS X 10.8.3"
+description: "Fix the no-entry boot screen affecting Intel X25-M SSDs after upgrading a Mac to OS X 10.8.3 by updating the drive's firmware."
 author: Dean
 layout: post
 url: /2013/04/intel-x25-m-ssds-dont-work-with-mac-osx-10-8-3/
@@ -25,5 +27,5 @@ Don't do what I did and wipe your data, as there is no need!
 
 Hopefully this article will be of help to a few people out there! Let me know in the comments if it was.
 
- [1]: //deanclatworthy.com/wp-content/uploads/2013/04/osx-noentry.jpg
+ [1]: /img/uploads/2013/04/osx-noentry.jpg
  [2]: http://www.intel.com/go/ssdtoolbox

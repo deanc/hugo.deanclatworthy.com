@@ -1,5 +1,7 @@
 ---
 title: Getting a twitter user's latest posts using API v1.1 and Guzzle (PHP)
+seo_title: "Fetch Tweets with Guzzle and Twitter API"
+description: "A PHP example using Guzzle 3, Composer, and OAuth credentials to request and decode a user's latest posts from Twitter API v1.1."
 author: Dean
 layout: post
 url: /2013/07/getting-a-twitter-users-latest-posts-using-api-v1-1-and-guzzle-php/

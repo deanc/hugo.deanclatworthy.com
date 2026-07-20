@@ -61,7 +61,7 @@ that kind of time debugging why webkit keeps flickering animations, or an androi
 slowly.
 
 I've plenty of experience writing vanilla Javascript, but am familiar with many JS frameworks including:
-[Vue](https://vuejs.org/), [React](http://facebook.github.io/react/) & others.
+[Vue](https://vuejs.org/), [React](https://react.dev/) & others.
 
 
 ## 🛠️ Systems architecture & design

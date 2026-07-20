@@ -1,10 +1,14 @@
 ---
 title: Jump In Camp video
+description: "Watch the final video from Microsoft's 2010 Jump In Camp developer event in Switzerland."
 author: Dean
 layout: post
 url: /2010/04/jump-in-camp-video/
 image:
-  - //deanclatworthy.com/img/uploads/2010/04/4499556648_5a5da0a301-150x150.jpg
+  - /img/uploads/2010/04/4499556648_5a5da0a301-150x150.jpg
+image_alt: "Night view over Lake Zurich from Feusisberg"
+image_width: 150
+image_height: 150
 dsq_thread_id:
   - 848255816
 categories:

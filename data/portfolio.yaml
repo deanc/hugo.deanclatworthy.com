@@ -186,9 +186,7 @@ items:
       - name: Eurobest Bronze 2015
         url: https://awards.eurobest.com/winners/2015/pr/entry.cfm?entryid=2434&award=0
       - name: Vuoden Huiput Silver 2015 — Digital Marketing
-        url: https://www.vuodenhuiput.fi/fi-FI/vuoden-huiput-2015/tulokset/hopeahuippu/0500CRJ/
       - name: Vuoden Huiput Silver 2015 — Integrated Marketing Communications
-        url: https://www.vuodenhuiput.fi/fi-FI/vuoden-huiput-2015/tulokset/integroitu-markkinointiviestinta/0100LDT/
     thumbnails: [/img/portfolio/metsa-planb/metsa-planb-1-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-2-thumbnail.jpg, /img/portfolio/metsa-planb/metsa-planb-3-thumbnail.jpg]
     visible: true
   - id: hasan_eurobest
@@ -198,7 +196,7 @@ items:
     description: >
       For the Eurobest 2014 Festival of Creativity, I was tasked with helping with the development of the hasan & partners stand at the Eurobest conference. This featured two installations:
 
-      * two beer taps, that are only opened once you charge two or more mobile phones (made by [perfect fools](http://perfectfools.se) & myself)
+      * two beer taps, that are only opened once you charge two or more mobile phones (made by Perfect Fools & myself)
       * a mobile phone powered slot machine to give away great prizes (made by me).
     thumbnails: [/img/portfolio/eurobest-stand/eurobest-stand-4-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-3-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-2-thumbnail.jpg, /img/portfolio/eurobest-stand/eurobest-stand-1-thumbnail.jpg]
     visible: true
@@ -256,7 +254,7 @@ items:
       We were asked to create a campaign where every time an SMS donation is received, or the
       website is shared using Facebook or tweeted, a tiny receipt printer in downtown Helsinki will print a few words of the
       80,000 word report that is released every "Girls Day" by Plan Finland. This required integration from a website that I
-      was responsible for constructing and a printer software created by [Perfect Fools](http://perfectfools.se).
+      was responsible for constructing and a printer software created by Perfect Fools.
     technologies: [PHP, MySQL, HTML5, CSS, Javascript]
     vimeo_id: 107582361
     thumbnails: [/img/portfolio/plan-printer/plan-girls-day-printer-2-thumbnail.jpg, /img/portfolio/plan-printer/plan-girls-day-printer-1-thumbnail.jpg]

@@ -1,5 +1,7 @@
 ---
 title: Ensuring facebook canvas applications work in IE8 / IE9 / IE10
+seo_title: "Facebook Canvas Sessions in IE"
+description: "How to restore PHP sessions in Facebook Canvas applications on Internet Explorer by setting a P3P header, with a Silex middleware example."
 author: Dean
 layout: post
 url: /2013/05/ensuring-facebook-canvas-applications-work-in-ie9/

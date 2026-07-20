@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "How to set up Apache vhosts correctly on Debian Jessie 8"
-description: ""
+seo_title: "Apache Vhosts on Debian Jessie 8"
+description: "Fix an Apache virtual host that will not load on Debian Jessie by using the required .conf filename and checking active vhosts with apachectl."
 category: 
 tags: []
 url: /2015/06/29/debian-jessie-apache-vhosts/

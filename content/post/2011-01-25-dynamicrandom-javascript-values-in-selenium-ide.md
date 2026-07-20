@@ -1,10 +1,15 @@
 ---
 title: Dynamic/Random Javascript values in Selenium IDE
+seo_title: "Random Values in Selenium IDE"
+description: "How to generate dynamic JavaScript values in Selenium IDE tests, including unique timestamp-based email addresses for registration forms."
 author: Dean
 layout: post
 url: /2011/01/dynamicrandom-javascript-values-in-selenium-ide/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/selenium.jpg
+  - /img/uploads/2011/07/selenium.jpg
+image_alt: "Selenium IDE open with an OpenStreetMap base URL"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794530157
 categories:

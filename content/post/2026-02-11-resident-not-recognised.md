@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resident, not recognised"
-description: ""
+description: "A long-term resident reflects on life in Finland, changing immigration and citizenship rules, language barriers, belonging, and the limits of legal recognition."
 category:
 url: /2026/02/11/resident-not-recognised/
 tags: [finland,citizenship,suomi]

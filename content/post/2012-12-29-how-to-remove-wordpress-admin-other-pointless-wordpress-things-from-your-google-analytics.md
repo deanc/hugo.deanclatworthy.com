@@ -1,5 +1,7 @@
 ---
 title: 'How to remove WordPress admin & other pointless WordPress things from your Google Analytics'
+seo_title: "Exclude WordPress Admin from Analytics"
+description: "A step-by-step guide to creating Google Analytics filters that exclude visits to WordPress admin pages and the wp-login.php screen."
 author: Dean
 layout: post
 url: /2012/12/how-to-remove-wordpress-admin-other-pointless-wordpress-things-from-your-google-analytics/

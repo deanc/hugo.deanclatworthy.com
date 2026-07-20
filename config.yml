@@ -21,7 +21,7 @@ markup:
   highlight:
     style: tokyonight-day
 
-disableKinds: ["taxonomy"]
+disableKinds: ["taxonomy", "term", "section"]
 
 Params:
   SiteName: Dean Clatworthy

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "OSX Yosemite upgrade guide for PHP developers"
-description: ""
+seo_title: "OS X Yosemite Guide for PHP Developers"
+description: "A troubleshooting guide for restoring Apache, virtual hosts, PHP, MySQL, Homebrew, and related development tools after upgrading to OS X Yosemite."
 category: 
 tags: []
 url: /2014/12/20/yosemite-upgrade-guide-for-php-developers/
@@ -49,4 +50,4 @@ It seems MySQL doesn’t start by default. First go to the Settings on your Mac 
 Next, follow these instructions to [launch MySQL automatically](http://stackoverflow.com/a/26706416/775007).
 
 ## PHPStorm
-PHPStorm is not yet compatible with Yosemite as it ships a new version of Java. Unfortunately you have to downgrade for now. [More info here](https://intellij-support.jetbrains.com/entries/27854363-IDE-doesn-t-start-after-updating-to-Mac-OS-Yosemite-or-Mavericks)
+PHPStorm is not yet compatible with Yosemite as it ships a new version of Java. Unfortunately you have to downgrade for now.

@@ -1,10 +1,15 @@
 ---
 title: Bad character encoding causing MySQL errors in PHP
+seo_title: "Fix MySQL UTF-8 Encoding Errors"
+description: "Diagnose MySQL error 1366 caused by Latin-1 input and validate strict UTF-8 strings in PHP with mb_detect_encoding before importing them."
 author: Dean
 layout: post
 url: /2011/06/bad-character-encoding-causing-mysql-errors-in-php/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/matrix.jpg
+  - /img/uploads/2011/07/matrix.jpg
+image_alt: "Streams of green digits resembling the Matrix"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794929573
 categories:

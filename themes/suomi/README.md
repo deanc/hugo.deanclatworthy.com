@@ -1,6 +1,6 @@
 # Suomi
 
-`suomi` is a lightweight Finland-inspired Hugo theme for DeanClatworthy.com. It includes the homepage, about, portfolio, writing archive, article, skills and contact layouts, while remaining safe to preview alongside the existing `dean` theme.
+`suomi` is the primary Finland-inspired Hugo theme for DeanClatworthy.com. It includes the homepage, about, portfolio, writing archive, article, skills and contact layouts. The legacy `dean` theme remains available as a fallback.
 
 Preview the complete site with Suomi first and Dean available as a fallback:
 
@@ -8,7 +8,7 @@ Preview the complete site with Suomi first and Dean available as a fallback:
 hugo server --theme suomi,dean
 ```
 
-The normal site configuration is intentionally unchanged and continues to use `dean` by default.
+The normal site configuration loads `suomi` first and `dean` as a fallback.
 
 ## Footprint
 

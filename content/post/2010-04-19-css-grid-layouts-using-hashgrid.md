@@ -1,18 +1,22 @@
 ---
 title: CSS grid layouts using HashGrid
+description: "How to overlay a HashGrid on a web design, fix its stacking order, and create a matching grid image in Photoshop."
 author: Dean
 layout: post
 url: /2010/04/css-grid-layouts-using-hashgrid/
 image:
-  - //deanclatworthy.com/img/uploads/2010/04/hasgrid-150x150.jpg
+  - /img/uploads/2010/04/hasgrid-150x150.jpg
+image_alt: "The Analog website overlaid with a turquoise layout grid"
+image_width: 150
+image_height: 150
 dsq_thread_id:
   - 794526251
 categories: CSS
 date: 2010-04-19
 ---
-Just a heads up to anyone who's planning on designing their next project using a grid. The folks over at [Analog][1] have created a nifty little tool called [Hashgrid][2] to overlay a grid over your web page like so:
+Just a heads up to anyone who's planning on designing their next project using a grid. The folks over at Analog have created a nifty little tool called [Hashgrid][2] to overlay a grid over your web page like so:
 
-[<img src="//deanclatworthy.com/img/uploads/2010/04/hasgrid.jpg" alt="" title="hasgrid" width="600" height="385" class="alignnone size-full wp-image-60" />][3]
+[<img src="/img/uploads/2010/04/hasgrid.jpg" alt="The Analog website overlaid with a turquoise layout grid" title="hasgrid" width="600" height="385" class="alignnone size-full wp-image-60" />][3]
 
 Installation is pretty simple but I ran into a couple of minor issues which hopefully can be remedied in a future version:
 
@@ -21,6 +25,5 @@ Installation is pretty simple but I ran into a couple of minor issues which hope
 
 The hardest part is creating the grid image in photoshop. The quickest way I found to do this is with the selection tool and guides. Once you've created your guides it takes a few seconds to use the line tool to draw over your guides. If I get some time I might create a quick tool to generate dynamic grid images unless the hashgrid folks want to beat me to it ;-)
 
- [1]: http://analog.coop/
  [2]: http://www.hashgrid.com
- [3]: //deanclatworthy.com/img/uploads/2010/04/hasgrid.jpg
+ [3]: /img/uploads/2010/04/hasgrid.jpg

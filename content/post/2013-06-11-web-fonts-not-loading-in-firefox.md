@@ -1,5 +1,6 @@
 ---
 title: Web fonts not loading in Firefox
+description: "Fix cross-domain web fonts that load in other browsers but fail in Firefox by returning the appropriate Access-Control-Allow-Origin header."
 author: Dean
 layout: post
 url: /2013/06/web-fonts-not-loading-in-firefox/

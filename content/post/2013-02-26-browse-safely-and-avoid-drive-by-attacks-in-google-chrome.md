@@ -1,5 +1,7 @@
 ---
 title: Browse safely, and avoid drive-by attacks in Google Chrome
+seo_title: "Prevent Drive-by Attacks in Chrome"
+description: "An explanation of browser drive-by attacks and how Chrome's click-to-play plugin setting could reduce exposure while allowing trusted exceptions."
 author: Dean
 layout: post
 url: /2013/02/browse-safely-and-avoid-drive-by-attacks-in-google-chrome/
@@ -43,7 +45,7 @@ And that's it! Enjoy browsing the web more safely and please give feedback in th
  [4]: http://www.messagingnews.com/eyeonmessaging/stephanie-jordan/several-large-frequently-visited-sites-still-serving-malware
  [5]: http://en.wikipedia.org/wiki/Malware
  [6]: http://en.wikipedia.org/wiki/Zero-day_attack
- [7]: //deanclatworthy.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-26-at-1.11.02-PM.png
- [8]: //deanclatworthy.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-26-at-1.13.09-PM.png
- [9]: //deanclatworthy.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-26-at-1.14.25-PM.png
+ [7]: /img/uploads/2013/02/Screen-Shot-2013-02-26-at-1.11.02-PM.png
+ [8]: /img/uploads/2013/02/Screen-Shot-2013-02-26-at-1.13.09-PM.png
+ [9]: /img/uploads/2013/02/Screen-Shot-2013-02-26-at-1.14.25-PM.png
  [10]: https://twitter.com/deanclatworthy

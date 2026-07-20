@@ -1,5 +1,7 @@
 ---
 title: 'How to use responsive twitter bootstrap & masonry together'
+seo_title: "Responsive Bootstrap with Masonry"
+description: "JavaScript and CSS for combining Masonry with Twitter Bootstrap's responsive fixed-width breakpoints and recalculating columns as the viewport changes."
 author: Dean
 layout: post
 url: /2012/09/responsive-twitter-bootstrap-masonry/

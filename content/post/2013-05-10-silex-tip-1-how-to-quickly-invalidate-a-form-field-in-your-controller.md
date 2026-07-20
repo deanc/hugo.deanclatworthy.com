@@ -1,5 +1,7 @@
 ---
 title: 'Silex Tip #1: How to quickly invalidate a form field in your controller'
+seo_title: "Invalidate a Silex Form Field"
+description: "How to invalidate a single Silex form field directly in a controller by adding a Symfony FormError when a custom constraint is unnecessary."
 author: Dean
 layout: post
 url: /2013/05/silex-tip-1-how-to-quickly-invalidate-a-form-field-in-your-controller/

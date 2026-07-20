@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "How to use native Symfony Validator translations in a Silex application"
-description: ""
+seo_title: "Symfony Validator Translations in Silex"
+description: "How to load Symfony's built-in Validator translation files into fully qualified locales such as en_GB when using the Silex Translation component."
 category:
 url: /2015/10/09/using-symfony-translations-with-silex/
 tags: []

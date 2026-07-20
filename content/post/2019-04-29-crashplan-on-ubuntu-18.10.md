@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Crashplan on Ubuntu 18.10"
-description: ""
+description: "A workaround for running CrashPlan for Small Business on Ubuntu 18.10 by adding a PPA that addresses its Electron and glibc compatibility issue."
 category:
 url: /2019/04/29/running-crashplan-on-ubuntu-18.10/
 tags: [crashplan,ubuntu,electron,linux]

@@ -1,5 +1,6 @@
 ---
 title: 'Facebook: The new giant of advertising?'
+description: "How Facebook's structured activity and feeling tags could give its advertising platform more precise real-time targeting than demographic data alone."
 author: Dean
 layout: post
 url: /2013/06/facebook-the-new-giant-of-advertising/
@@ -9,7 +10,7 @@ categories:
   - Facebook
 date: 2013-06-18
 ---
-Last week Facebook [rolled out a new update][1] that lets people tag what they're doing in their post or say how they are feeling. Users can say they are watching a movie or reading a book &#8211; amongst other things. What makes this different from before is that your status update is providing more structured data to Facebook about your activity.<!--more-->
+Last week Facebook rolled out a new update that lets people tag what they're doing in their post or say how they are feeling. Users can say they are watching a movie or reading a book &#8211; amongst other things. What makes this different from before is that your status update is providing more structured data to Facebook about your activity.<!--more-->
 
 For example, when you went to the movie theatre, before you might have just typed a status update such as: &#8220;At the movies seeing the new Batman&#8221;. Unfortunately for Facebook there are 1000s of different ways to say you're at the movies, across 1000s of different languages used on their platform. The problem of trying to analyse what a user is doing from text is a difficult one to solve. But Facebook now made it easier.
 
@@ -25,5 +26,4 @@ Facebook has positioned itself to become the market leader in online advertising
 
 &nbsp;
 
- [1]: http://newsroom.fb.com/News/600/Adding-What-You-re-Doing-to-Status-Updates
- [2]: http://techcrunch.com/2013/05/01/facebook-mobile-ad-revenue/
+ [2]: https://techcrunch.com/2013/05/01/facebook-mobile-ad-revenue/

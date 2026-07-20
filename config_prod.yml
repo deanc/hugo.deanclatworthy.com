@@ -20,7 +20,7 @@ markup:
   highlight:
     style: tokyonight-day
 
-disableKinds: ["taxonomy"]
+disableKinds: ["taxonomy", "term", "section"]
 
 Params:
   AnalyticsID: "G-BKE986PPRZ"

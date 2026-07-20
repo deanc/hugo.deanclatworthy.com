@@ -1,5 +1,6 @@
 ---
 title: Stop OSX saving SSH private key password
+description: "A one-command tip for stopping OS X's SSH agent from remembering the password for a private key between server logins."
 author: Dean
 layout: post
 url: /2013/01/stop-osx-saving-ssh-private-key-password/

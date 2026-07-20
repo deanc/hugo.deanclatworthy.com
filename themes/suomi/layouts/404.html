@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="not-found page-width" aria-labelledby="not-found-title">
+  <div class="not-found-copy">
+    <p class="eyebrow">404 / Page not found</p>
+    <h1 id="not-found-title">That path doesn&rsquo;t lead anywhere.</h1>
+    <p class="not-found-lede">The page may have moved, or the address might be slightly off. Let&rsquo;s get you back somewhere familiar.</p>
+    <nav class="not-found-actions" aria-label="Page recovery">
+      <a class="primary-action" href="{{ "/" | relURL }}">Back to the homepage</a>
+      <a class="not-found-secondary" href="{{ "archive.html" | relURL }}">Browse my writing <span aria-hidden="true">→</span></a>
+    </nav>
+  </div>
+
+  <div class="not-found-scene" aria-hidden="true">
+    <span class="not-found-code">404</span>
+    <svg viewBox="0 0 520 360" focusable="false">
+      <circle class="not-found-sun" cx="392" cy="88" r="34"/>
+      <path class="not-found-hill not-found-hill-back" d="M0 240C90 175 164 188 236 225c78 40 166 18 284-58v193H0Z"/>
+      <path class="not-found-hill" d="M0 282c88-42 162-44 231-8 78 41 167 38 289-20v106H0Z"/>
+      <path class="not-found-path" d="M266 360c7-42 31-69 71-89 37-19 49-42 35-69 31 24 36 49 14 74-20 22-39 47-53 84Z"/>
+      <g class="not-found-trees">
+        <path d="M80 278v-31H48l32-51H57l34-58 34 58h-23l32 51h-32v31Z"/>
+        <path d="M160 286v-24h-27l27-42h-18l29-49 29 49h-19l27 42h-27v24Z"/>
+        <path d="M426 275v-27h-29l29-46h-20l32-53 31 53h-19l29 46h-30v27Z"/>
+      </g>
+    </svg>
+  </div>
+</section>
+{{ end }}

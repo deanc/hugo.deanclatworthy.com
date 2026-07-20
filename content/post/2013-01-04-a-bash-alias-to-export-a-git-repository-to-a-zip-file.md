@@ -1,5 +1,7 @@
 ---
 title: A bash alias to export a git repository to a zip file
+seo_title: "Export a Git Repository to ZIP"
+description: "Create a short Bash alias that uses git archive to package the committed master branch of a Git repository into a timestamped ZIP file."
 author: Dean
 layout: post
 url: /2013/01/a-bash-alias-to-export-a-git-repository-to-a-zip-file/

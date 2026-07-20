@@ -1,5 +1,7 @@
 ---
 title: Stopping mass-login attempts to WordPress using nginx
+seo_title: "Stop WordPress Login Attacks with nginx"
+description: "Pointers for protecting wp-login.php from mass login attempts with nginx and diagnosing a PHP configuration that downloads the login script."
 author: Dean
 layout: post
 url: /2013/07/stopping-mass-login-attempts-to-wordpress-using-nginx/

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Migrating Jekyll to Hugo - my experience"
-description: ""
+description: "Lessons from migrating a Jekyll site to Hugo, including URL preservation, templates, menus, metadata, syntax highlighting, and deployment."
 category:
 url: /2015/10/15/migrating-jekyll-to-hugo-my-experience/
 tags: [hugo, jekyll]

@@ -1,5 +1,7 @@
 ---
 title: Crawling UTF-8 pages using the Symfony2 DomCrawler component
+seo_title: "UTF-8 with Symfony DomCrawler"
+description: "How to make Symfony 2 DomCrawler parse UTF-8 HTML correctly with addHTMLContent instead of allowing the crawler to assume ISO-8859-1."
 author: Dean
 layout: post
 url: /2013/04/crawling-utf-8-pages-using-the-symfony2-domcrawler-component/

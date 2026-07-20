@@ -1,5 +1,6 @@
 ---
 title: Hello world!
+description: "An introduction to Dean Clatworthy's blog and its mix of useful articles, personal interests, observations, and occasional rants."
 author: Dean
 layout: post
 dsq_thread_id:

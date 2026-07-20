@@ -1,5 +1,7 @@
 ---
 title: 'How to avoid relying on github: mirror your repository'
+seo_title: "Mirror a Git Repository"
+description: "How to configure a Git repository with GitHub and Bitbucket remotes so one push mirrors code to both hosts and reduces reliance on one service."
 author: Dean
 layout: post
 url: /2013/01/how-to-avoid-relying-on-github-mirror-your-repository/

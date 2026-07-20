@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "Integration isn't an evening class"
-description: ""
+description: "Why Finland should treat language learning as integration infrastructure, with structured, funded study time for skilled immigrants building lives and careers."
 category:
 url: /2026/02/11/integration-isnt-an-evening-class/
 tags: [finland,citizenship,suomi,language]
 date: 2026-02-11
 image: "/integration-isnt-an-evening-class.jpeg"
+image_alt: "A snow-covered road stretching through a Finnish winter landscape"
+image_width: 1280
+image_height: 850
 ---
 
 I have lived in Finland for 16 years. When I arrived, I failed hard at learning the language.

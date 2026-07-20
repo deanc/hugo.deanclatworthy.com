@@ -1,10 +1,14 @@
 ---
 title: How to rip music from the hype machine
+description: "How to use Chrome's network inspector to locate and save an MP3 that still plays on Hype Machine after its original blog link has disappeared."
 author: Dean
 layout: post
 url: /2012/01/how-to-rip-music-from-the-hype-machine/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/matrix.jpg
+  - /img/uploads/2011/07/matrix.jpg
+image_alt: "Streams of green digits resembling the Matrix"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794523433
 categories:

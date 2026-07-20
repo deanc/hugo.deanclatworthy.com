@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Using a self signed certificate with Cloudflare's Full SSL on nginx"
-description: ""
+seo_title: "Cloudflare Full SSL with nginx"
+description: "How to secure both legs of a Cloudflare connection by generating a self-signed certificate and configuring Full SSL on an nginx origin server."
 category: 
 tags: []
 url: /2014/10/18/using-a-self-signed-certificate-with-cloudflares-full-ssl-on-nginx/

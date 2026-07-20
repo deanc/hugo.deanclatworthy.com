@@ -1,10 +1,15 @@
 ---
 title: WordPress plugin deployment script (GIT to SVN)
+seo_title: "Deploy WordPress Plugins from Git to SVN"
+description: "A Bash deployment script that keeps a WordPress plugin in Git while synchronising releases, versions, commits, and tags with WordPress.org SVN."
 author: Dean
 layout: post
 url: /2011/01/wordpress-plugin-deployment-script-git-to-svn/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/cmdline.jpg
+  - /img/uploads/2011/07/cmdline.jpg
+image_alt: "Colour-coded Unix shell command names on a black terminal"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794530150
 categories:

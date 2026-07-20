@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "The Joy of Programming"
-description: ""
+description: "A reflection on how autonomous AI coding agents increase software output while changing the hands-on craft, satisfaction, and identity of programming."
 category:
 url: /2026/02/09/the-joy-of-programming/
 tags: [ai,agents,claude,chatgpt,codex,anthropic]
 date: 2026-02-09
 image: "/post-joy-of-programming.jpg"
+image_alt: "A father and son building a toy castle together by a fireplace"
+image_width: 1024
+image_height: 541
 ---
 
 It’s 2026, and I’m writing this post without AI. That already feels like a confession.

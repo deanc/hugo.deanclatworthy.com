@@ -1,10 +1,14 @@
 ---
 title: Useful GIT commands
+description: "A practical Git command reference for resetting a branch to its remote, comparing branch histories, and sorting branches by recent commits."
 author: Dean
 layout: post
 url: /2011/01/useful-git-commands/
 image:
-  - //deanclatworthy.com/img/uploads/2011/07/git.jpg
+  - /img/uploads/2011/07/git.jpg
+image_alt: "Diagram of common Git commands and workflows"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 794932361
 categories:

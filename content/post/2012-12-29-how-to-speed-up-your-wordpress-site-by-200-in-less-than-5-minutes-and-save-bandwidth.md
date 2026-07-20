@@ -1,5 +1,7 @@
 ---
 title: How to speed up your WordPress site by 200% in less than 5 minutes and save bandwidth
+seo_title: "Speed Up WordPress with Cloudflare"
+description: "How Cloudflare's caching, CDN, minification, and security features can make a WordPress site faster, reduce bandwidth, and improve availability."
 author: Dean
 layout: post
 url: /2012/12/how-to-speed-up-your-wordpress-site-by-200-in-less-than-5-minutes-and-save-bandwidth/

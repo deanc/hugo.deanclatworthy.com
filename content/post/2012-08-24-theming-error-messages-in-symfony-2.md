@@ -1,5 +1,7 @@
 ---
 title: Theming/styling error messages in Symfony 2
+seo_title: "Theme Symfony 2 Form Errors"
+description: "A reusable Twig form theme for custom Symfony 2 validation error markup, including the correct bundle alias syntax needed to load it."
 author: Dean
 layout: post
 url: /2012/08/theming-error-messages-in-symfony-2/

@@ -1,10 +1,15 @@
 ---
 title: A chrome extension to revert to the old-style facebook chat
+seo_title: "Restore the Old Facebook Chat in Chrome"
+description: "A Chrome extension that simplified Facebook's redesigned chat sidebar by hiding offline contacts and showing only friends available to chat."
 author: Dean
 layout: post
 url: /2011/09/a-chrome-extension-to-revert-to-the-old-style-facebook-chat/
 image:
-  - //deanclatworthy.com/img/uploads/2011/09/blog_fb.png
+  - /img/uploads/2011/09/blog_fb.png
+image_alt: "Facebook chat interface showing a list of contacts"
+image_width: 672
+image_height: 150
 dsq_thread_id:
   - 797875550
 categories:

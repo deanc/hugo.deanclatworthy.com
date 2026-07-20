@@ -1,5 +1,7 @@
 ---
 title: A Photoshop PSD template for Twitter Bootstrap's responsive grid
+seo_title: "Bootstrap Responsive Grid PSD Template"
+description: "A downloadable Photoshop PSD overlay that helps designers work accurately with the 1200, 980, and 768 pixel breakpoints in Bootstrap 2."
 author: Dean
 layout: post
 url: /2013/01/a-photoshop-psd-template-for-twitter-bootstraps-responsive-grid/
@@ -17,7 +19,7 @@ One of the challenges I have faced when doing my front-end work is trying to com
 
 Furthermore, one has to then consider the margins in between the columns on the grid. Rather than leave this to interpretation I created this PSD template. You can just rip out the layers from it and put it on top of your existing design, or use it as a starting point to any of your designs which will utilise Bootstrap. It overlays a translucent grid for the top 3 bootstrap breakpoints: 1200px, 980px and 768px.
 
-<a href="http://www.deanclatworthy.com/2013/01/a-photoshop-psd-template-for-twitter-bootstraps-responsive-grid/bootstrap-guide/" rel="attachment wp-att-288"><img class="alignnone size-large wp-image-288" alt="Bootstrap-Guide" src="//deanclatworthy.com/img/uploads/2013/01/Bootstrap-Guide-1024x682.png" width="625" height="416" /></a>
+<a href="/img/uploads/2013/01/Bootstrap-Guide.png"><img class="alignnone size-large wp-image-288" alt="Bootstrap grid guide" src="/img/uploads/2013/01/Bootstrap-Guide-1024x682.png" width="625" height="416" /></a>
 
 You can utilise any of the space in green, but do not place anything on the leftmost or rightmost red areas.
 
