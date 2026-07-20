@@ -1,5 +1,6 @@
 ---
 date: "2015-10-14T14:10:32+03:00"
+lastmod: "2026-07-20"
 title: "My Skills"
 emoji: "🗂️"
 description: "Find out more about what skills I have, and what I can do for you or your business."

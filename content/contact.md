@@ -1,5 +1,6 @@
 ---
 date: "2015-10-14T14:10:32+03:00"
+lastmod: "2026-07-20"
 title: "Contact"
 eyebrow: "Get in touch"
 emoji: "✉️"

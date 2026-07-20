@@ -5,6 +5,14 @@ tagline:
 uglyURLs: "true"
 theme: [suomi, dean]
 summaryLength: 25
+enableGitInfo: true
+
+frontmatter:
+  lastmod:
+    - lastmod
+    - ":git"
+    - date
+    - publishDate
 
 markup:
   goldmark:
@@ -22,6 +30,12 @@ Params:
   Tagline: "I build web services for a living. <code>Full-stack</code>, <code>Cloud</code>, <code>Databases</code>"
   Author:
     Name: Dean Clatworthy
+    JobTitle: Software Architect & Engineer
+    Location: Helsinki, Finland
+  Social:
+    Github: https://github.com/deanc
+    Linkedin: https://www.linkedin.com/in/deanclatworthy/
+    Twitter: https://x.com/deanclatworthy
   Homepage:
     Intro: |
       Greetings! I'm originally from England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 but now I live in Helsinki, Finland 🇫🇮. I've a BSc. in Computer Science

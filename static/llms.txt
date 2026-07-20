@@ -1,0 +1,27 @@
+# Dean Clatworthy
+
+> Personal website of Dean Clatworthy, a software architect and engineer in Helsinki, Finland. Dean designs and builds maintainable web services across cloud, back-end, and front-end systems.
+
+This is the canonical guide to the main public information on deanclatworthy.com. For complete URL discovery, use the sitemap; for machine-readable site updates, use the RSS feed.
+
+## Profile and expertise
+
+- [About Dean](https://deanclatworthy.com/about.html): Background, working principles, and professional focus.
+- [Skills and experience](https://deanclatworthy.com/skills.html): Cloud architecture, TypeScript, Node.js, back-end and front-end development, databases, systems design, and agentic development.
+- [Portfolio](https://deanclatworthy.com/portfolio.html): Selected consulting, architecture, platform modernisation, and digital product work.
+
+## Writing and open source
+
+- [Writing archive](https://deanclatworthy.com/archive.html): Essays and technical articles by Dean.
+- [RSS feed](https://deanclatworthy.com/index.xml): Machine-readable feed of site updates.
+- [GitHub](https://github.com/deanc): Open-source tools, scripts, and experiments.
+
+## Contact and verified profiles
+
+- [Contact](https://deanclatworthy.com/contact.html): Enquiries about consulting, technical work, and general correspondence.
+- [LinkedIn](https://www.linkedin.com/in/deanclatworthy/): Professional profile.
+- [X](https://x.com/deanclatworthy): Public social profile.
+
+## Site discovery
+
+- [Sitemap](https://deanclatworthy.com/sitemap.xml): Complete index of canonical public pages.

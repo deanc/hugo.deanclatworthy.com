@@ -1,5 +1,6 @@
 ---
 date: "2015-10-14T14:10:32+03:00"
+lastmod: "2026-07-20"
 title: "Portfolio of Dean Clatworthy"
 emoji: "💻"
 description: "See all my previous work, and projects."

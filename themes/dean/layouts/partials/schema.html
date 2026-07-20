@@ -3,26 +3,32 @@
 {{- $authorName := or .Site.Params.Author.Name .Site.Title -}}
 {{- $defaultDescription := .Site.Params.MetaDescription | default .Site.Params.Tagline | plainify | strings.TrimSpace -}}
 
+{{- $sameAs := slice -}}
+{{- with .Site.Params.Social -}}
+  {{- with .Github }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with .Linkedin }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with .Twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- end -}}
+
+{{- $person := dict
+  "@type" "Person"
+  "@id" (printf "%s#person" $siteURL)
+  "name" $authorName
+  "url" $siteURL
+  "image" (printf "%simg/portrait.jpg" $siteURL)
+  "description" ($defaultDescription | htmlUnescape)
+-}}
+{{- with .Site.Params.Author.JobTitle -}}
+  {{- $person = merge $person (dict "jobTitle" .) -}}
+{{- end -}}
+{{- with .Site.Params.Author.Location -}}
+  {{- $person = merge $person (dict "homeLocation" (dict "@type" "Place" "name" .)) -}}
+{{- end -}}
+{{- if gt (len $sameAs) 0 -}}
+  {{- $person = merge $person (dict "sameAs" $sameAs) -}}
+{{- end -}}
+
 {{- if .IsHome -}}
-  {{- $sameAs := slice -}}
-  {{- with .Site.Params.Social -}}
-    {{- with .Github }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-    {{- with .Linkedin }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-    {{- with .Twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-  {{- end -}}
-
-  {{- $person := dict
-    "@type" "Person"
-    "@id" (printf "%s#person" $siteURL)
-    "name" $authorName
-    "url" $siteURL
-    "image" (printf "%simg/portrait.jpg" $siteURL)
-    "description" ($defaultDescription | htmlUnescape)
-  -}}
-  {{- if gt (len $sameAs) 0 -}}
-    {{- $person = merge $person (dict "sameAs" $sameAs) -}}
-  {{- end -}}
-
   {{- $website := dict
     "@type" "WebSite"
     "@id" (printf "%s#website" $siteURL)
@@ -33,6 +39,21 @@
   -}}
 
   <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $person) | jsonify | safeJS }}</script>
+{{- end -}}
+
+{{- if eq .RelPermalink "/about.html" -}}
+  {{- $description := .Description | default $defaultDescription | plainify | strings.TrimSpace | htmlUnescape | truncate 160 -}}
+  {{- $profilePage := dict
+    "@type" "ProfilePage"
+    "@id" (printf "%sabout.html#profile" $siteURL)
+    "url" .Permalink
+    "name" .Title
+    "description" $description
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "isPartOf" (dict "@id" (printf "%s#website" $siteURL))
+    "mainEntity" (dict "@id" (printf "%s#person" $siteURL))
+  -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $profilePage $person) | jsonify | safeJS }}</script>
 {{- end -}}
 
 {{- if and .IsPage (eq .Section "post") -}}

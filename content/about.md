@@ -1,5 +1,6 @@
 ---
 title: "About me"
+lastmod: "2026-07-20"
 eyebrow: "Profile"
 description: "Software architect and engineer in Helsinki, building dependable web services and thoughtful digital products."
 ---
