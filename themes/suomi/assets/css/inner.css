@@ -33,6 +33,24 @@
 .page-intro > :first-child { margin-top: 0; }
 .page-intro > :last-child { margin-bottom: 0; }
 
+.about-heading {
+  display: grid;
+  max-width: none;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 250px);
+  gap: clamp(48px, 8vw, 108px);
+  align-items: center;
+}
+
+.about-heading .page-intro { max-width: 680px; }
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
 .current-role {
   max-width: 760px;
   margin-top: 32px;
@@ -793,6 +811,11 @@
 .skills-cta .primary-action { flex: none; gap: 14px; }
 
 @media (max-width: 760px) {
+  .about-heading {
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 28px;
+  }
+
   .article-page .page-heading { margin-inline: 0; }
   .article-prose blockquote {
     margin: 2em 0;
@@ -832,6 +855,9 @@
 }
 
 @media (max-width: 480px) {
+  .about-heading { grid-template-columns: 1fr; }
+  .about-portrait { width: 160px; }
+
   .article-page .page-heading h1 { font-size: 48px; }
   .article-meta { margin-top: 26px; }
   .article-hero { margin-bottom: 48px; }

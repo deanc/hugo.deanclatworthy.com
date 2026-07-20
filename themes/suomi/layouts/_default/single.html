@@ -2,23 +2,38 @@
 {{ if and .File (eq .File.BaseFileName "skills") }}
   {{ partial "skills-page.html" . }}
 {{ else }}
-<article class="prose-page page-width{{ if eq .Section "post" }} article-page{{ end }}">
+{{ $isAbout := and .File (eq .File.BaseFileName "about") }}
+<article class="prose-page page-width{{ if eq .Section "post" }} article-page{{ else if $isAbout }} about-page{{ end }}">
   {{ if and (eq .Section "post") .Draft hugo.IsDevelopment }}
   <aside class="draft-notice" role="status">
     <strong>Unpublished draft</strong>
     <span>This page is visible only in Hugo development mode.</span>
   </aside>
   {{ end }}
-  <header class="page-heading">
-    <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}{{ with .Params.eyebrow }}{{ . }}{{ else }}Dean Clatworthy{{ end }}{{ end }}</p>
-    <h1>{{ .Title }}</h1>
-    {{ if eq .Section "post" }}
-    <div class="article-meta">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-      <span>{{ .ReadingTime }} min read</span>
+  <header class="page-heading{{ if $isAbout }} about-heading{{ end }}">
+    <div class="page-heading-copy">
+      <p class="eyebrow">{{ if eq .Section "post" }}Writing{{ else }}{{ with .Params.eyebrow }}{{ . }}{{ else }}Dean Clatworthy{{ end }}{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ if eq .Section "post" }}
+      <div class="article-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+      {{ else }}
+        {{ with .Params.description }}<p class="page-intro">{{ . }}</p>{{ end }}
+      {{ end }}
     </div>
-    {{ else }}
-      {{ with .Params.description }}<p class="page-intro">{{ . }}</p>{{ end }}
+    {{ if $isAbout }}
+    <img
+      class="about-portrait"
+      src="{{ "img/me_450.jpg" | relURL }}"
+      srcset="{{ "img/me_225.jpg" | relURL }} 225w, {{ "img/me_300.jpg" | relURL }} 300w, {{ "img/me_450.jpg" | relURL }} 450w"
+      sizes="(max-width: 560px) 160px, (max-width: 760px) 150px, 250px"
+      width="450"
+      height="450"
+      alt="Dean Clatworthy"
+      loading="eager"
+      decoding="async">
     {{ end }}
   </header>
 
