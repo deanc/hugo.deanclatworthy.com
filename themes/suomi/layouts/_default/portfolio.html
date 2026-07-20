@@ -18,7 +18,12 @@
       <section class="project" id="project-{{ .id }}">
         <div class="project-heading">
           <h2>{{ .title }}</h2>
-          {{ with .agency }}<p>{{ . }}</p>{{ end }}
+          {{ if or .agency .year }}
+          <p class="project-meta">
+            {{ with .agency }}<span>{{ . }}</span>{{ end }}
+            {{ with .year }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
+          </p>
+          {{ end }}
         </div>
         <div class="project-body">
           <div class="prose">{{ .description | markdownify }}</div>

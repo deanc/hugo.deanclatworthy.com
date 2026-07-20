@@ -89,6 +89,9 @@
       {{- if $item.agency -}}
         {{- $entry = merge $entry (dict "producer" (dict "@type" "Organization" "name" $item.agency)) -}}
       {{- end -}}
+      {{- if $item.year -}}
+        {{- $entry = merge $entry (dict "dateCreated" (printf "%v" $item.year)) -}}
+      {{- end -}}
       {{- if $item.thumbnails -}}
         {{- $entry = merge $entry (dict "image" (slice ((index $item.thumbnails 0) | absURL))) -}}
       {{- end -}}

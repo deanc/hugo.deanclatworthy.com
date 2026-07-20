@@ -381,11 +381,14 @@
 .archive-list a span:nth-child(2) { font-size: clamp(18px, 2vw, 21px); }
 .archive-list a span:last-child { font-size: 24px; }
 .archive-list a:hover span:nth-child(2) { text-decoration: underline; }
+.archive-list a .post-title .unpublished-label { font-size: .55em; }
+.archive-list a:hover .unpublished-label { text-decoration: none; }
 
 .project-list { border-top: 1px solid var(--ink); }
 .project { display: grid; grid-template-columns: minmax(210px, .7fr) minmax(0, 1.6fr); gap: clamp(40px, 7vw, 90px); padding: clamp(48px, 7vw, 78px) 0; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
 .project-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(31px, 4vw, 44px); font-weight: 400; line-height: 1.08; }
-.project-heading p { margin: 15px 0 0; color: var(--muted); font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+.project-heading .project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 15px 0 0; color: var(--muted); font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+.project-meta span + time::before { display: inline-block; width: 3px; height: 3px; margin: 0 8px 3px 0; border-radius: 50%; background: currentColor; content: ""; }
 .project-body .prose { font-size: 18px; }
 .technology-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; padding: 0; list-style: none; }
 .technology-list li { padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }

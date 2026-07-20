@@ -2,6 +2,7 @@ items:
   - id: asteroid_healthcare_notifications
     title: "Healthcare: Global notifications platform"
     agency: Asteroid
+    year: 2025
     description: >
       I worked on the migration of a large-scale notifications platform from a queue-based architecture to Kafka.
       Operating across multiple global deployments, the system delivers hundreds of thousands of push notifications,
@@ -12,6 +13,7 @@ items:
   - id: asteroid_pet_store_modernisation
     title: "E-commerce: Pet store platform modernisation"
     agency: Asteroid
+    year: 2022
     description: >
       I led the engineering team and defined the architecture for moving a major online pet store away from a legacy
       PHP monolith running on Kubernetes towards a more agile AWS-based platform. Rather than attempting a high-risk
@@ -23,6 +25,7 @@ items:
   - id: wunderdog_airline_payments
     title: "Airline: E-commerce payments platform"
     agency: Wunderdog
+    year: 2020
     description: >
       I worked in the payments team behind Finland's largest e-commerce platform, helping to develop and maintain
       the services that power a high-volume, business-critical checkout experience. The platform used a serverless
@@ -32,6 +35,7 @@ items:
   - id: wunderdog_genetics_ordering
     title: "Healthcare: Genetics ordering platform"
     agency: Wunderdog
+    year: 2020
     description: >
       I contributed new features to a large clinical application used by geneticists and physicians to order genetic
       testing panels. Working across its React and Go codebases, I helped evolve a complex healthcare workflow while
@@ -41,6 +45,7 @@ items:
   - id: wunderdog_healthcare_modernisation
     title: "Healthcare: Application modernisation and ICD-10"
     agency: Wunderdog
+    year: 2019
     description: >
       I helped modernise a legacy PHP application by rebuilding it with React and Node.js, containerising it with
       Docker and deploying it to an OpenShift cluster. I also implemented an ICD-10 database and supporting application,
@@ -50,6 +55,7 @@ items:
   - id: becauseofyou
     title: "AdCouncil: BecauseOfYou"
     agency: hasan & partners / TBD
+    year: 2018
     description: >
       In collaboration with TBD agency in San Francisco, I developed the website for this anti-bullying campaign.
     technologies: [HTML5, PHP, MySQL, JS, CSS, Wordpress]
@@ -59,6 +65,7 @@ items:
   - id: sheboard
     title: "Plan Finland: Sheboard"
     agency: hasan & partners
+    year: 2017
     description: >
       Have you ever wondered about the difference in language you use to talk to boys and girls? We created a predictive
       keyboard app which adjusts the language you use to talk about girls. For this project I developed the website for the
@@ -71,6 +78,7 @@ items:
   - id: kone_machine_conversations_part_2
     title: "KONE: Machine Conversations (Part 2)"
     agency: hasan & partners
+    year: 2018
     description: >
       For the second part of Machine Conversations, we were tasked with promoting the launch of KONE's 24/7 Escalator
       maintenance product. In order to do this we hooked an escalator into the same back-end system created for the original
@@ -84,6 +92,7 @@ items:
   - id: kone_machine_conversations_part_1
     title: "KONE: Machine Conversations (Part 1)"
     agency: hasan & partners
+    year: 2017
     description: >
       Our pitch was to bring KONE's 24/7 connected services offering to life
       in the form of converting the messages sent by their elevators into a live chat between the elevator
@@ -117,6 +126,7 @@ items:
   - id: valio_suksi_ladulle
     title: "Valio: Suksi Ladulle"
     agency: hasan & partners
+    year: 2016
     description: >
       Similar to the Fazer Chocolate Hunt project, we utilised a database of outdoor shelter
       locations to create pins on a map that people and their families could visit during the winter months leading up
@@ -142,6 +152,7 @@ items:
   - id: tallinksilja_complaint_booth
     title: "TallinkSilja: Complaint Booth + Banner"
     agency: hasan & partners
+    year: 2016
     description: >
       We retrofitted an old English phone box with a fake phone, powered by Skype, in order to allow visitors to a complaint
       booth to vent their general frustrations to a moderator on the other end of the phone. If the moderator determined
@@ -162,6 +173,7 @@ items:
   - id: metsa_plan_b
     title: "Metsä: Plan B"
     agency: hasan & partners
+    year: 2015
     description: >
       I created a static website, built using Jekyll, to showcase for potential Metsä customers how iconic structures might
       look and function if they were built out of wood.
@@ -182,6 +194,7 @@ items:
   - id: hasan_eurobest
     title: "hasan & partners: Eurobest booth"
     agency: hasan & partners
+    year: 2014
     description: >
       For the Eurobest 2014 Festival of Creativity, I was tasked with helping with the development of the hasan & partners stand at the Eurobest conference. This featured two installations:
 
@@ -192,6 +205,7 @@ items:
   - id: sanoma_big_things
     title: "Sanoma: Big Things"
     agency: hasan & partners
+    year: 2014
     description: >
       For the Eurobest 2014 Festival of Creativity, we created a website for Sanoma - Finland's
       biggest media house - to showcase inspirational quotes to do with marketing.
@@ -201,6 +215,7 @@ items:
   - id: plan_sponsor_dreams
     title: "Plan: Sponsor of dreams installation"
     agency: hasan & partners
+    year: 2014
     description: >
       I created an integrated installation for Plan: Finland in Finland's busiest shopping mall
       which allows users to donate money into a box, and upon a successful donation it takes their photo. Photos are then displayed
@@ -211,6 +226,7 @@ items:
   - id: metsa_tree_online
     title: "Metsä: Tree Online"
     agency: hasan & partners
+    year: 2014
     description: >
       Highly interactive and visual website for one of Finland's biggest companies. Featuring an
       interactive video timeline and plenty of other visual eye candy. A community area was also created to allow Metsä
@@ -225,6 +241,7 @@ items:
   - id: lidl_grillimeisteri
     title: "Lidl: Grillimaisteri 2014"
     agency: hasan & partners
+    year: 2014
     description: >
       Lidl asked us to create a new website for their 2014 activities for the Grillimaisteri brand.
       I created a back-end for the site to manage all the content including recipes, products, competitions, blogs etc. I was
@@ -234,6 +251,7 @@ items:
   - id: plan_girls_day_printer
     title: "Plan Finland: Girls Day Printer"
     agency: hasan & partners
+    year: 2014
     description: >
       We were asked to create a campaign where every time an SMS donation is received, or the
       website is shared using Facebook or tweeted, a tiny receipt printer in downtown Helsinki will print a few words of the
@@ -264,6 +282,7 @@ items:
   - id: angrybirds_star_wars
     title: "Angry Birds: Star Wars"
     agency: Luxus
+    year: 2012
     description: >
       I helped to concept and subsequently implement the official website for Rovio&#8217;s new
       title &#8220;Angry Birds: Star Wars&#8221;. Most of this work was HTML5/CSS3/JavaScript and using Twitter Bootstrap
@@ -276,6 +295,7 @@ items:
   - id: iitala_store
     title: "Iittala: Online web store"
     agency: Luxus
+    year: 2012
     description: >
       Front end implementation for the Iittala online webstore. This involved a lengthy process of converting
       wireframes to prototypes to a full front-end implementation into Iittala's CMS. The project lasted almost six months and
