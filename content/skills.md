@@ -15,6 +15,11 @@ On this page I'll detail my areas of expertise.
 
 I am an [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/92fb903a-4ae2-45d7-a1ee-c0203669f67a/public_url) and [AWS Certified Cloud Practioner](https://www.credly.com/badges/a03fa404-283d-469d-8d65-f74c7b970bfa/public_url).
 
+## 🤖 AI & agentic development
+
+I have hands-on experience using large language models (LLMs) through agent harnesses, with a comprehensive understanding
+of how to design and build effective, reusable agent skills and workflows.
+
 ## 🗄️ Back-end
 
 #### Node.js
@@ -66,10 +71,42 @@ designed in such a way that it's easily maintained and modified, that it scales 
 problems that may occur further down the line. Having had many years of experience I have learnt to identify very early
 on in the life cycle of a project what potential pitfalls might occur and address the risks before they happen.
 
-## 🤖 AI & agentic development
+## 🤝 Technical leadership & collaboration
 
-I have hands-on experience using large language models (LLMs) through agent harnesses, with a comprehensive understanding
-of how to design and build effective, reusable agent skills and workflows.
+After more than 20 years of building software, I’ve learnt that writing the code is often not the hardest part. The harder
+part is working out what should be built, explaining the trade-offs and helping a team move forward when there is no
+obviously correct answer.
+
+#### Turning ambiguity into a plan
+
+Before jumping into a solution, I ask questions and try to uncover the real problem behind a request. Sometimes that
+means challenging the original idea. Sometimes it means choosing a boring solution because it will be easier to
+understand, maintain and operate.
+
+It is very easy to build the wrong thing well. I would rather have the difficult conversation at the beginning than
+discover six months later that we solved the wrong problem.
+
+#### Communicating technical trade-offs
+
+There is rarely one perfect technical answer. Every decision comes with a cost, whether that is development time,
+complexity, performance or maintenance later on. I can explain those trade-offs to both technical and non-technical
+colleagues without hiding behind jargon.
+
+The goal is to make a good decision, not an impressive-looking one.
+
+#### Helping other developers succeed
+
+I enjoy mentoring, pairing and reviewing code. A good code review should explain why something could be improved, not
+just point out that it is wrong. Sharing the reasoning matters. It helps people make their own decisions next time and
+means that knowledge does not remain stuck with one person.
+
+#### Calm, dependable delivery
+
+Projects change. Estimates turn out to be wrong. Production systems break. None of these situations improve when people
+panic or start looking for someone to blame.
+
+I try to stay calm, be honest about what we know and focus on what needs to happen next. Fix the immediate problem, work
+out why it happened and leave the system in a better state than it was before.
 
 ## 📦 Misc
 
