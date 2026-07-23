@@ -11,6 +11,11 @@
 - When materially changing a core standalone page, update its explicit `lastmod` value. Do not change the original `date` value, which represents first publication.
 - When adding or removing an important canonical page, decide whether it belongs in `static/llms.txt`; do not turn the file into a complete sitemap.
 
+## Tone of voice
+
+- Read and follow [`TONE_OF_VOICE.md`](TONE_OF_VOICE.md) when drafting or editing Dean's public-facing copy, including posts, standalone pages, portfolio entries, summaries, calls to action, and social copy derived from the site.
+- Treat it as style guidance, not permission to invent facts, experiences, opinions, outcomes, or certainty. Preserve the source material's meaning and follow the more specific SEO requirements below for published posts.
+
 ## Active theme and SEO invariants
 
 - `suomi` is the primary active theme. Treat `dean` as a legacy fallback; make layout, styling, metadata, and SEO changes only in `themes/suomi` unless explicitly requested otherwise.
