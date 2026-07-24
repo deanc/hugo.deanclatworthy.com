@@ -228,6 +228,8 @@
 .prose a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .prose a:hover { text-decoration-thickness: 2px; }
 .prose img { max-width: 100%; height: auto; border-radius: 4px; }
+.content-image-picture,
+.content-image-picture img { display: block; }
 .prose code { padding: .12em .3em; background: var(--soft); font-size: .88em; }
 .prose pre { overflow-x: auto; padding: 22px; background: var(--soft); border-radius: 4px; }
 .prose pre code { padding: 0; background: transparent; }
@@ -283,6 +285,17 @@
   margin: -8px auto clamp(54px, 7vw, 76px);
   border-radius: 4px;
   object-fit: cover;
+}
+
+.article-hero-picture {
+  display: block;
+  width: min(100%, 980px);
+  margin: -8px auto clamp(54px, 7vw, 76px);
+}
+
+.article-hero-picture .article-hero {
+  width: 100%;
+  margin: 0;
 }
 
 .article-prose {

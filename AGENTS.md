@@ -11,6 +11,13 @@
 - When materially changing a core standalone page, update its explicit `lastmod` value. Do not change the original `date` value, which represents first publication.
 - When adding or removing an important canonical page, decide whether it belongs in `static/llms.txt`; do not turn the file into a complete sitemap.
 
+## Image sources and derivatives
+
+- Keep the best available lossless source for new images under `image-sources/`. These files are build inputs and must not be published directly.
+- Use the same path and basename for the lossless PNG master and its public fallback in `static/`, changing only the extension where appropriate.
+- Generate responsive AVIF and WebP variants from the lossless master. Keep the public JPEG fallback for compatibility, stable URLs and social previews.
+- Do not create a fake master by converting an existing lossy JPEG or WebP to PNG. If no lossless source exists, keep the best original available and document that limitation.
+
 ## Tone of voice
 
 - Read and follow [`TONE_OF_VOICE.md`](TONE_OF_VOICE.md) when drafting or editing Dean's public-facing copy, including posts, standalone pages, portfolio entries, summaries, calls to action, and social copy derived from the site.

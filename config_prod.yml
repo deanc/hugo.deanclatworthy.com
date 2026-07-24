@@ -6,6 +6,18 @@ uglyURLs: "true"
 theme: [suomi, dean]
 enableGitInfo: true
 
+module:
+  mounts:
+    # Lossless source images are build inputs and are never published directly.
+    - source: image-sources
+      target: assets/image-sources
+    # Keep canonical image URLs under static/ while making their sources
+    # available to Hugo's responsive image pipeline.
+    - source: static
+      target: assets
+    - source: themes/dean/static/img/uploads
+      target: assets/img/uploads
+
 frontmatter:
   lastmod:
     - lastmod

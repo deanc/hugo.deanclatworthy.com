@@ -35,13 +35,7 @@ Years before I drank coffee myself, I had noticed a [La Pavoni Europiccola](http
 
 So I bought one.
 
-<img
-  src="/things-i-love-coffee-la-pavoni.jpg"
-  alt="Japanese-inspired ink and watercolour illustration of a La Pavoni Europiccola lever espresso machine"
-  width="1536"
-  height="1024"
-  loading="lazy"
-  decoding="async">
+![Japanese-inspired ink and watercolour illustration of a La Pavoni Europiccola lever espresso machine](/things-i-love-coffee-la-pavoni.jpg)
 
 The Europiccola made the process as interesting as the drink. I grind the beans, prepare the coffee, place a cup beneath the group head and pull the lever down by hand. The movement is simple, physical and pleasing. There is no button to hide the difficult parts.
 
@@ -97,12 +91,6 @@ I also enjoy making coffee for other people. I will admit that I like showing of
 
 I visit [Kahvila Sävy](https://savy.coffee/), one of my favourite cafés in Helsinki, at least once a week, usually for breakfast. Over the years, I have come to recognise the baristas and regulars, and often stop to chat. It makes me feel like a small part of the community around the café.
 
-<img
-  src="/things-i-love-coffee-cafe.jpg"
-  alt="Japanese-inspired ink and watercolour illustration of a warm café interior with a barista and a few customers"
-  width="1536"
-  height="1024"
-  loading="lazy"
-  decoding="async">
+![Japanese-inspired ink and watercolour illustration of a warm café interior with a barista and a few customers](/things-i-love-coffee-cafe.jpg)
 
 Most mornings, though, it comes back to the Europiccola: grind the beans, prepare the coffee, pull the lever, steam the milk and pour. The espresso is not always right and the tulip often collapses. I drink it anyway, then try again the next morning.

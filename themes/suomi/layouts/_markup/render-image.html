@@ -1,0 +1,60 @@
+{{- $destination := .Destination -}}
+{{- $resourcePath := $destination | strings.TrimPrefix "/" -}}
+{{- $extension := path.Ext $resourcePath -}}
+{{- $masterPath := printf "image-sources/%s.png" (strings.TrimSuffix $extension $resourcePath) -}}
+{{- $source := resources.Get $masterPath -}}
+{{- if not $source -}}
+  {{- $source = .Page.Resources.GetMatch $resourcePath -}}
+{{- end -}}
+{{- if not $source -}}
+  {{- $source = resources.Get $resourcePath -}}
+{{- end -}}
+{{- $processable := and $source (not (in (slice "gif" "svg") $source.MediaType.SubType)) -}}
+{{- if $processable -}}
+  {{- $candidateWidths := slice -}}
+  {{- range slice 400 680 1020 1360 -}}
+    {{- if le . $source.Width -}}
+      {{- $candidateWidths = $candidateWidths | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not (in $candidateWidths $source.Width) -}}
+    {{- $candidateWidths = $candidateWidths | append $source.Width -}}
+  {{- end -}}
+  {{- $avifSrcset := slice -}}
+  {{- $webpSrcset := slice -}}
+  {{- range $candidateWidths -}}
+    {{- $avif := $source.Resize (printf "%dx avif q58" .) -}}
+    {{- $webp := $source.Resize (printf "%dx webp q78" .) -}}
+    {{- $avifSrcset = $avifSrcset | append (printf "%s %dw" $avif.RelPermalink .) -}}
+    {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $webp.RelPermalink .) -}}
+  {{- end -}}
+  {{- $sizes := "(max-width: 720px) calc(100vw - 32px), 760px" -}}
+  {{- if eq .Page.Section "post" -}}
+    {{- $sizes = "(max-width: 720px) calc(100vw - 32px), 680px" -}}
+  {{- end }}
+<picture class="content-image-picture">
+  <source
+    type="image/avif"
+    srcset="{{ delimit $avifSrcset ", " }}"
+    sizes="{{ $sizes }}">
+  <source
+    type="image/webp"
+    srcset="{{ delimit $webpSrcset ", " }}"
+    sizes="{{ $sizes }}">
+  <img
+    src="{{ $destination | safeURL }}"
+    width="{{ $source.Width }}"
+    height="{{ $source.Height }}"
+    alt="{{ .Text | plainify }}"
+    loading="lazy"
+    decoding="async"
+    {{- with .Title }} title="{{ . }}"{{ end }}>
+</picture>
+{{- else -}}
+<img
+  src="{{ $destination | safeURL }}"
+  alt="{{ .Text | plainify }}"
+  loading="lazy"
+  decoding="async"
+  {{- with .Title }} title="{{ . }}"{{ end }}>
+{{- end -}}

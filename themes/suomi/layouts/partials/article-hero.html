@@ -1,0 +1,59 @@
+{{- $image := .Params.image -}}
+{{- if reflect.IsSlice $image }}{{ $image = index $image 0 }}{{ end -}}
+{{- with $image -}}
+  {{- $originalURL := . | relURL -}}
+  {{- $alt := default $.Title $.Params.image_alt -}}
+  {{- $resourcePath := . | strings.TrimPrefix "/" -}}
+  {{- $extension := path.Ext $resourcePath -}}
+  {{- $masterPath := printf "image-sources/%s.png" (strings.TrimSuffix $extension $resourcePath) -}}
+  {{- $source := resources.Get $masterPath -}}
+  {{- if not $source -}}
+    {{- $source = resources.Get $resourcePath -}}
+  {{- end -}}
+  {{- if $source -}}
+    {{- $candidateWidths := slice -}}
+    {{- range slice 400 768 980 -}}
+      {{- if le . $source.Width -}}
+        {{- $candidateWidths = $candidateWidths | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not (in $candidateWidths $source.Width) -}}
+      {{- $candidateWidths = $candidateWidths | append $source.Width -}}
+    {{- end -}}
+    {{- $avifSrcset := slice -}}
+    {{- $webpSrcset := slice -}}
+    {{- range $candidateWidths -}}
+      {{- $avif := $source.Resize (printf "%dx avif q58" .) -}}
+      {{- $webp := $source.Resize (printf "%dx webp q78" .) -}}
+      {{- $avifSrcset = $avifSrcset | append (printf "%s %dw" $avif.RelPermalink .) -}}
+      {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $webp.RelPermalink .) -}}
+    {{- end }}
+    <picture class="article-hero-picture">
+      <source
+        type="image/avif"
+        srcset="{{ delimit $avifSrcset ", " }}"
+        sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1034px) calc(100vw - 54px), 980px">
+      <source
+        type="image/webp"
+        srcset="{{ delimit $webpSrcset ", " }}"
+        sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1034px) calc(100vw - 54px), 980px">
+      <img
+        class="article-hero"
+        src="{{ $originalURL }}"
+        width="{{ $source.Width }}"
+        height="{{ $source.Height }}"
+        alt="{{ $alt }}"
+        loading="eager"
+        fetchpriority="high">
+    </picture>
+  {{- else }}
+    <img
+      class="article-hero"
+      src="{{ $originalURL }}"
+      alt="{{ $alt }}"
+      {{ with $.Params.image_width }}width="{{ . }}"{{ end }}
+      {{ with $.Params.image_height }}height="{{ . }}"{{ end }}
+      loading="eager"
+      fetchpriority="high">
+  {{- end -}}
+{{- end -}}

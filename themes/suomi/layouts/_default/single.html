@@ -38,16 +38,7 @@
   </header>
 
   {{ if isset .Params "image" }}
-    {{ $img := .Params.image }}
-    {{ if reflect.IsSlice $img }}{{ $img = index $img 0 }}{{ end }}
-    <img
-      class="article-hero"
-      src="{{ $img | relURL }}"
-      alt="{{ default .Title .Params.image_alt }}"
-      {{ with .Params.image_width }}width="{{ . }}"{{ end }}
-      {{ with .Params.image_height }}height="{{ . }}"{{ end }}
-      loading="eager"
-      decoding="async">
+    {{ partial "article-hero.html" . }}
   {{ end }}
 
   <div class="prose{{ if eq .Section "post" }} article-prose{{ end }}">
