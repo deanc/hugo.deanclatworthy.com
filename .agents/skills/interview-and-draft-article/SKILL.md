@@ -1,6 +1,6 @@
 ---
 name: interview-and-draft-article
-description: Help Dean Clatworthy choose an editorial angle, interview him one question at a time, and turn his answers into a first-person Markdown article in his established voice. Use when Dean asks to be interviewed for a post, develop an article through conversation, explore ways to approach a subject, tell a personal or professional story, or have Codex ghostwrite an article as him from supplied experiences. Establish the topic, propose distinct angles for approval, gather enough detail before drafting, preserve factual and emotional precision, follow TONE_OF_VOICE.md and AGENTS.md, create a Hugo draft, and support requested links or illustrations.
+description: Help Dean Clatworthy choose an editorial angle, interview him one question at a time, and turn his answers into an illustrated first-person Markdown article in his established voice. Use when Dean asks to be interviewed for a post, develop an article through conversation, explore ways to approach a subject, tell a personal or professional story, or have Codex ghostwrite an article as him from supplied experiences. Establish the topic, propose distinct angles for approval, gather enough detail before drafting, preserve factual and emotional precision, follow TONE_OF_VOICE.md and AGENTS.md, create a Hugo draft, propose and generate a hero plus a purposeful number of inline illustrations, and prepare lossless masters and responsive web derivatives after approval.
 ---
 
 # Interview and draft an article
@@ -178,13 +178,6 @@ prompt.
 8. Do not create alternative drafts unless Dean explicitly asks to compare
    approaches.
 
-Run the production build and `git diff --check`. For a new draft, also build
-with drafts enabled to verify the page itself while confirming that the normal
-production build excludes it.
-
-Report the draft path and the main editorial choices. Do not publish, commit or
-push unless asked.
-
 ## Handle revisions
 
 Treat Dean’s factual corrections as source corrections, not optional style
@@ -200,13 +193,104 @@ keep the canonical URL reserved for the eventual chosen version. Once Dean
 chooses one, consolidate it into the canonical draft and remove the comparison
 file.
 
-## Add illustrations only when requested
+## Plan the illustration set
 
-When Dean requests article artwork, use the image-generation skill and any
-provided references. Match the requested subject accurately while allowing
-composition and framing to support the article.
+Treat illustrations as part of the standard article workflow unless Dean opts
+out or the subject clearly needs documentary screenshots, diagrams or
+photographs instead.
 
-Keep the lossless generated master under `image-sources/`, create the public
-fallback under `static/`, and use the repository’s responsive Markdown image
-pipeline. Insert inline artwork at the narrative point it supports, with
-descriptive alt text. Do not generate illustrations automatically.
+Once the article’s structure is stable, propose an image plan before generating
+anything. Include:
+
+- one hero concept that represents the whole piece;
+- only as many inline concepts as the story earns;
+- the purpose, subject, placement and framing of each image;
+- any factual reference needed for a recognisable object, product or place;
+- draft alt text for each image.
+
+For a typical personal or reflective article, use the hero plus one to three
+inline illustrations. A short piece may need only the hero. Add more only when
+distinct scenes, objects or processes materially help the reader. Do not
+illustrate every heading or use an image merely to break up text.
+
+Place an inline image immediately after the passage it deepens. Favour turning
+points, meaningful objects, physical processes and changes of setting. Avoid
+repeating the hero’s subject or composition.
+
+Ask Dean to approve, combine or change the proposed concepts. Do not generate
+the images until he approves the plan.
+
+## Match the coffee illustration style
+
+Use these exact lossless coffee illustrations as style references for every
+generated editorial illustration unless Dean requests another direction:
+
+- `image-sources/things-i-love-coffee.png`
+- `image-sources/things-i-love-coffee-la-pavoni.png`
+- `image-sources/things-i-love-coffee-cafe.png`
+
+Inspect them with the image viewer before prompting, then pass them to the
+image-generation tool as reference images. Their role is style consistency,
+not subject matter.
+
+Describe the shared visual language explicitly in every prompt:
+
+- Japanese-inspired sumi-e ink drawing and restrained watercolour wash;
+- warm, lightly mottled aged-paper ground with visible natural texture;
+- expressive black and charcoal linework with imperfect hand-drawn edges;
+- a subdued sepia, warm ochre and soft grey palette;
+- small, selective accents of muted rust red and olive green;
+- gentle editorial warmth, generous breathing room and an unhurried mood;
+- detailed focal subjects surrounded by looser, quieter brushwork;
+- no typography, captions, logos, signature or watermark.
+
+Keep the style Japanese-inspired rather than making the scene generically
+“Japanese”. Do not add pagodas, torii, calligraphy, kimono, cherry blossom or
+other cultural motifs unless the article genuinely calls for them.
+
+Use a wide landscape composition near 16:9 for the hero, with a clear focal
+subject and enough breathing room to crop safely across layouts. Use landscape
+3:2 for inline images by default. Let perspective and framing vary so the set
+feels related without becoming repetitive.
+
+For a named product, building, person or other recognisable subject, obtain or
+use an accurate subject reference in addition to the coffee style references.
+Label the roles clearly in the prompt: the coffee images control medium,
+palette and mood; the subject reference controls form and identifying details.
+Allow a useful change of perspective or framing, but do not invent important
+features. This mirrors the La Pavoni illustration workflow.
+
+## Generate, review and prepare the files
+
+After Dean approves the plan, use the image-generation skill and create each
+asset with its own subject-specific prompt. Generate one strong candidate per
+concept, inspect it for subject accuracy, composition, unwanted text and
+consistency with the set, then show it to Dean. Iterate with one targeted
+change at a time when needed.
+
+Do not treat a generated concept as final merely because it is attractive.
+Check that it supports the actual passage and does not imply a fact, place,
+relationship or event that the article does not establish.
+
+Once Dean approves the final images:
+
+1. Keep each original, best-quality lossless PNG under `image-sources/`.
+2. Name the hero after the article slug. Give inline images the same basename
+   plus a short descriptive suffix.
+3. Create the matching public JPEG fallback under `static/` with the same path
+   and basename.
+4. Never resize or apply lossy compression to the PNG master. Never manufacture
+   a PNG master from a lossy output.
+5. Point the post’s `image` front matter to the root-relative JPEG fallback and
+   set accurate `image_alt`, `image_width` and `image_height`.
+6. Insert inline JPEG paths through Markdown with concise, descriptive alt text.
+7. Let Hugo generate the responsive AVIF and WebP variants from the PNG masters
+   through the existing image pipeline; do not hand-author `picture` markup.
+
+Run `hugo --minify --config config_prod.yml`, build with drafts enabled to
+inspect the new post, and run `git diff --check`. Confirm that the normal
+production build excludes the draft and that the draft build emits AVIF and
+WebP `srcset` entries plus JPEG fallbacks for the hero and every inline image.
+
+Report the article path, approved image paths and main editorial choices. Do
+not publish, commit or push unless Dean asks.

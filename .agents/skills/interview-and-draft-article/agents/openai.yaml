@@ -1,4 +1,4 @@
 interface:
   display_name: "Interview and draft an article"
-  short_description: "Choose an angle, interview Dean, draft a post"
-  default_prompt: "Use $interview-and-draft-article to help me choose an angle, interview me, and turn my answers into a draft article."
+  short_description: "Choose an angle, draft and illustrate a post"
+  default_prompt: "Use $interview-and-draft-article to help me choose an angle, interview me, and turn my answers into an illustrated draft article."
