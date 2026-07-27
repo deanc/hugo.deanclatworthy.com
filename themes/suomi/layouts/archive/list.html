@@ -7,10 +7,7 @@
   </header>
   <div class="archive-years">
     {{- $posts := where .Site.RegularPages "Section" "post" -}}
-    {{- $visiblePosts := where $posts "Draft" false -}}
-    {{- if hugo.IsDevelopment -}}
-      {{- $visiblePosts = $posts -}}
-    {{- end -}}
+    {{- $visiblePosts := cond hugo.IsDevelopment $posts (where $posts "Draft" false) -}}
     {{ range ($visiblePosts.GroupByPublishDate "2006") }}
     <section class="archive-year" aria-labelledby="year-{{ .Key }}">
       <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
