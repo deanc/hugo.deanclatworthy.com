@@ -54,6 +54,11 @@ items:
     visible: true
   - id: kallan_automotive_prototype
     title: "Volkswagen: Prototype in-car experience"
+    client:
+      name: Volkswagen
+      logo: /img/work/logos/volkswagen
+      logo_width: 160
+      logo_height: 160
     agency: Kallan
     year: 2019
     description: >
@@ -64,6 +69,11 @@ items:
     visible: true
   - id: becauseofyou
     title: "AdCouncil: BecauseOfYou"
+    client:
+      name: Ad Council
+      logo: /img/work/logos/ad-council
+      logo_width: 120
+      logo_height: 120
     agency: hasan & partners / TBD
     year: 2018
     description: >
@@ -74,6 +84,11 @@ items:
     visible: true
   - id: sheboard
     title: "Plan Finland: Sheboard"
+    client:
+      name: Plan International
+      logo: /img/work/logos/plan-international
+      logo_width: 298
+      logo_height: 160
     agency: hasan & partners
     year: 2017
     description: >
@@ -87,6 +102,11 @@ items:
     visible: true
   - id: kone_machine_conversations_part_2
     title: "KONE: Machine Conversations (Part 2)"
+    client:
+      name: KONE
+      logo: /img/work/logos/kone
+      logo_width: 320
+      logo_height: 125
     agency: hasan & partners
     year: 2018
     description: >
@@ -101,6 +121,11 @@ items:
     visible: true
   - id: kone_machine_conversations_part_1
     title: "KONE: Machine Conversations (Part 1)"
+    client:
+      name: KONE
+      logo: /img/work/logos/kone
+      logo_width: 320
+      logo_height: 125
     agency: hasan & partners
     year: 2017
     description: >
@@ -135,6 +160,11 @@ items:
     visible: true
   - id: valio_suksi_ladulle
     title: "Valio: Suksi Ladulle"
+    client:
+      name: Valio
+      logo: /img/work/logos/valio
+      logo_width: 240
+      logo_height: 155
     agency: hasan & partners
     year: 2016
     description: >
@@ -145,6 +175,11 @@ items:
     visible: true
   - id: fazer_chocolate_hunt
     title: "Fazer: Chocolate Hunt"
+    client:
+      name: Fazer
+      logo: /img/work/logos/fazer
+      logo_width: 160
+      logo_height: 160
     agency: hasan & partners
     description: >
       For this project we placed virtual pins on a map throughout the course of a week, in a large
@@ -154,6 +189,11 @@ items:
     visible: true
   - id: takeda_panamol_popeli
     title: "Takeda: Panamol Pöpeli"
+    client:
+      name: Takeda
+      logo: /img/work/logos/takeda
+      logo_width: 320
+      logo_height: 115
     agency: hasan & partners
     description: >
       A web-based version of the classic memory game. Built as a single-page ReactJS app.
@@ -161,6 +201,11 @@ items:
     visible: true
   - id: tallinksilja_complaint_booth
     title: "TallinkSilja: Complaint Booth + Banner"
+    client:
+      name: Tallink Silja
+      logo: /img/work/logos/tallink-silja
+      logo_width: 140
+      logo_height: 49
     agency: hasan & partners
     year: 2016
     description: >
@@ -182,6 +227,11 @@ items:
     visible: true
   - id: metsa_plan_b
     title: "Metsä: Plan B"
+    client:
+      name: Metsä Group
+      logo: /img/work/logos/metsa-group
+      logo_width: 320
+      logo_height: 111
     agency: hasan & partners
     year: 2015
     description: >
@@ -222,6 +272,11 @@ items:
     visible: false
   - id: plan_sponsor_dreams
     title: "Plan: Sponsor of dreams installation"
+    client:
+      name: Plan International
+      logo: /img/work/logos/plan-international
+      logo_width: 298
+      logo_height: 160
     agency: hasan & partners
     year: 2014
     description: >
@@ -233,6 +288,11 @@ items:
     visible: true
   - id: metsa_tree_online
     title: "Metsä: Tree Online"
+    client:
+      name: Metsä Group
+      logo: /img/work/logos/metsa-group
+      logo_width: 320
+      logo_height: 111
     agency: hasan & partners
     year: 2014
     description: >
@@ -258,6 +318,11 @@ items:
     visible: false
   - id: plan_girls_day_printer
     title: "Plan Finland: Girls Day Printer"
+    client:
+      name: Plan International
+      logo: /img/work/logos/plan-international
+      logo_width: 298
+      logo_height: 160
     agency: hasan & partners
     year: 2014
     description: >
@@ -289,6 +354,11 @@ items:
     visible: false
   - id: angrybirds_star_wars
     title: "Angry Birds: Star Wars"
+    client:
+      name: Rovio
+      logo: /img/work/logos/rovio
+      logo_width: 320
+      logo_height: 79
     agency: Luxus
     year: 2012
     description: >
@@ -302,6 +372,11 @@ items:
     visible: true
   - id: iitala_store
     title: "Iittala: Online web store"
+    client:
+      name: Iittala
+      logo: /img/work/logos/iittala
+      logo_width: 320
+      logo_height: 73
     agency: Luxus
     year: 2012
     description: >

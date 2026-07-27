@@ -20,11 +20,35 @@
         <div class="project-heading">
           {{ if $showDraft }}<span class="project-draft-label">Draft preview</span>{{ end }}
           <h2>{{ .title }}</h2>
-          {{ if or .agency .year }}
-          <p class="project-meta">
-            {{ with .agency }}<span>{{ . }}</span>{{ end }}
-            {{ with .year }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
-          </p>
+          {{ if or .agency .year .client }}
+          <div class="project-details">
+            {{ if or .agency .year }}
+            <p class="project-meta">
+              {{ with .agency }}<span>{{ . }}</span>{{ end }}
+              {{ with .year }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
+            </p>
+            {{ end }}
+            {{ with .client }}
+              {{ $client := . }}
+              {{ with $client.logo }}
+              <div class="project-client" aria-label="Client: {{ $client.name }}">
+                <picture>
+                  <source type="image/avif" srcset="{{ . }}.avif">
+                  <source type="image/webp" srcset="{{ . }}.webp">
+                  <img
+                    class="project-client-logo"
+                    src="{{ . }}.png"
+                    width="{{ $client.logo_width | default 160 }}"
+                    height="{{ $client.logo_height | default 160 }}"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
+              </div>
+              {{ end }}
+            {{ end }}
+          </div>
           {{ end }}
         </div>
         <div class="project-body">
