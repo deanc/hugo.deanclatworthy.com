@@ -52,6 +52,16 @@ items:
       using PostgreSQL and Knex to provide a maintainable foundation for structured medical classification data.
     technologies: [React, Node.js, PostgreSQL, Knex, Docker, OpenShift, PHP, ICD-10]
     visible: true
+  - id: kallan_automotive_prototype
+    title: "Volkswagen: Prototype in-car experience"
+    agency: Kallan
+    year: 2019
+    description: >
+      I worked on the implementation of a prototype in-car experience for Volkswagen. Using React Native, I helped turn
+      an adaptive infotainment and driver-assistance concept into a working application that could be explored and
+      evaluated.
+    technologies: [React Native]
+    visible: true
   - id: becauseofyou
     title: "AdCouncil: BecauseOfYou"
     agency: hasan & partners / TBD

@@ -14,9 +14,11 @@
 
   <div class="project-list">
     {{ range hugo.Data.portfolio.items }}
-      {{ if .visible }}
-      <section class="project" id="project-{{ .id }}">
+      {{ $showDraft := and hugo.IsDevelopment .draft }}
+      {{ if or .visible $showDraft }}
+      <section class="project{{ if $showDraft }} project-draft{{ end }}" id="project-{{ .id }}">
         <div class="project-heading">
+          {{ if $showDraft }}<span class="project-draft-label">Draft preview</span>{{ end }}
           <h2>{{ .title }}</h2>
           {{ if or .agency .year }}
           <p class="project-meta">
