@@ -6,6 +6,7 @@ emoji: "💻"
 description: "See all my previous work, and projects."
 current_role:
     company: "Asteroid"
+    company_url: "https://asteroid.fi"
     position: "partner and consultant"
 menu:
     main:

@@ -7,12 +7,13 @@
     {{ with .Params.current_role }}
     <aside class="current-role" aria-label="Current role">
       <strong>Current role</strong>
-      <p>I&rsquo;m currently working at {{ .company }} as a {{ .position }}.</p>
+      <p>I&rsquo;m currently working at {{ with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}{{ .company }}{{ with .company_url }}</a>{{ end }} as a {{ .position }}.</p>
     </aside>
     {{ end }}
   </header>
 
   <div class="project-list">
+    {{ $agencyLinks := dict "hasan & partners" "https://hasanpartners.fi" "Asteroid" "https://asteroid.fi" "Wunderdog" "https://wunderdog.fi" "Kallan" "https://kallan.co" }}
     {{ range hugo.Data.portfolio.items }}
       {{ $showDraft := and hugo.IsDevelopment .draft }}
       {{ if or .visible $showDraft }}
@@ -24,7 +25,17 @@
           <div class="project-details">
             {{ if or .agency .year }}
             <p class="project-meta">
-              {{ with .agency }}<span>{{ . }}</span>{{ end }}
+              {{ with .agency }}
+                {{ $agency := . }}
+                <span>
+                  {{ if eq . "hasan & partners / TBD" }}
+                    <a href="https://hasanpartners.fi" target="_blank" rel="noopener noreferrer">hasan &amp; partners</a> / TBD
+                  {{ else }}
+                    {{ $agencyURL := index $agencyLinks $agency }}
+                    {{ if $agencyURL }}<a href="{{ $agencyURL }}" target="_blank" rel="noopener noreferrer">{{ $agency }}</a>{{ else }}{{ $agency }}{{ end }}
+                  {{ end }}
+                </span>
+              {{ end }}
               {{ with .year }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
             </p>
             {{ end }}
