@@ -1,10 +1,13 @@
-{{- with site.Params.AnalyticsID }}
+{{- if and hugo.IsProduction site.Params.AnalyticsID }}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.AnalyticsID }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ . }}');
+  window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+  window.gtag('js', new Date());
+  window.gtag('config', '{{ site.Params.AnalyticsID }}');
 </script>
+{{- with resources.Get "js/analytics-events.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" data-page-kind="{{ $.Kind }}"></script>
+{{- end }}
 {{- end }}

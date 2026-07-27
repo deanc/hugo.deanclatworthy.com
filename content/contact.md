@@ -18,7 +18,7 @@ To get in touch, fill in the form below and I’ll get back to you.
 
 <form id="my-form" action="https://formspree.io/f/moqrdjpv" method="POST">
   <input type="text" name="_gotcha" class="sadfasdf" />
-  <label>Your Email:<input type="email" name="email" autocomplete="on" required /></label>
+  <label>Your Email:<input type="email" name="email" autocomplete="email" required /></label>
   <br /><br />
   <label>Subject:<input type="text" name="subject" autocomplete="off" /></label>
   <br /><br />
