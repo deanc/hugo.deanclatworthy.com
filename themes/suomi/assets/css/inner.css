@@ -987,14 +987,7 @@
   .project-body { min-width: 0; }
   .project-body { padding-right: 0; }
   .project-client {
-    position: static;
-    width: fit-content;
-    justify-content: flex-start;
-  }
-  .project-client-logo {
-    max-width: 82px;
-    height: 30px;
-    opacity: .72;
+    display: none;
   }
   .project-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
