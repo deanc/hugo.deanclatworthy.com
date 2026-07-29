@@ -3,10 +3,11 @@ layout: post
 title: "Things I love: sauna"
 description: "How sauna became part of my life in Finland: a place for friendship, good löyly and a few quiet hours away from everything else."
 category:
-url: /2026/07/25/things-i-love-sauna/
+url: /2026/07/30/things-i-love-sauna/
 tags: [sauna, Helsinki, Finland]
-date: 2026-07-25
-draft: true
+date: 2026-07-30
+publishDate: 2026-07-29T18:10:59+03:00
+draft: false
 image: "/things-i-love-sauna.jpg"
 image_alt: "Three men talking on the high wooden benches of a Finnish sauna beside a stone-filled heater"
 image_width: 1672
