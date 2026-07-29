@@ -77,10 +77,7 @@
       <div id="writing" class="link-list">
         <h2>Writing</h2>
         {{- $posts := where site.RegularPages.ByDate.Reverse "Section" "post" }}
-        {{- $visiblePosts := where $posts "Draft" false }}
-        {{- if hugo.IsDevelopment }}
-          {{- $visiblePosts = $posts }}
-        {{- end }}
+        {{- $visiblePosts := cond hugo.IsDevelopment $posts (where $posts "Draft" false) }}
         {{- range first 3 $visiblePosts }}
         <a href="{{ .RelPermalink }}">
           <span class="post-title">{{ .Title }}{{ if .Draft }} <span class="unpublished-label">Unpublished</span>{{ end }}</span><span aria-hidden="true">→</span>
