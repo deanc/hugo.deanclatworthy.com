@@ -73,10 +73,6 @@ minify:
     html:
       keepWhitespace: false
 
-services:
-  disqus:
-    shortname: deanclatworthy
-
 related:
   includeNewer: true
   threshold: 10
