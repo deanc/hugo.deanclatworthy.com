@@ -186,6 +186,7 @@
   .product-availability > p:not(.eyebrow) { font-size: 20px; }
 }
 @media (max-width: 460px) {
+  .product-price > strong { font-size: 48px; }
   .product-offer { max-width: 300px; margin-inline: auto; gap: 6px 14px; font-size: 14px; }
   .product-price-card { flex-direction: column; gap: 24px; text-align: center; padding: 26px 16px; }
   .product-brand { gap: 7px; }
