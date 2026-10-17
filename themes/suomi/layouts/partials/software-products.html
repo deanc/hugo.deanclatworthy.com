@@ -1,0 +1,8 @@
+{{- $products := where site.RegularPages "Layout" "product" -}}
+{{- /* Explicit entries keep the catalogue usable while products are unlisted. */ -}}
+{{- range .Params.products -}}
+  {{- with site.GetPage . -}}
+    {{- $products = $products | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return sort ($products | uniq) "Params.product_order" -}}

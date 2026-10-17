@@ -126,6 +126,28 @@ a { color: inherit; }
   gap: clamp(24px, 4vw, 54px);
 }
 
+/* Leave room for Software alongside the existing navigation. */
+.site-header nav { gap: clamp(16px, 2.3vw, 30px); }
+@media (min-width: 721px) and (max-width: 1120px) {
+  .wordmark { line-height: 1.12; }
+  .wordmark span { display: block; margin-top: 3px; font-size: 14px; }
+}
+
+.home-software { margin-top: 70px; padding-block: 34px 40px; border-block: 1px solid var(--line); }
+.home-software-content { display: grid; grid-template-columns: 1.15fr .85fr; gap: 70px; align-items: center; }
+.home-software h2 { margin: 0 0 20px; font: 400 36px/1.15 var(--serif); letter-spacing: -.025em; }
+.home-software-content > div > p { max-width: 540px; margin: 0 0 20px; color: var(--muted); font-size: 20px; line-height: 1.5; }
+.home-software-content > div > a { font-size: 18px; text-underline-offset: 5px; }
+.home-software-app { display: flex; align-items: center; gap: 24px; padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--soft); text-decoration: none; }
+.home-software-app:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.home-software-app picture, .home-software-app img { display: block; width: 80px; height: 80px; flex: none; border-radius: 18px; }
+.home-software-app strong { display: block; font: 400 30px/1.2 var(--serif); }
+.home-software-app small { display: block; margin-top: 5px; color: var(--muted); font-size: 15px; }
+@media (max-width: 720px) {
+  .home-software { margin-top: 50px; }
+  .home-software-content { grid-template-columns: 1fr; gap: 30px; }
+}
+
 .site-header nav a,
 .site-footer nav a {
   text-decoration: none;

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="software-page page-width">
+  <header class="software-heading">
+    <p class="eyebrow">Independent software · Made in Helsinki</p>
+    <h1>Useful things.<br><em>Thoughtfully made.</em></h1>
+    <div class="software-lede">{{ .Content }}</div>
+  </header>
+  <section class="software-catalogue" aria-label="Software by Dean Clatworthy">
+    {{ range partial "software-products.html" . }}
+    <article class="software-card">
+      <div class="software-card-copy">
+        {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "72px") }}
+        <p class="software-meta">{{ .Params.platform }} <span>{{ .Params.status }}</span></p>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="software-card-tagline">{{ .Params.tagline }}</p>
+        <p class="software-card-summary">{{ .Params.summary }}</p>
+        <a class="primary-action" href="{{ .RelPermalink }}">Meet {{ .Title }} <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="software-card-art" href="{{ .RelPermalink }}" aria-label="Explore {{ .Title }}">
+        <div class="software-orbit" aria-hidden="true"></div>
+        {{ partial "software-image.html" (dict "src" .Params.image "alt" .Params.image_alt "class" "catalogue-screenshot" "sizes" "(max-width: 720px) 650px, 760px" "eager" true) }}
+        <span class="software-art-label">Your shares, connected.</span>
+      </a>
+    </article>
+    {{ end }}
+  </section>
+  <aside class="software-maker">
+    <p class="eyebrow">From the person who builds it</p>
+    <div><h2>A direct line to the developer.</h2><p>I’m Dean, a software architect and engineer in Helsinki. If you have a question about one of my apps, you can <a href="{{ "contact.html" | relURL }}" data-contact-cta>ask me directly</a>.</p></div>
+  </aside>
+</article>
+{{ end }}

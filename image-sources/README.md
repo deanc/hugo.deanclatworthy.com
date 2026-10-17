@@ -11,6 +11,14 @@ image-sources/things-i-love-coffee.png
 static/things-i-love-coffee.jpg
 ```
 
+`img/software/sharepilot/` contains lossless captures of the native SharePilot
+development build, using a fictional, disconnected example share. No credentials
+or private server details appear in these images. The icon was extracted from
+the app's ICNS resource. Public JPEG fallbacks share the same paths under
+`static/`; the software image partial creates responsive AVIF and WebP variants
+from these PNG masters. Screenshot framing on the website crops empty space
+with CSS; the full native captures are retained here.
+
 Hugo prefers the lossless master when it creates responsive AVIF and WebP
 variants. The file under `static/` remains the stable JPEG fallback and the
 source used by social previews.

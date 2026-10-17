@@ -75,7 +75,7 @@
   {{- end -}}
   <meta name="description" content="{{ $description | truncate 160 }}">
   <meta name="author" content="{{ .Site.Params.Author.Name }}">
-  {{- if eq .Kind "404" }}
+  {{- if or (eq .Kind "404") .Params.noindex }}
   <meta name="robots" content="noindex, follow">
   {{- end }}
   <link rel="canonical" href="{{ $canonicalURL }}">
@@ -118,6 +118,22 @@
   {{- if not .IsHome }}
     {{- with resources.Get "css/inner.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+    {{- end }}
+  {{- end }}
+  {{- if in (slice "software" "product") .Layout }}
+    {{- with resources.Get "css/software.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+    {{- end }}
+    {{ partial "software-schema.html" . }}
+  {{- end }}
+  {{- if eq .Layout "product" }}
+    {{- with resources.Get "js/software.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+    {{- end }}
+  {{- end }}
+  {{- if eq .RelPermalink "/contact.html" }}
+    {{- with resources.Get "js/contact-subject.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
     {{- end }}
   {{- end }}
   {{- with resources.Get "js/theme-toggle.js" | minify | fingerprint }}

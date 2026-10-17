@@ -1,0 +1,115 @@
+{{ define "main" }}
+<article class="product-page">
+  <header class="product-hero page-width">
+    <div class="product-brand">
+      {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "58px") }}
+      <p>{{ .Title }} <span>for Mac</span></p>
+    </div>
+    <h1>Your network drives.<br><em>Already there.</em></h1>
+    <p class="product-lede">{{ .Params.summary }}</p>
+    <div class="product-actions">
+      {{ partial "product-download.html" . }}
+      <a class="product-text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+    </div>
+    <ul class="product-offer" aria-label="Trial and pricing">
+      <li>{{ .Params.trial_days }} days free</li>
+      {{ if .Params.trial_no_card }}<li>No credit card</li>{{ end }}
+      <li>{{ .Params.price }} once{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
+      <li>No subscription</li>
+    </ul>
+    <p class="product-requirements">{{ .Params.platform }} <span>·</span> Intel and Apple Silicon</p>
+  </header>
+
+  <figure class="product-showcase page-width">
+    <div class="product-showcase-stage">
+      <div class="software-orbit" aria-hidden="true"></div>
+      <div class="product-screenshot-window">
+        {{ partial "software-image.html" (dict "src" .Params.image "alt" .Params.image_alt "class" "product-overview" "sizes" "(max-width: 720px) calc(100vw - 64px), 920px" "eager" true) }}
+      </div>
+      <div class="product-stage-note" aria-hidden="true"><span></span> A home for your network shares</div>
+    </div>
+    <figcaption>The native Mac app. Development build shown with an example share; no server connection is active.</figcaption>
+  </figure>
+
+  <div class="product-trust page-width" aria-label="At a glance">
+    <span>Built natively for macOS</span><span>Passwords in Keychain</span><span>No analytics or telemetry</span>
+  </div>
+
+  <section class="product-section page-width" id="how-it-works" aria-labelledby="everyday-title">
+    <div class="product-section-heading"><p class="eyebrow">How it works</p><h2 id="everyday-title">Your shares.<br><em>Three steps to set up.</em></h2></div>
+    <div class="product-feature-grid">
+      {{ range .Params.features }}
+      <div class="product-feature">
+        {{ partial "software-icon.html" .icon }}
+        <h3>{{ .title }}</h3><p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="product-rules-section page-width" aria-labelledby="rules-title">
+    <div class="product-rules-copy">
+      <p class="eyebrow">Your setup, your rules</p>
+      <h2 id="rules-title">The right drive.<br><em>At the right time.</em></h2>
+      <p>Keep your home NAS for your home network. Connect work files when your VPN is available. Bring a project share online when you open an app.</p>
+      <p>Use all, any or none of your conditions. Each share gets its own rules, and the status view explains what it’s waiting for.</p>
+      <ul class="product-rule-types" aria-label="Available connection conditions"><li>Wi-Fi</li><li>VPN service</li><li>Running apps</li><li>Time of day</li><li>Power</li><li>And more</li></ul>
+    </div>
+    <div class="product-rule-example">
+      <p class="rule-example-label">An example setup</p>
+      <div class="rule-example-share">{{ partial "software-icon.html" "menubar" }}<div><strong>Studio files</strong><span>Connect when all conditions match</span></div></div>
+      <div class="rule-example-row"><span>Wi-Fi network</span><strong>Studio</strong></div>
+      <div class="rule-example-row"><span>Running app</span><strong>Final Cut Pro</strong></div>
+      <div class="rule-example-row"><span>Power source</span><strong>Plugged in</strong></div>
+      <p class="rule-example-result"><span aria-hidden="true">↳</span> Ready for the next editing session.</p>
+      <small>Illustrative rules. Configure these in SharePilot.</small>
+    </div>
+  </section>
+
+  <section class="product-settings-section page-width" aria-labelledby="settings-title">
+    <div class="product-section-heading"><p class="eyebrow">Considered, down to the details</p><h2 id="settings-title">Set it up once.<br><em>Keep control.</em></h2><p>Choose how each share mounts, where it appears and when it disconnects. The settings stay close to the thing they control.</p></div>
+    <figure class="product-settings-figure">
+      <div class="product-settings-crop">{{ partial "software-image.html" (dict "src" "/img/software/sharepilot/settings.jpg" "alt" "SharePilot settings for the example Studio files share, showing connection, guest access, read-only and Finder options." "sizes" "(max-width: 720px) calc(100vw - 64px), 960px") }}</div>
+      <figcaption>Connection and mounting settings in the native app.</figcaption>
+    </figure>
+    <div class="product-detail-grid">{{ range .Params.details }}<div><h3>{{ .title }}</h3><p>{{ .text }}</p></div>{{ end }}</div>
+  </section>
+
+  <section class="product-availability page-width" id="availability" aria-labelledby="availability-title">
+    {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "72px") }}
+    <p class="eyebrow">{{ .Title }} for Mac</p>
+    <h2 id="availability-title">Try it on<br><em>your own network.</em></h2>
+    <p>{{ .Params.trial_days }} days to try every feature. Then a one-time licence to keep your shares connected.</p>
+    <div class="product-price-card">
+      <div class="product-price"><strong>{{ .Params.price }}</strong><span>One-time purchase</span><small>No subscription.{{ if .Params.price_is_placeholder }} Price to be confirmed.{{ end }}</small></div>
+      <div class="product-price-actions">
+        {{ partial "product-download.html" . }}
+        {{ with .Params.purchase_url }}<a class="product-text-link" href="{{ . }}">{{ $.Params.purchase_label | default "Buy SharePilot" }} <span aria-hidden="true">↗</span></a>{{ else }}<button class="product-text-link" type="button" data-preview-dialog="purchase-preview">Buy SharePilot <span aria-hidden="true">↗</span></button>{{ end }}
+        {{ if not .Params.download_url }}<small>Preview · download and checkout coming soon</small>{{ end }}
+      </div>
+    </div>
+    {{ if .Params.trial_no_card }}<p class="product-trial-note">No account or credit card needed for the trial.</p>{{ end }}
+    <noscript><p>The download and checkout are placeholders in this local preview.</p></noscript>
+    <p class="product-availability-note">Made by <a href="{{ "about.html" | relURL }}">Dean Clatworthy</a> in Helsinki, Finland.</p>
+  </section>
+  <section class="product-faq page-width" aria-labelledby="faq-title">
+    <div><p class="eyebrow">Before you download</p><h2 id="faq-title">Good questions.</h2><p>Something else on your mind?<br><a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Ask me about {{ .Title }} <span aria-hidden="true">↗</span></a></p></div>
+    <div class="product-faq-list">{{ range .Params.faq }}<details><summary>{{ .question }}<span aria-hidden="true">+</span></summary><p>{{ $.RenderString (dict "display" "inline") .answer }}</p></details>{{ end }}</div>
+  </section>
+  {{ if not .Params.download_url }}
+  <dialog class="product-preview-dialog" id="download-preview" aria-labelledby="download-preview-title">
+    <p class="eyebrow">Local preview</p><h2 id="download-preview-title">The download goes here.</h2>
+    <p>The signed SharePilot download will be linked here before launch. The app includes a {{ .Params.trial_days }}-day full-feature trial.</p>
+    <a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Get launch details <span aria-hidden="true">↗</span></a>
+    <form method="dialog"><button class="primary-action" autofocus>Back to SharePilot</button></form>
+  </dialog>
+  {{ end }}
+  {{ if not .Params.purchase_url }}
+  <dialog class="product-preview-dialog" id="purchase-preview" aria-labelledby="purchase-preview-title">
+    <p class="eyebrow">Local preview</p><h2 id="purchase-preview-title">Checkout goes here.</h2>
+    <p>The final price and payment link will be added before launch. {{ .Params.price }} is a placeholder for a one-time licence.</p>
+    <form method="dialog"><button class="primary-action" autofocus>Back to SharePilot</button></form>
+  </dialog>
+  {{ end }}
+</article>
+{{ end }}

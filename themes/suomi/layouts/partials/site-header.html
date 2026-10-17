@@ -5,6 +5,9 @@
   <div class="header-actions">
     <nav aria-label="Primary navigation">
       <a href="{{ "portfolio.html" | relURL }}"{{ if eq .RelPermalink "/portfolio.html" }} aria-current="page"{{ end }}>Work</a>
+      {{/* Restore when the software catalogue is ready for public discovery.
+      <a href="{{ "/software/" | relURL }}"{{ if in (slice "software" "product") .Layout }} aria-current="{{ if eq .Layout "product" }}true{{ else }}page{{ end }}"{{ end }}>Software</a>
+      */}}
       <a href="{{ "archive.html" | relURL }}"{{ if or (eq .RelPermalink "/archive.html") (eq .Section "post") }} aria-current="page"{{ end }}>Writing</a>
       <a href="{{ "skills.html" | relURL }}"{{ if eq .RelPermalink "/skills.html" }} aria-current="page"{{ end }}>Skills</a>
       <a href="{{ "about.html" | relURL }}"{{ if eq .RelPermalink "/about.html" }} aria-current="page"{{ end }}>About</a>

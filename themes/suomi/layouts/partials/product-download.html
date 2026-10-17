@@ -1,0 +1,5 @@
+{{- with .Params.download_url -}}
+<a class="primary-action" href="{{ . }}">Download free trial <span aria-hidden="true">↓</span></a>
+{{- else -}}
+<button class="primary-action" type="button" data-preview-dialog="download-preview">Download free trial <span aria-hidden="true">↓</span></button>
+{{- end -}}

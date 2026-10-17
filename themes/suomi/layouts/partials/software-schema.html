@@ -1,0 +1,11 @@
+{{- if eq .Layout "product" -}}
+  {{- $app := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" .Title "url" .Permalink "description" .Description "applicationCategory" "UtilitiesApplication" "operatingSystem" .Params.platform "image" (.Params.image | absURL) "author" (dict "@type" "Person" "name" .Site.Params.Author.Name "url" .Site.Home.Permalink) -}}
+  {{- with .Params.download_url }}{{ $app = merge $app (dict "downloadUrl" (. | absURL)) }}{{ end -}}
+  <script type="application/ld+json">{{ $app | jsonify | safeJS }}</script>
+{{- else -}}
+  {{- $items := slice -}}
+  {{- range $index, $product := partial "software-products.html" . -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" (add $index 1) "url" $product.Permalink "name" $product.Title) -}}
+  {{- end -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "name" "Software by Dean Clatworthy" "itemListElement" $items | jsonify | safeJS }}</script>
+{{- end -}}

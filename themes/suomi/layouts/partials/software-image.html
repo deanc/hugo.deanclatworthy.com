@@ -1,0 +1,21 @@
+{{- $path := strings.TrimPrefix "/" .src -}}
+{{- $master := printf "image-sources/%s.png" (strings.TrimSuffix (path.Ext $path) $path) -}}
+{{- $source := resources.Get $master -}}
+{{- $sizes := .sizes | default "(max-width: 720px) calc(100vw - 64px), 960px" -}}
+{{- with $source -}}
+  {{- $avif := slice -}}
+  {{- $webp := slice -}}
+  {{- range slice 128 480 800 1200 1600 2000 -}}
+    {{- if le . $source.Width -}}
+      {{- $a := $source.Resize (printf "%dx avif q73" .) -}}
+      {{- $w := $source.Resize (printf "%dx webp q86" .) -}}
+      {{- $avif = $avif | append (printf "%s %dw" $a.RelPermalink .) -}}
+      {{- $webp = $webp | append (printf "%s %dw" $w.RelPermalink .) -}}
+    {{- end -}}
+  {{- end }}
+<picture{{ with $.class }} class="{{ . }}"{{ end }}>
+  <source type="image/avif" srcset="{{ delimit $avif ", " }}" sizes="{{ $sizes }}">
+  <source type="image/webp" srcset="{{ delimit $webp ", " }}" sizes="{{ $sizes }}">
+  <img src="{{ $.src | relURL }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.alt }}" loading="{{ if $.eager }}eager{{ else }}lazy{{ end }}"{{ if $.eager }} fetchpriority="high"{{ end }} decoding="async">
+</picture>
+{{- end -}}
