@@ -13,6 +13,7 @@ build:
   list: never
 product_order: 1
 platform: macOS 26 or later
+connections: [SMB, NFS, WebDAV, AFP]
 status: Coming soon
 tagline: Your network drives. Already there.
 summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
@@ -68,6 +69,7 @@ faq:
   - question: How do I get support?
     answer: "[Contact me directly](/contact.html?subject=SharePilot%20support#my-form). Include your macOS version and a brief description of what you were trying to do so I can help."
   - question: Which network shares does it support?
+    id: connection-compatibility
     answer: "SMB, AFP, WebDAV and NFS through macOS. Authenticated WebDAV requires HTTPS; plain HTTP is supported for guest access only. Compatibility depends on your server and macOS version, particularly for NFS and older AFP servers."
   - question: Does it work with a VPN?
     answer: "You can use a connected VPN service as a connection rule. Some third-party VPN clients aren’t visible to macOS’s service API. Rules help control convenience and timing; they aren’t a security boundary."

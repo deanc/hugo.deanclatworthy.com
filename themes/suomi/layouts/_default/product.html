@@ -34,6 +34,13 @@
   <div class="product-trust page-width" aria-label="At a glance">
     <span>Built natively for macOS</span><span>Passwords in Keychain</span><span>No analytics or telemetry</span>
   </div>
+  {{ with .Params.connections }}
+  <div class="product-connections page-width">
+    <p>Supported connections</p>
+    <ul aria-label="Supported connection types">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    <a href="#connection-compatibility" data-faq-link>Compatibility details <span aria-hidden="true">↓</span></a>
+  </div>
+  {{ end }}
 
   <section class="product-section page-width" id="how-it-works" aria-labelledby="everyday-title">
     <div class="product-section-heading"><p class="eyebrow">How it works</p><h2 id="everyday-title">Your shares.<br><em>Three steps to set up.</em></h2></div>
@@ -95,7 +102,7 @@
   </section>
   <section class="product-faq page-width" aria-labelledby="faq-title">
     <div><p class="eyebrow">Before you download</p><h2 id="faq-title">Good questions.</h2><p>Something else on your mind?<br><a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Ask me about {{ .Title }} <span aria-hidden="true">↗</span></a></p></div>
-    <div class="product-faq-list">{{ range .Params.faq }}<details><summary>{{ .question }}<span aria-hidden="true">+</span></summary><p>{{ $.RenderString (dict "display" "inline") .answer }}</p></details>{{ end }}</div>
+    <div class="product-faq-list">{{ range .Params.faq }}<details{{ with .id }} id="{{ . }}"{{ end }}><summary>{{ .question }}<span aria-hidden="true">+</span></summary><p>{{ $.RenderString (dict "display" "inline") .answer }}</p></details>{{ end }}</div>
   </section>
   {{ if not .Params.download_url }}
   <dialog class="product-preview-dialog" id="download-preview" aria-labelledby="download-preview-title">
