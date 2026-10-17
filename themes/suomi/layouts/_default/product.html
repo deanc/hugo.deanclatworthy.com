@@ -88,6 +88,7 @@
         {{ if not .Params.download_url }}<small>Preview · download and checkout coming soon</small>{{ end }}
       </div>
     </div>
+    {{ with .Params.license_summary }}<p class="product-license-note">{{ . }}</p>{{ end }}
     {{ if .Params.trial_no_card }}<p class="product-trial-note">No account or credit card needed for the trial.</p>{{ end }}
     <noscript><p>The download and checkout are placeholders in this local preview.</p></noscript>
     <p class="product-availability-note">Made by <a href="{{ "about.html" | relURL }}">Dean Clatworthy</a> in Helsinki, Finland.</p>
@@ -107,7 +108,8 @@
   {{ if not .Params.purchase_url }}
   <dialog class="product-preview-dialog" id="purchase-preview" aria-labelledby="purchase-preview-title">
     <p class="eyebrow">Local preview</p><h2 id="purchase-preview-title">Checkout goes here.</h2>
-    <p>The final price and payment link will be added before launch. {{ .Params.price }} is a placeholder for a one-time licence.</p>
+    <p>{{ if .Params.price_is_placeholder }}The final price and payment link will be added before launch. {{ .Params.price }} is a placeholder for a one-time licence.{{ else }}The one-time price is {{ .Params.price }}. The payment link will be added before launch.{{ end }}</p>
+    {{ with .Params.license_summary }}<p>{{ . }}</p>{{ end }}
     <form method="dialog"><button class="primary-action" autofocus>Back to SharePilot</button></form>
   </dialog>
   {{ end }}

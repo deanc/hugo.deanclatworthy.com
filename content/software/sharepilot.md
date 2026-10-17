@@ -25,8 +25,9 @@ cta_label: Get launch details
 cta_url: /contact.html?subject=SharePilot%20launch#my-form
 trial_days: 7
 trial_no_card: true
-price: "€XX"
-price_is_placeholder: true
+price: "US$24.99"
+price_is_placeholder: false
+license_summary: "Includes all version 1 updates. Future major upgrades optional."
 # Set these to the signed public download and checkout when the release is ready.
 # The page then uses the download as its primary action and shows a purchase link.
 download_url: ""
@@ -61,7 +62,9 @@ faq:
   - question: How many Macs does a licence cover?
     answer: "The number of Macs included with a licence will be confirmed before launch. You can deactivate a Mac from within SharePilot to free its licence slot."
   - question: Which updates are included?
-    answer: "The update entitlement for a purchase will be confirmed before launch. SharePilot currently uses manual downloads rather than automatic updates."
+    answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. Future major upgrades are optional and may be sold separately. SharePilot currently uses manual downloads rather than automatic updates."
+  - question: How long will maintenance and security support last?
+    answer: "The maintenance and security support period for SharePilot 1 will be confirmed before launch. A one-time purchase doesn’t include an indefinite support commitment or guaranteed compatibility with future macOS releases."
   - question: How do I get support?
     answer: "[Contact me directly](/contact.html?subject=SharePilot%20support#my-form). Include your macOS version and a brief description of what you were trying to do so I can help."
   - question: Which network shares does it support?
@@ -77,5 +80,5 @@ faq:
   - question: Do connection rules need extra permissions?
     answer: "Wi-Fi name rules need Location permission on recent macOS versions. Focus rules need access to shared Focus status. SharePilot explains these requests in the app. Other rules can be used without granting either permission."
   - question: When can I buy it?
-    answer: "SharePilot is being prepared for release, with a seven-day full-feature trial and a one-time licence. The price and download on this preview are placeholders. Get in touch for launch details or to ask whether it will suit your setup."
+    answer: "SharePilot 1 is being prepared for release at US$24.99 as a one-time purchase, with a seven-day full-feature trial. Public downloads and checkout aren’t available yet. Get in touch for launch details or to ask whether it will suit your setup."
 ---

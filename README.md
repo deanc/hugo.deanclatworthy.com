@@ -90,18 +90,29 @@ comments keep the links out of rendered HTML until then.
 ```
 
 SharePilot's price, trial length and release links are in
-`content/software/sharepilot.md`. The current price (`€XX`), download and
-checkout are preview placeholders. Before launch, set `price`, change
-`price_is_placeholder` to `false`, fill `download_url` with the signed public
+`content/software/sharepilot.md`. SharePilot 1 is priced at US$24.99 as a
+one-time purchase, including all 1.x updates. Future major upgrades are
+optional and may be sold separately. Download and checkout links are still
+preview placeholders. Before launch, fill `download_url` with the signed public
 build and `purchase_url` with the checkout, and update the availability FAQ,
 `status`, and `static/llms.txt`. The real URLs replace the preview dialogs
 automatically. Product-specific launch enquiries prefill the existing contact
 form's subject; nothing is submitted automatically.
 
 The trial is presented as seven days with no account or credit card required.
-Licence device coverage and update entitlements are marked as pending in the
-FAQ until launch terms are decided; replace those answers before publishing.
+Licence device coverage and the maintenance/security support period are marked
+as pending in the FAQ until launch terms are decided. Define those before the
+commercial launch; update entitlement does not promise indefinite maintenance.
 The support link prefills the same contact form with a SharePilot support subject.
+
+The intended purchase entitlement is permanent for the bought major version on
+compatible macOS versions. The current app still requires periodic backend
+verification, with signed paid receipts valid for up to seven days offline.
+Before selling permanent access, provide a durable access mechanism for paid
+customers if the licensing service closes. The site deliberately avoids
+"lifetime licence" and service-independent access claims until the technical
+behaviour supports them. This website change does not modify the app, backend,
+or payment provider configuration.
 
 Screenshot masters and the extracted app icon are in
 `image-sources/img/software/sharepilot/`; public JPEG fallbacks live at the
