@@ -34,13 +34,6 @@
   <div class="product-trust page-width" aria-label="At a glance">
     <span>Built natively for macOS</span><span>Passwords in Keychain</span><span>No analytics or telemetry</span>
   </div>
-  {{ with .Params.connections }}
-  <div class="product-connections page-width">
-    <p>Supported connections</p>
-    <ul aria-label="Supported connection types">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-    <a href="#connection-compatibility" data-faq-link>Compatibility details <span aria-hidden="true">↓</span></a>
-  </div>
-  {{ end }}
 
   <section class="product-section page-width" id="how-it-works" aria-labelledby="everyday-title">
     <div class="product-section-heading"><p class="eyebrow">How it works</p><h2 id="everyday-title">Your shares.<br><em>Three steps to set up.</em></h2></div>

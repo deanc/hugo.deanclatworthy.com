@@ -13,7 +13,6 @@ build:
   list: never
 product_order: 1
 platform: macOS 26 or later
-connections: [SMB, NFS, WebDAV, AFP]
 status: Coming soon
 tagline: Your network drives. Already there.
 summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
@@ -36,7 +35,7 @@ purchase_url: ""
 purchase_label: ""
 features:
   - title: Add your shares.
-    text: "Enter the address of your NAS or file server and save your credentials in Keychain. Set up each shared folder once."
+    text: "Add an SMB, NFS, WebDAV or AFP share from your NAS or file server. Set it up once, with credentials saved in Keychain."
     icon: reconnect
   - title: Choose when they connect.
     text: "Enable automatic connections, and add network, app or time rules when needed. SharePilot retries failed connections automatically."
