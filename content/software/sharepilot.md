@@ -14,7 +14,7 @@ build:
 product_order: 1
 platform: macOS 26 or later
 status: Coming soon
-tagline: Your network drives. Already there.
+tagline: Keep your network drives connected.
 summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
 image: /img/software/sharepilot/overview.jpg
 image_alt: "SharePilot’s native Mac dashboard showing a disconnected example network share and its connection status."
