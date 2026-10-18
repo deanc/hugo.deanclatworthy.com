@@ -13,7 +13,7 @@ build:
   list: never
 product_order: 1
 platform: macOS 26 or later
-status: Coming soon
+status: Trial preview available
 tagline: Keep your network drives connected.
 summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
 image: /img/software/sharepilot/overview.jpg
@@ -30,9 +30,11 @@ price_is_placeholder: false
 license_summary: "Includes all version 1 updates. Future major upgrades optional."
 privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
-# Set these to the signed public download and checkout when the release is ready.
-# The page then uses the download as its primary action and shows a purchase link.
-download_url: ""
+preview_release: true
+download_url: "https://github.com/deanc/SharePilot-releases/releases/download/preview-v0.7-build14/SharePilot-macOS.zip"
+download_label: Download trial preview
+download_note: "Version 0.7 (build 14). Unsigned and unnotarised; macOS may block opening. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/preview-v0.7-build14) before installing."
+# Add the checkout and remove preview_release when the commercial build is ready.
 purchase_url: ""
 purchase_label: ""
 features:
@@ -60,7 +62,7 @@ faq:
   - question: Do I need a credit card for the trial?
     answer: "No. Download and open SharePilot to start a seven-day trial with all supported features. You don’t need to create an account, enter payment details or buy a licence to try it."
   - question: What happens when the trial ends?
-    answer: "You’ll need to activate a purchased licence to make new connections, manually or automatically. Existing mounted shares stay available, and you can still open or disconnect them. Trial expiry never forces a drive to disconnect."
+    answer: "After seven days from first launch, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start. This preview cannot activate a licence; paid activation will require a future commercial build."
   - question: How many Macs does a licence cover?
     answer: "The number of Macs included with a licence will be confirmed before launch. You can deactivate a Mac from within SharePilot to free its licence slot."
   - question: Which updates are included?
@@ -83,5 +85,5 @@ faq:
   - question: Do connection rules need extra permissions?
     answer: "Wi-Fi name rules need Location permission on recent macOS versions. Focus rules need access to shared Focus status. SharePilot explains these requests in the app. Other rules can be used without granting either permission."
   - question: When can I buy it?
-    answer: "SharePilot 1 is being prepared for release at US$24.99 as a one-time purchase, with a seven-day full-feature trial. Public downloads and checkout aren’t available yet. Get in touch for launch details or to ask whether it will suit your setup."
+    answer: "You can download the seven-day trial preview now. Purchases aren’t available yet. SharePilot 1 is planned at US$24.99 as a one-time purchase, including all version 1 updates. Get in touch for launch details or to ask whether it will suit your setup."
 ---

@@ -92,11 +92,16 @@ comments keep the links out of rendered HTML until then.
 SharePilot's price, trial length and release links are in
 `content/software/sharepilot.md`. SharePilot 1 is priced at US$24.99 as a
 one-time purchase, including all 1.x updates. Future major upgrades are
-optional and may be sold separately. Download and checkout links are still
-preview placeholders. Before launch, fill `download_url` with the signed public
-build and `purchase_url` with the checkout, and update the availability FAQ,
-`status`, and `static/llms.txt`. The real URLs replace the preview dialogs
-automatically. Product-specific launch enquiries prefill the existing contact
+optional and may be sold separately. The download links to the public seven-day
+trial preview, version 0.7 build 14, hosted on GitHub Releases. It is unsigned and
+unnotarised; installation notes are linked beside the download buttons. The app
+locks all controls and background automation after seven days from first launch,
+preserving the original trial start across updates and reinstalls.
+
+`preview_release: true` labels the price as planned and keeps checkout unavailable.
+Before commercial launch, link the commercial build and checkout, remove the
+preview flag, and update the availability FAQ and `status`. Review `static/llms.txt`
+when the software pages become publicly listed. Product-specific launch enquiries prefill the existing contact
 form's subject; nothing is submitted automatically.
 
 The trial is presented as seven days with no account or credit card required.

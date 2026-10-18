@@ -14,10 +14,11 @@
     <ul class="product-offer" aria-label="Trial and pricing">
       <li>{{ .Params.trial_days }} days free</li>
       {{ if .Params.trial_no_card }}<li>No credit card</li>{{ end }}
-      <li>{{ .Params.price }} once{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
+      <li>{{ .Params.price }} {{ if .Params.preview_release }}at launch{{ else }}once{{ end }}{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
       <li>No subscription</li>
     </ul>
     <p class="product-requirements">{{ .Params.platform }} <span>·</span> Intel and Apple Silicon</p>
+    {{ with .Params.download_note }}<p class="product-requirements">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
   </header>
 
   <figure class="product-showcase page-width">
@@ -79,18 +80,19 @@
     {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "72px") }}
     <p class="eyebrow">{{ .Title }} for Mac</p>
     <h2 id="availability-title">Try it on<br><em>your own network.</em></h2>
-    <p>{{ .Params.trial_days }} days to try every feature. Then a one-time licence to keep your shares connected.</p>
+    <p>{{ .Params.trial_days }} days to try every feature. {{ if .Params.preview_release }}Purchases aren’t available yet; paid activation will require a future commercial build.{{ else }}Then a one-time licence to keep your shares connected.{{ end }}</p>
     <div class="product-price-card">
-      <div class="product-price"><strong>{{ .Params.price }}</strong><span>One-time purchase</span><small>No subscription.{{ if .Params.price_is_placeholder }} Price to be confirmed.{{ end }}</small></div>
+      <div class="product-price"><strong>{{ .Params.price }}</strong><span>{{ if .Params.preview_release }}Planned one-time price{{ else }}One-time purchase{{ end }}</span><small>No subscription.{{ if .Params.price_is_placeholder }} Price to be confirmed.{{ end }}</small></div>
       <div class="product-price-actions">
         {{ partial "product-download.html" . }}
-        {{ with .Params.purchase_url }}<a class="product-text-link" href="{{ . }}">{{ $.Params.purchase_label | default "Buy SharePilot" }} <span aria-hidden="true">↗</span></a>{{ else }}<button class="product-text-link" type="button" data-preview-dialog="purchase-preview">Buy SharePilot <span aria-hidden="true">↗</span></button>{{ end }}
+        {{ with .Params.purchase_url }}<a class="product-text-link" href="{{ . }}">{{ $.Params.purchase_label | default "Buy SharePilot" }} <span aria-hidden="true">↗</span></a>{{ else }}{{ if .Params.preview_release }}<small>Purchases coming soon</small>{{ else }}<button class="product-text-link" type="button" data-preview-dialog="purchase-preview">Buy SharePilot <span aria-hidden="true">↗</span></button>{{ end }}{{ end }}
         {{ if not .Params.download_url }}<small>Preview · download and checkout coming soon</small>{{ end }}
       </div>
     </div>
     {{ with .Params.license_summary }}<p class="product-license-note">{{ . }}</p>{{ end }}
     {{ if .Params.trial_no_card }}<p class="product-trial-note">No account or credit card needed for the trial.</p>{{ end }}
-    <noscript><p>The download and checkout are placeholders in this local preview.</p></noscript>
+    {{ with .Params.download_note }}<p class="product-trial-note">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
+    {{ if not .Params.download_url }}<noscript><p>The download will be linked here before launch.</p></noscript>{{ end }}
     <p class="product-availability-note">Made by <a href="{{ "about.html" | relURL }}">Dean Clatworthy</a> in Helsinki, Finland.</p>
     {{ if or .Params.privacy_url .Params.terms_url }}
     <p class="product-availability-note">
@@ -113,7 +115,7 @@
     <form method="dialog"><button class="primary-action" autofocus>Back to SharePilot</button></form>
   </dialog>
   {{ end }}
-  {{ if not .Params.purchase_url }}
+  {{ if and (not .Params.purchase_url) (not .Params.preview_release) }}
   <dialog class="product-preview-dialog" id="purchase-preview" aria-labelledby="purchase-preview-title">
     <p class="eyebrow">Local preview</p><h2 id="purchase-preview-title">Checkout goes here.</h2>
     <p>{{ if .Params.price_is_placeholder }}The final price and payment link will be added before launch. {{ .Params.price }} is a placeholder for a one-time licence.{{ else }}The one-time price is {{ .Params.price }}. The payment link will be added before launch.{{ end }}</p>

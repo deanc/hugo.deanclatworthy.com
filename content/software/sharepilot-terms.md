@@ -20,7 +20,9 @@ These terms apply to SharePilot, developed by Dean Clatworthy in Helsinki, Finla
 
 ## Trial and licence
 
-After the seven-day trial, a paid licence is required for new connections. Existing mounted shares remain available to open or disconnect.
+The trial runs for seven days from first launch. After that, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start.
+
+The current trial preview cannot activate a licence. Purchases aren’t available yet; paid activation will require a future commercial build.
 
 A one-time purchase licenses SharePilot 1 for the number of Macs stated at checkout, including all version 1 updates. Future major upgrades are optional and may cost extra. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised.
 
