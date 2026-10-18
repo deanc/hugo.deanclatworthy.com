@@ -3,7 +3,7 @@ title: SharePilot
 seo_title: SharePilot — Network drives, connected
 description: "Keep your Mac’s network drives connected with SharePilot. Reconnect after sleep, set connection rules and manage your shares from the menu bar."
 date: 2026-10-16
-lastmod: 2026-10-17
+lastmod: 2026-10-18
 url: /software/sharepilot/
 layout: product
 noindex: true
@@ -28,6 +28,8 @@ trial_no_card: true
 price: "US$24.99"
 price_is_placeholder: false
 license_summary: "Includes all version 1 updates. Future major upgrades optional."
+privacy_url: /software/sharepilot/privacy/
+terms_url: /software/sharepilot/terms/
 # Set these to the signed public download and checkout when the release is ready.
 # The page then uses the download as its primary action and shows a purchase link.
 download_url: ""
