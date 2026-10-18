@@ -24,7 +24,7 @@ The trial runs for seven days from first launch. After that, all SharePilot cont
 
 The current trial preview cannot activate a licence. Purchases aren’t available yet; paid activation will require a future commercial build.
 
-A one-time purchase licenses SharePilot 1 for the number of Macs stated at checkout, including all version 1 updates. Future major upgrades are optional and may cost extra. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised.
+A one-time purchase licenses SharePilot 1 for one Mac at a time, including all version 1 updates. You can move the licence to another Mac by deactivating it on the previous Mac first. Future major upgrades are optional and may cost extra. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised. Your statutory rights to necessary updates and remedies remain unaffected.
 
 Don’t resell or publicly share licence keys, bypass licensing, or access systems without permission. Activation and periodic licence checks require internet access.
 

@@ -27,7 +27,7 @@ trial_days: 7
 trial_no_card: true
 price: "US$24.99"
 price_is_placeholder: false
-license_summary: "Includes all version 1 updates. Future major upgrades optional."
+license_summary: "One Mac per licence. Includes all version 1 updates. Future major upgrades optional."
 privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
 preview_release: true
@@ -64,11 +64,9 @@ faq:
   - question: What happens when the trial ends?
     answer: "After seven days from first launch, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start. This preview cannot activate a licence; paid activation will require a future commercial build."
   - question: How many Macs does a licence cover?
-    answer: "The number of Macs included with a licence will be confirmed before launch. You can deactivate a Mac from within SharePilot to free its licence slot."
+    answer: "One Mac at a time. In the commercial build, you can deactivate your licence on one Mac before activating it on another."
   - question: Which updates are included?
     answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. Future major upgrades are optional and may be sold separately. SharePilot currently uses manual downloads rather than automatic updates."
-  - question: How long will maintenance and security support last?
-    answer: "The maintenance and security support period for SharePilot 1 will be confirmed before launch. A one-time purchase doesn’t include an indefinite support commitment or guaranteed compatibility with future macOS releases."
   - question: How do I get support?
     answer: "[Contact me directly](/contact.html?subject=SharePilot%20support#my-form). Include your macOS version and a brief description of what you were trying to do so I can help."
   - question: Which network shares does it support?
