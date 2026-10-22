@@ -36,6 +36,8 @@ The checkout page stores a private purchase token in your browser so you can ret
 
 The website separately uses Google Analytics, including cookies and page-interaction data, to understand visits. Hosting providers process connection information, including IP addresses, to deliver and secure services.
 
+The SharePilot product page loads Paddle to show local pricing. Paddle uses your IP address to estimate your country and return the price, currency and estimated tax. Your billing details determine the final amount at checkout.
+
 See the privacy policies of [Paddle](https://www.paddle.com/legal/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/), [Formspree](https://formspree.io/legal/privacy-policy/) and [Google](https://policies.google.com/privacy). Providers may process data outside the EEA under the transfer safeguards described in their policies. I don’t sell your personal data.
 
 ## Retention and your rights

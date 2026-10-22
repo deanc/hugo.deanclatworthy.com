@@ -1,5 +1,6 @@
 {{ define "main" }}
-<article class="product-page">
+{{ $localizedPricing := and (not .Params.preview_release) .Params.paddle_price_id .Params.paddle_client_token }}
+<article class="product-page"{{ if $localizedPricing }} data-paddle-price-id="{{ .Params.paddle_price_id }}" data-paddle-client-token="{{ .Params.paddle_client_token }}"{{ end }}>
   <header class="product-hero page-width">
     <div class="product-brand">
       {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "58px") }}
@@ -14,7 +15,7 @@
     <ul class="product-offer" aria-label="Trial and pricing">
       <li>{{ .Params.trial_days }} days free</li>
       {{ if .Params.trial_no_card }}<li>No credit card</li>{{ end }}
-      <li>{{ .Params.price }} {{ if .Params.preview_release }}at launch{{ else }}once{{ end }}{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
+      <li><span data-product-price>{{ .Params.price }}</span> {{ if .Params.preview_release }}at launch{{ else }}once{{ end }}{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
       <li>No subscription</li>
     </ul>
     <p class="product-requirements">{{ .Params.platform }} <span>·</span> Intel and Apple Silicon</p>
@@ -82,13 +83,14 @@
     <h2 id="availability-title">Try it on<br><em>your own network.</em></h2>
     <p>{{ .Params.trial_days }} days to try every feature supported by your Mac. {{ if .Params.preview_release }}Purchases aren’t available yet; paid activation will require a future commercial build.{{ else }}Then a one-time licence to keep your shares connected.{{ end }}</p>
     <div class="product-price-card">
-      <div class="product-price"><strong>{{ .Params.price }}</strong><span>{{ if .Params.preview_release }}Planned one-time price{{ else }}One-time purchase{{ end }}</span><small>No subscription.{{ if .Params.price_is_placeholder }} Price to be confirmed.{{ end }}</small></div>
+      <div class="product-price"><strong data-product-price>{{ .Params.price }}</strong><span>{{ if .Params.preview_release }}Planned one-time price{{ else }}One-time purchase{{ end }}</span><small>No subscription.{{ if .Params.price_is_placeholder }} Price to be confirmed.{{ end }}</small></div>
       <div class="product-price-actions">
         {{ partial "product-download.html" . }}
         {{ with .Params.purchase_url }}<a class="product-text-link" href="{{ . }}">{{ $.Params.purchase_label | default "Buy SharePilot" }} <span aria-hidden="true">↗</span></a>{{ else }}{{ if .Params.preview_release }}<small>Purchases coming soon</small>{{ else }}<button class="product-text-link" type="button" data-preview-dialog="purchase-preview">Buy SharePilot <span aria-hidden="true">↗</span></button>{{ end }}{{ end }}
         {{ if not .Params.download_url }}<small>Preview · download and checkout coming soon</small>{{ end }}
       </div>
     </div>
+    {{ if $localizedPricing }}<p class="product-trial-note" data-product-price-note role="status">USD base price. Local price and tax confirmed at checkout.</p>{{ end }}
     {{ with .Params.license_summary }}<p class="product-license-note">{{ . }}</p>{{ end }}
     {{ if .Params.trial_no_card }}<p class="product-trial-note">No account or credit card needed for the trial.</p>{{ end }}
     {{ with .Params.download_note }}<p class="product-trial-note">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}

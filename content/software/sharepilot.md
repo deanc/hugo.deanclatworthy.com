@@ -27,6 +27,8 @@ cta_url: /contact.html?subject=SharePilot%20support#my-form
 trial_days: 7
 trial_no_card: true
 price: "US$24.99"
+paddle_price_id: "pri_01m5h8d5bjyjm1tqdk8hek4bzw"
+paddle_client_token: "live_2fa206ffe0e713c9d343f8d686e"
 price_is_placeholder: false
 license_summary: "One Mac per licence. Includes all version 1 updates. Future major upgrades optional."
 privacy_url: /software/sharepilot/privacy/
@@ -90,5 +92,5 @@ faq:
   - question: Do connection rules need extra permissions?
     answer: "Wi-Fi name rules need Location permission on recent macOS versions. Focus rules need access to shared Focus status. SharePilot explains these requests in the app. Other rules can be used without granting either permission."
   - question: How do I buy and activate a licence?
-    answer: "[Buy SharePilot 1](https://sharepilot-licensing.dclat.workers.dev/buy) through Paddle, then save the licence key shown after checkout. Open SharePilot’s licence settings and paste the key to activate this Mac. The one-time base price is US$24.99; your currency and applicable taxes are shown at checkout."
+    answer: "[Buy SharePilot 1](https://sharepilot-licensing.dclat.workers.dev/buy) through Paddle, then save the licence key shown after checkout. Open SharePilot’s licence settings and paste the key to activate this Mac. Your local price, currency and applicable taxes are confirmed at checkout."
 ---

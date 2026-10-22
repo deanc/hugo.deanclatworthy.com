@@ -140,6 +140,12 @@
     {{- with resources.Get "js/software.js" | minify | fingerprint }}
   <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
     {{- end }}
+    {{- if and (not .Params.preview_release) .Params.paddle_price_id .Params.paddle_client_token }}
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
+      {{- with resources.Get "js/product-pricing.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+      {{- end }}
+    {{- end }}
   {{- end }}
   {{- if eq .RelPermalink "/contact.html" }}
     {{- with resources.Get "js/contact-subject.js" | minify | fingerprint }}
