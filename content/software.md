@@ -1,8 +1,8 @@
 ---
 title: Software
-description: "Thoughtful apps for everyday tasks, designed and built by Dean Clatworthy. Explore independent software for your Mac, starting with SharePilot."
+description: "Independent apps for everyday tasks from Dean Clatworthy. Start with SharePilot for Mac to automatically mount and reconnect your network drives."
 date: 2026-10-16
-lastmod: 2026-10-17
+lastmod: 2026-10-22
 url: /software/
 layout: software
 noindex: true
@@ -14,4 +14,4 @@ products:
   - /software/sharepilot
 ---
 
-Small frustrations are often worth building something for. These are my own products, made with the same care I bring to my work for others.
+Small frustrations are often worth building something for. These are my own apps for everyday tasks, starting with SharePilot for Mac. You can contact me directly for support.
