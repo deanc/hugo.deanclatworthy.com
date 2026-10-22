@@ -1,0 +1,14 @@
+Generated with the built-in image_gen tool, 22 October 2026.
+Reference: image-sources/img/software/sharepilot/icon.png
+Approved by owner on 22 October 2026 for the SharePilot page's social preview.
+
+Use case: ads-marketing
+Asset type: polished professional Open Graph social share image for SharePilot, a native Mac app that reconnects network drives.
+Primary request: Create one finished premium software social card with a wide 1200:630 aspect ratio. This is a tasteful editorial brand composition, with beautiful typography and ample breathing room, ready to share as a social preview.
+Input images: the supplied local image is the existing SharePilot app icon, used as a brand reference and supporting insert. Preserve its white wireless-drive glyph and blue rounded-square identity precisely, without adding glyph details or inventing a new logo.
+Scene/backdrop: warm off-white canvas, near-white at the left, a very subtle powder-blue atmospheric glow at the right. Very fine, quiet concentric connection rings behind the icon, fading delicately into the background. No busy network diagram.
+Subject/composition: wide landscape. Left 56% is beautifully typeset copy. Right 44% has a large, crisp, floating SharePilot icon, front-facing with restrained soft contact shadow and slight dimensionality, approximately 230px across in a 1200px wide layout. Keep all key content within generous 64px outer safe margins. Avoid any awkward clipping. No screenshot or invented app UI.
+Typography: small SharePilot wordmark in clean confident sans-serif at upper left; compact understated 'FOR MAC' label nearby. Main headline in very large elegant editorial serif, deep midnight navy, natural line breaks across three lines: 'Keep your' / 'network drives' / 'connected.' Strong hierarchy, optically balanced spacing. Headline should dominate the left half and read clearly at thumbnail size. A thin muted horizontal footer rule and very small domain at lower left add finish. Do not use extra cards, badges, checklists, buttons or feature chips.
+Color palette: warm ivory #F8F9F7, deep ink navy #071D35, existing icon cobalt blue, pale icy blue. Restrained, calm, carefully art-directed. Crisp typography with flawless spelling.
+Text (verbatim, only these four strings): 'SharePilot'; 'FOR MAC'; 'Keep your network drives connected.'; 'deanclatworthy.com/software/sharepilot'
+Constraints: deliver one cohesive finished share image. No watermark, no price, no download CTA, no testimonials, no Apple logo, no stock devices, no decorative random symbols. Preserve existing app identity. Professional independent software, quietly confident editorial aesthetic.

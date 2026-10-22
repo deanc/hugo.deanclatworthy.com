@@ -20,6 +20,11 @@ image: /img/software/sharepilot/overview.jpg
 image_alt: "SharePilot’s native Mac dashboard showing a disconnected example network share and its connection status."
 image_width: 2000
 image_height: 1616
+og_image: /img/software/sharepilot/share.jpg
+og_image_alt: "SharePilot for Mac. Keep your network drives connected. Blue app icon on a pale background."
+og_image_type: image/jpeg
+og_image_width: 1200
+og_image_height: 630
 icon: /img/software/sharepilot/icon.jpg
 cta_label: Contact support
 cta_url: /contact.html?subject=SharePilot%20support#my-form
