@@ -111,7 +111,7 @@
   {{ if not .Params.download_url }}
   <dialog class="product-preview-dialog" id="download-preview" aria-labelledby="download-preview-title">
     <p class="eyebrow">Local preview</p><h2 id="download-preview-title">The download goes here.</h2>
-    <p>The signed SharePilot download will be linked here before launch. The app includes a {{ .Params.trial_days }}-day full-feature trial.</p>
+    <p>The SharePilot download will be linked here before launch. The app includes a {{ .Params.trial_days }}-day full-feature trial.</p>
     <a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Get launch details <span aria-hidden="true">↗</span></a>
     <form method="dialog"><button class="primary-action" autofocus>Back to SharePilot</button></form>
   </dialog>

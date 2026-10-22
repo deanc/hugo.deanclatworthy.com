@@ -13,7 +13,7 @@ build:
   list: never
 product_order: 1
 platform: macOS 26 or later
-status: Trial preview available
+status: Available now
 tagline: Keep your network drives connected.
 summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
 image: /img/software/sharepilot/overview.jpg
@@ -21,8 +21,8 @@ image_alt: "SharePilot’s native Mac dashboard showing a disconnected example n
 image_width: 2000
 image_height: 1616
 icon: /img/software/sharepilot/icon.jpg
-cta_label: Get launch details
-cta_url: /contact.html?subject=SharePilot%20launch#my-form
+cta_label: Contact support
+cta_url: /contact.html?subject=SharePilot%20support#my-form
 trial_days: 7
 trial_no_card: true
 price: "US$24.99"
@@ -31,13 +31,12 @@ license_summary: "One Mac per licence. Includes all version 1 updates. Future ma
 privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
 refund_url: /software/sharepilot/refunds/
-preview_release: true
-download_url: "https://github.com/deanc/SharePilot-releases/releases/download/preview-v0.7-build14/SharePilot-macOS.zip"
-download_label: Download trial preview
-download_note: "Version 0.7 (build 14). Unsigned and unnotarised; macOS may block opening. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/preview-v0.7-build14) before installing."
-# Add the live Paddle /buy URL and remove preview_release only after approval, sandbox verification and a commercial build.
-purchase_url: ""
-purchase_label: ""
+preview_release: false
+download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.0-build15/SharePilot-macOS.zip"
+download_label: Download SharePilot
+download_note: "Version 1.0 (build 15). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.0-build15) before installing."
+purchase_url: "https://sharepilot-licensing.dclat.workers.dev/buy"
+purchase_label: Buy SharePilot 1
 features:
   - title: Add your shares.
     text: "Add an SMB, NFS, WebDAV or AFP share from your NAS or file server. Set it up once, with credentials saved in Keychain."
@@ -63,13 +62,15 @@ faq:
   - question: Do I need a credit card for the trial?
     answer: "No. Download and open SharePilot to start a seven-day trial with all supported features. You don’t need to create an account, enter payment details or buy a licence to try it."
   - question: What happens when the trial ends?
-    answer: "After seven days from first launch, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start. This preview cannot activate a licence; paid activation will require a future commercial build."
+    answer: "After seven days from first launch, all SharePilot controls and background automations lock unless you activate a licence. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start."
   - question: How many Macs does a licence cover?
-    answer: "One Mac at a time. In the commercial build, you can deactivate your licence on one Mac before activating it on another."
+    answer: "One Mac at a time. Deactivate your licence in SharePilot’s licence settings before activating it on another Mac."
   - question: Which updates are included?
-    answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. Future major upgrades are optional and may be sold separately. SharePilot currently uses manual downloads rather than automatic updates."
+    answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. A future 2.x release needs a separate licence, bought outright or through a paid upgrade if offered. You can keep using version 1 on compatible macOS versions. Updates are installed manually."
   - question: Who handles payments and licence keys?
-    answer: "When purchases open, Paddle will handle checkout, payment receipts and refunds as merchant of record. Your licence key will appear after checkout; save or download it for activation. If you lose it, [contact support](/contact.html?subject=SharePilot%20licence%20support#my-form) with your Paddle receipt reference."
+    answer: "Paddle handles checkout, payment receipts and refunds as merchant of record. Your licence key appears after checkout; save or download it for activation. Paddle emails your payment receipt separately. If you lose your key, [contact support](/contact.html?subject=SharePilot%20licence%20support#my-form) with your Paddle receipt reference."
+  - question: Can I upgrade from the trial preview?
+    answer: "Yes. Quit the preview, download the current version and replace the app in Applications. Your settings and original trial start are preserved. You can then activate a purchased licence. macOS may ask you to approve Keychain access again after the update."
   - question: Can I get a refund?
     answer: "Use the seven-day trial to check SharePilot before buying. Purchases are normally final; I consider discretionary refunds only in exceptional circumstances. Your statutory rights and Paddle’s terms still apply. Read the [refund policy](/software/sharepilot/refunds/) for details."
   - question: How do I get support?
@@ -87,6 +88,6 @@ faq:
     answer: "There are no analytics or telemetry. Passwords are stored in Keychain. Commercial builds contact the licensing service for activation and periodic checks, sending your licence key and a random installation identifier. Your configured servers and network checks still make their normal connections."
   - question: Do connection rules need extra permissions?
     answer: "Wi-Fi name rules need Location permission on recent macOS versions. Focus rules need access to shared Focus status. SharePilot explains these requests in the app. Other rules can be used without granting either permission."
-  - question: When can I buy it?
-    answer: "You can download the seven-day trial preview now. Purchases aren’t available yet. SharePilot 1 is planned at US$24.99 as a one-time purchase, including all version 1 updates. Get in touch for launch details or to ask whether it will suit your setup."
+  - question: How do I buy and activate a licence?
+    answer: "[Buy SharePilot 1](https://sharepilot-licensing.dclat.workers.dev/buy) through Paddle, then save the licence key shown after checkout. Open SharePilot’s licence settings and paste the key to activate this Mac. The one-time base price is US$24.99; your currency and applicable taxes are shown at checkout."
 ---

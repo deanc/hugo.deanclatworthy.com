@@ -22,9 +22,9 @@ These terms apply to SharePilot, developed by Dean Clatworthy in Helsinki, Finla
 
 The trial runs for seven days from first launch. After that, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start.
 
-The current trial preview cannot activate a licence. Purchases aren’t available yet; paid activation will require a future commercial build.
+The current download supports licence activation. If you used an earlier trial-only preview, install the [current version](/software/sharepilot/) before activating a purchased licence. Your original trial start is preserved.
 
-A one-time purchase licenses SharePilot 1 for one Mac at a time, including all version 1 updates. You can move the licence to another Mac by deactivating it on the previous Mac first. Future major upgrades are optional and may cost extra. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised. Your statutory rights to necessary updates and remedies remain unaffected.
+A one-time purchase licenses SharePilot 1 for one Mac at a time, including all version 1 updates. You can move the licence to another Mac by deactivating it on the previous Mac first. The licence does not activate version 2 or later major versions; those require a separate licence, bought outright or through a paid upgrade if offered. Upgrading is optional. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised. Your statutory rights to necessary updates and remedies remain unaffected.
 
 Don’t resell or publicly share licence keys, bypass licensing, or access systems without permission. Activation and periodic licence checks require internet access.
 

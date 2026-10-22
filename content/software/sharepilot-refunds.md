@@ -16,7 +16,7 @@ build:
 
 Last updated: 22 October 2026.
 
-This policy applies to paid SharePilot licences. Purchases are not available yet; the current download is a trial preview.
+This policy applies to paid SharePilot licences purchased through Paddle.
 
 ## Try SharePilot before buying
 

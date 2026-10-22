@@ -24,7 +24,7 @@ SharePilot has no analytics, telemetry or user accounts. Settings stay on your M
 
 ## Licensing, purchases and support
 
-Commercial builds send your licence key and installation/activation identifiers to a Cloudflare-hosted SharePilot licensing service. Paddle purchase and refund notifications determine whether a licence is valid. It stores licence-key hashes, purchase references and activation records, and processes IP addresses to prevent abuse. Trial-only previews don’t contact a licence server.
+The current app sends your licence key and installation/activation identifiers to a Cloudflare-hosted SharePilot licensing service when you activate or check a licence. Paddle purchase and refund notifications determine whether a licence is valid. The service stores licence-key hashes, purchase references, purchased major versions and activation records, and processes IP addresses to prevent abuse. Earlier trial-only previews don’t contact a licence server.
 
 Paddle handles payments as merchant of record. I can access purchase details to provide licences and support, but don’t receive full card details. Support uses the email address and message you provide; the contact form uses Formspree.
 
