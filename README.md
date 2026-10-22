@@ -70,24 +70,15 @@ The catalogue is at `/software/`, with SharePilot at
 `/software/sharepilot/`. Product cards are generated from regular pages with
 `layout: product`, ordered by `product_order`. Section pages remain disabled.
 
-Both pages are currently published as unlisted previews. Their front matter
-sets `noindex: true`, `sitemap.disable: true`, and `build.list: never`, keeping
-them out of search indexing, the sitemap, RSS, and regular page collections.
+SharePilot is indexable and included in the sitemap and regular page collections.
+Its search and social metadata describe automatic mounting of network drives on Mac.
+The catalogue still sets `noindex: true`, `sitemap.disable: true`, and
+`build.list: never`, excluding it from indexing, the sitemap and regular collections.
 The catalogue's `products` list explicitly includes SharePilot so the unlisted
 catalogue still works by direct URL. These pages are publicly accessible.
 
 The Software links in the header and footer and the homepage software feature
-are preserved inside Hugo template comments. To restore public discovery,
-uncomment those blocks, remove the three front matter exclusions from both
-pages, and restore the software entries in `static/llms.txt` below. Hugo
-comments keep the links out of rendered HTML until then.
-
-```markdown
-## Independent software
-
-- [Software](https://deanclatworthy.com/software/): Independent apps designed and built by Dean.
-- [SharePilot](https://deanclatworthy.com/software/sharepilot/): Native app for macOS 26 or later, reconnecting network shares with connection rules. Optional Apple Shortcuts event integration requires macOS 27 or later. Being prepared for release.
-```
+are active. Both software pages are linked from `static/llms.txt`.
 
 SharePilot's price, trial length and release links are in
 `content/software/sharepilot.md`. SharePilot 1 is priced at US$24.99 as a

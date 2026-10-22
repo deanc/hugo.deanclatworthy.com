@@ -13,7 +13,7 @@ This is the canonical guide to the main public information on deanclatworthy.com
 ## Independent software
 
 - [Software](https://deanclatworthy.com/software/): Dean’s own apps, starting with SharePilot for Mac.
-- [SharePilot](https://deanclatworthy.com/software/sharepilot/): A Mac app for managing and reconnecting network drives. Includes download, purchase and support information.
+- [SharePilot](https://deanclatworthy.com/software/sharepilot/): A Mac app for automatically mounting and reconnecting network drives. Includes download, purchase and support information.
 
 ## Writing and open source
 

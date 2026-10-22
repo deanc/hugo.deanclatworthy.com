@@ -1,16 +1,12 @@
 ---
 title: SharePilot
-seo_title: SharePilot — Network drives, connected
-description: "Keep your Mac’s network drives connected with SharePilot. Reconnect after sleep, set connection rules and manage your shares from the menu bar."
+seo_title: SharePilot — Auto-mount network drives
+og_title: SharePilot — Automatically mount network drives on Mac
+description: "Automatically mount network drives on your Mac and reconnect after sleep or network changes. Set connection rules and try SharePilot free for 7 days."
 date: 2026-10-16
 lastmod: 2026-10-22
 url: /software/sharepilot/
 layout: product
-noindex: true
-sitemap:
-  disable: true
-build:
-  list: never
 product_order: 1
 platform: macOS 26 or later
 status: Available now
