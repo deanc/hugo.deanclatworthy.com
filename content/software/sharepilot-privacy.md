@@ -4,7 +4,7 @@ seo_title: SharePilot privacy policy
 description: "How SharePilot handles local settings, licence checks, purchases and support requests."
 eyebrow: SharePilot
 date: 2026-10-18
-lastmod: 2026-10-18
+lastmod: 2026-10-22
 url: /software/sharepilot/privacy/
 layout: single
 noindex: true
@@ -14,7 +14,7 @@ build:
   list: never
 ---
 
-Last updated: 18 October 2026.
+Last updated: 22 October 2026.
 
 I’m Dean Clatworthy, SharePilot’s developer and data controller, based in Helsinki, Finland. For privacy questions or requests, [contact me](/contact.html?subject=SharePilot%20privacy#my-form).
 
@@ -24,17 +24,19 @@ SharePilot has no analytics, telemetry or user accounts. Settings stay on your M
 
 ## Licensing, purchases and support
 
-Commercial builds send your licence key and installation/activation identifiers to a Cloudflare-hosted service that checks licences with Creem. It stores licence-key hashes, purchase references and activation records, and processes IP addresses to prevent abuse. Trial-only previews don’t contact a licence server.
+Commercial builds send your licence key and installation/activation identifiers to a Cloudflare-hosted SharePilot licensing service. Paddle purchase and refund notifications determine whether a licence is valid. It stores licence-key hashes, purchase references and activation records, and processes IP addresses to prevent abuse. Trial-only previews don’t contact a licence server.
 
-Creem handles payments as merchant of record. I can access purchase details to provide licences and support, but don’t receive full card details. Support uses the email address and message you provide; the contact form uses Formspree.
+Paddle handles payments as merchant of record. I can access purchase details to provide licences and support, but don’t receive full card details. Support uses the email address and message you provide; the contact form uses Formspree.
 
 The legal bases are providing your purchase and requested support, legal obligations, and my legitimate interest in preventing abuse. Licence information is required for activation.
+
+The checkout page stores a private purchase token in your browser so you can retrieve the key for your most recent purchase. The service stores only a hash of that token alongside the purchase reference. Save or download each key after checkout. Paddle emails your payment receipt separately.
 
 ## Website and service providers
 
 The website separately uses Google Analytics, including cookies and page-interaction data, to understand visits. Hosting providers process connection information, including IP addresses, to deliver and secure services.
 
-See the privacy policies of [Creem](https://www.creem.io/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/), [Formspree](https://formspree.io/legal/privacy-policy/) and [Google](https://policies.google.com/privacy). Providers may process data outside the EEA under the transfer safeguards described in their policies. I don’t sell your personal data.
+See the privacy policies of [Paddle](https://www.paddle.com/legal/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/), [Formspree](https://formspree.io/legal/privacy-policy/) and [Google](https://policies.google.com/privacy). Providers may process data outside the EEA under the transfer safeguards described in their policies. I don’t sell your personal data.
 
 ## Retention and your rights
 

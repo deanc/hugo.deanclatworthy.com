@@ -3,7 +3,7 @@ title: SharePilot
 seo_title: SharePilot — Network drives, connected
 description: "Keep your Mac’s network drives connected with SharePilot. Reconnect after sleep, set connection rules and manage your shares from the menu bar."
 date: 2026-10-16
-lastmod: 2026-10-18
+lastmod: 2026-10-22
 url: /software/sharepilot/
 layout: product
 noindex: true
@@ -34,7 +34,7 @@ preview_release: true
 download_url: "https://github.com/deanc/SharePilot-releases/releases/download/preview-v0.7-build14/SharePilot-macOS.zip"
 download_label: Download trial preview
 download_note: "Version 0.7 (build 14). Unsigned and unnotarised; macOS may block opening. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/preview-v0.7-build14) before installing."
-# Add the checkout and remove preview_release when the commercial build is ready.
+# Add the live Paddle /buy URL and remove preview_release only after approval, sandbox verification and a commercial build.
 purchase_url: ""
 purchase_label: ""
 features:
@@ -67,6 +67,8 @@ faq:
     answer: "One Mac at a time. In the commercial build, you can deactivate your licence on one Mac before activating it on another."
   - question: Which updates are included?
     answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. Future major upgrades are optional and may be sold separately. SharePilot currently uses manual downloads rather than automatic updates."
+  - question: Who handles payments and licence keys?
+    answer: "When purchases open, Paddle will handle checkout, payment receipts and refunds as merchant of record. Your licence key will appear after checkout; save or download it for activation. If you lose it, [contact support](/contact.html?subject=SharePilot%20licence%20support#my-form) with your Paddle receipt reference."
   - question: How do I get support?
     answer: "[Contact me directly](/contact.html?subject=SharePilot%20support#my-form). Include your macOS version and a brief description of what you were trying to do so I can help."
   - question: Which network shares does it support?

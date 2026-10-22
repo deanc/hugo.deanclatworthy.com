@@ -4,7 +4,7 @@ seo_title: SharePilot terms of use
 description: "The terms for trying, purchasing and using SharePilot, including licensing, refunds and support."
 eyebrow: SharePilot
 date: 2026-10-18
-lastmod: 2026-10-18
+lastmod: 2026-10-22
 url: /software/sharepilot/terms/
 layout: single
 noindex: true
@@ -14,7 +14,7 @@ build:
   list: never
 ---
 
-Last updated: 18 October 2026.
+Last updated: 22 October 2026.
 
 These terms apply to SharePilot, developed by Dean Clatworthy in Helsinki, Finland. For questions or support, [contact me](/contact.html?subject=SharePilot%20support#my-form).
 
@@ -30,9 +30,11 @@ Don’t resell or publicly share licence keys, bypass licensing, or access syste
 
 ## Payments and refunds
 
-Creem is the merchant of record. Prices and taxes are shown at checkout; [Creem’s buyer terms](https://www.creem.io/buyer-terms) also apply.
+Paddle is the merchant of record. Prices and taxes are shown at checkout; [Paddle’s buyer terms](https://www.paddle.com/legal/buyer-terms) also apply.
 
 Refunds are available where required by law or offered at checkout. [Request a refund](/contact.html?subject=SharePilot%20refund#my-form) with your order reference. Refunded purchases no longer grant a licence. Statutory cancellation and consumer rights remain unaffected.
+
+Paddle sends payment receipts and refund confirmations. Your licence key appears after checkout; save a copy for activation. If you lose it, contact support with your Paddle receipt reference.
 
 ## Using SharePilot
 
