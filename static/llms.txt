@@ -10,6 +10,11 @@ This is the canonical guide to the main public information on deanclatworthy.com
 - [Skills and experience](https://deanclatworthy.com/skills.html): Cloud architecture, TypeScript, Node.js, back-end and front-end development, databases, systems design, and agentic development.
 - [Portfolio](https://deanclatworthy.com/portfolio.html): Selected consulting, architecture, platform modernisation, and digital product work.
 
+## Independent software
+
+- [Software](https://deanclatworthy.com/software/): Dean’s own apps, starting with SharePilot for Mac.
+- [SharePilot](https://deanclatworthy.com/software/sharepilot/): A Mac app for managing and reconnecting network drives. Includes download, purchase and support information.
+
 ## Writing and open source
 
 - [Writing archive](https://deanclatworthy.com/archive.html): Essays and technical articles by Dean.
