@@ -94,11 +94,12 @@
     {{ with .Params.download_note }}<p class="product-trial-note">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
     {{ if not .Params.download_url }}<noscript><p>The download will be linked here before launch.</p></noscript>{{ end }}
     <p class="product-availability-note">Made by <a href="{{ "about.html" | relURL }}">Dean Clatworthy</a> in Helsinki, Finland.</p>
-    {{ if or .Params.privacy_url .Params.terms_url }}
+    {{ if or .Params.privacy_url .Params.terms_url .Params.refund_url }}
     <p class="product-availability-note">
       {{ with .Params.privacy_url }}<a href="{{ . | relURL }}">Privacy policy</a>{{ end }}
       {{ if and .Params.privacy_url .Params.terms_url }} · {{ end }}
       {{ with .Params.terms_url }}<a href="{{ . | relURL }}">Terms of use</a>{{ end }}
+      {{ with .Params.refund_url }} · <a href="{{ . | relURL }}">Refund policy</a>{{ end }}
       · <a href="{{ "contact.html?subject=SharePilot%20support#my-form" | relURL }}" data-contact-cta>Contact support</a>
     </p>
     {{ end }}

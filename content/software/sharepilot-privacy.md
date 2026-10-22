@@ -44,4 +44,4 @@ I keep purchase and licence records while needed to maintain your licence and me
 
 You can request access, correction, deletion, restriction or portability, and object to processing where applicable. You can complain to your local data protection authority, including Finland’s [Data Protection Ombudsman](https://tietosuoja.fi/en/home).
 
-[SharePilot](/software/sharepilot/) · [Terms of use](/software/sharepilot/terms/)
+[SharePilot](/software/sharepilot/) · [Terms of use](/software/sharepilot/terms/) · [Refund policy](/software/sharepilot/refunds/)

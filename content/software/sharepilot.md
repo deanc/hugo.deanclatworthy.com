@@ -30,6 +30,7 @@ price_is_placeholder: false
 license_summary: "One Mac per licence. Includes all version 1 updates. Future major upgrades optional."
 privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
+refund_url: /software/sharepilot/refunds/
 preview_release: true
 download_url: "https://github.com/deanc/SharePilot-releases/releases/download/preview-v0.7-build14/SharePilot-macOS.zip"
 download_label: Download trial preview
@@ -69,6 +70,8 @@ faq:
     answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. Future major upgrades are optional and may be sold separately. SharePilot currently uses manual downloads rather than automatic updates."
   - question: Who handles payments and licence keys?
     answer: "When purchases open, Paddle will handle checkout, payment receipts and refunds as merchant of record. Your licence key will appear after checkout; save or download it for activation. If you lose it, [contact support](/contact.html?subject=SharePilot%20licence%20support#my-form) with your Paddle receipt reference."
+  - question: Can I get a refund?
+    answer: "Use the seven-day trial to check SharePilot before buying. Purchases are normally final; I consider discretionary refunds only in exceptional circumstances. Your statutory rights and Paddle’s terms still apply. Read the [refund policy](/software/sharepilot/refunds/) for details."
   - question: How do I get support?
     answer: "[Contact me directly](/contact.html?subject=SharePilot%20support#my-form). Include your macOS version and a brief description of what you were trying to do so I can help."
   - question: Which network shares does it support?

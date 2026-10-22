@@ -32,7 +32,7 @@ Don’t resell or publicly share licence keys, bypass licensing, or access syste
 
 Paddle is the merchant of record. Prices and taxes are shown at checkout; [Paddle’s buyer terms](https://www.paddle.com/legal/buyer-terms) also apply.
 
-Refunds are available where required by law or offered at checkout. [Request a refund](/contact.html?subject=SharePilot%20refund#my-form) with your order reference. Refunded purchases no longer grant a licence. Statutory cancellation and consumer rights remain unaffected.
+Purchases are normally final. Beyond refunds required by law or available under Paddle’s terms, I consider discretionary refunds only in exceptional circumstances. See the [refund policy](/software/sharepilot/refunds/) for the full details and how to request help. Refunded purchases no longer grant a licence. Statutory cancellation and consumer rights remain unaffected.
 
 Paddle sends payment receipts and refund confirmations. Your licence key appears after checkout; save a copy for activation. If you lose it, contact support with your Paddle receipt reference.
 
@@ -44,4 +44,4 @@ To the extent permitted by law, SharePilot is provided “as is”, without a gu
 
 Finnish law applies, without limiting mandatory consumer protections available in your country. Nothing here restricts your right to bring a consumer claim in a competent court where you live.
 
-[SharePilot](/software/sharepilot/) · [Privacy policy](/software/sharepilot/privacy/)
+[SharePilot](/software/sharepilot/) · [Privacy policy](/software/sharepilot/privacy/) · [Refund policy](/software/sharepilot/refunds/)
