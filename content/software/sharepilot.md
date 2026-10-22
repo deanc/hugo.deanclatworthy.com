@@ -11,7 +11,7 @@ product_order: 1
 platform: macOS 26 or later
 status: Available now
 tagline: Keep your network drives connected.
-summary: "Automatically reconnect your NAS and shared folders when your Mac wakes or changes networks. Choose when each drive connects, then get back to work."
+summary: "Automatically mount network drives on your Mac and reconnect your NAS and shared folders after sleep or network changes. Choose when each drive connects, then get back to work."
 image: /img/software/sharepilot/overview.jpg
 image_alt: "SharePilot’s native Mac dashboard showing a disconnected example network share and its connection status."
 image_width: 2000
