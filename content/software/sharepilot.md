@@ -11,6 +11,7 @@ product_order: 1
 platform: macOS 26 or later
 status: Available now
 tagline: Keep your network drives connected.
+hero_summary: "Automatically reconnect your NAS and shared folders after sleep or network changes. Set your rules, then get back to work."
 summary: "Automatically mount network drives on your Mac and reconnect your NAS and shared folders after sleep or network changes. Choose when each drive connects, then get back to work."
 image: /img/software/sharepilot/overview.jpg
 image_alt: "SharePilot’s native Mac dashboard showing a disconnected example network share and its connection status."
@@ -36,7 +37,7 @@ terms_url: /software/sharepilot/terms/
 refund_url: /software/sharepilot/refunds/
 preview_release: false
 download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.0-build15/SharePilot-macOS.zip"
-download_label: Download SharePilot
+download_label: Try free for 7 days
 download_note: "Version 1.0 (build 15). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.0-build15) before installing."
 purchase_url: "https://sharepilot-licensing.dclat.workers.dev/buy"
 purchase_label: Buy SharePilot 1

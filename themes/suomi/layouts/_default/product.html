@@ -1,37 +1,28 @@
 {{ define "main" }}
 {{ $localizedPricing := and (not .Params.preview_release) .Params.paddle_price_id .Params.paddle_client_token }}
 <article class="product-page"{{ if $localizedPricing }} data-paddle-price-id="{{ .Params.paddle_price_id }}" data-paddle-client-token="{{ .Params.paddle_client_token }}"{{ end }}>
-  <header class="product-hero page-width">
-    <div class="product-brand">
-      {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "58px") }}
-      <p>{{ .Title }} <span>for Mac</span></p>
-    </div>
-    <h1>Keep your network<br><em>drives connected.</em></h1>
-    <p class="product-lede">{{ .Params.summary }}</p>
-    <div class="product-actions">
-      {{ partial "product-download.html" . }}
-      <a class="product-text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
-    </div>
-    <ul class="product-offer" aria-label="Trial and pricing">
-      <li>{{ .Params.trial_days }} days free</li>
-      {{ if .Params.trial_no_card }}<li>No credit card</li>{{ end }}
-      <li><span data-product-price>{{ .Params.price }}</span> {{ if .Params.preview_release }}at launch{{ else }}once{{ end }}{{ if .Params.price_is_placeholder }} <span>(price TBC)</span>{{ end }}</li>
-      <li>No subscription</li>
-    </ul>
-    <p class="product-requirements">{{ .Params.platform }} <span>·</span> Intel and Apple Silicon</p>
-    {{ with .Params.download_note }}<p class="product-requirements">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
-  </header>
-
-  <figure class="product-showcase page-width">
-    <div class="product-showcase-stage">
-      <div class="software-orbit" aria-hidden="true"></div>
-      <div class="product-screenshot-window">
-        {{ partial "software-image.html" (dict "src" .Params.image "alt" .Params.image_alt "class" "product-overview" "sizes" "(max-width: 720px) calc(100vw - 64px), 920px" "eager" true) }}
+  <section class="product-hero page-width" aria-labelledby="product-title">
+    <header class="product-hero-copy">
+      <div class="product-brand">
+        {{ partial "software-image.html" (dict "src" .Params.icon "alt" "" "class" "app-icon" "sizes" "40px") }}
+        <p>{{ .Title }} <span>for Mac</span></p>
       </div>
-      <div class="product-stage-note" aria-hidden="true"><span></span> A home for your network shares</div>
-    </div>
-    <figcaption>The native Mac app. Development build shown with an example share; no server connection is active.</figcaption>
-  </figure>
+      <h1 id="product-title">Keep your network<br><em>drives connected.</em></h1>
+      <p class="product-lede">{{ .Params.hero_summary | default .Params.summary }}</p>
+      <div class="product-actions">
+        {{ partial "product-download.html" . }}
+        <a class="product-text-link" href="#availability">Pricing <span aria-hidden="true">→</span></a>
+      </div>
+      {{ if .Params.trial_no_card }}<p class="product-trial-reassurance">No account or credit card needed.</p>{{ end }}
+      <p class="product-requirements">{{ .Params.platform }} <span aria-hidden="true">·</span> <a href="#installation">Installation &amp; macOS approval</a></p>
+    </header>
+    <figure class="product-showcase">
+      <a class="product-screenshot-window" href="{{ .Params.image | relURL }}" target="_blank" rel="noopener" aria-label="Open full-size SharePilot screenshot (opens in a new tab)">
+        {{ partial "software-image.html" (dict "src" .Params.image "alt" .Params.image_alt "class" "product-overview" "sizes" "(max-width: 720px) calc(100vw - 32px), (max-width: 1134px) calc(100vw - 54px), 1080px" "eager" true) }}
+      </a>
+      <figcaption>Development build with an example share. No active server connection. <a href="{{ .Params.image | relURL }}" target="_blank" rel="noopener">View full-size screenshot <span aria-hidden="true">↗</span></a></figcaption>
+    </figure>
+  </section>
 
   <div class="product-trust page-width" aria-label="At a glance">
     <span>Built natively for macOS</span><span>Passwords in Keychain</span><span>No analytics or telemetry</span>
@@ -93,7 +84,7 @@
     {{ if $localizedPricing }}<p class="product-trial-note" data-product-price-note role="status">USD base price. Local price and tax confirmed at checkout.</p>{{ end }}
     {{ with .Params.license_summary }}<p class="product-license-note">{{ . }}</p>{{ end }}
     {{ if .Params.trial_no_card }}<p class="product-trial-note">No account or credit card needed for the trial.</p>{{ end }}
-    {{ with .Params.download_note }}<p class="product-trial-note">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
+    <p class="product-trial-note"><a href="#installation">Read the installation notes</a> before opening the app. macOS may require first-launch approval.</p>
     {{ if not .Params.download_url }}<noscript><p>The download will be linked here before launch.</p></noscript>{{ end }}
     <p class="product-availability-note">Made by <a href="{{ "about.html" | relURL }}">Dean Clatworthy</a> in Helsinki, Finland.</p>
     {{ if or .Params.privacy_url .Params.terms_url .Params.refund_url }}
@@ -106,8 +97,21 @@
     </p>
     {{ end }}
   </section>
+  <section class="product-installation page-width" id="installation" aria-labelledby="installation-title">
+    <div class="product-installation-heading">
+      <p class="eyebrow">Download and setup</p>
+      <h2 id="installation-title">A quick note<br><em>before you install.</em></h2>
+      <p>{{ .Params.platform }}. Intel and Apple Silicon.</p>
+      {{ with .Params.download_note }}<p class="product-release-note">{{ $.RenderString (dict "display" "inline") . }}</p>{{ end }}
+    </div>
+    <ol class="product-installation-steps">
+      <li><h3>Move it to Applications.</h3><p>Extract the downloaded ZIP and read <code>READ-ME-FIRST.txt</code>. Quit any existing copy, then move SharePilot into Applications.</p></li>
+      <li><h3>Approve the first launch.</h3><p>If macOS blocks the app and you trust the source, use System Settings → Privacy &amp; Security → Open Anyway, where available. SharePilot uses an ad hoc signature and is not Developer ID signed or notarised.</p></li>
+      <li><h3>Keep your setup when you update.</h3><p>Updates are manual and preserve your settings and original trial/licence data. macOS may ask for Keychain approval again. Use “Retry Keychain access” in SharePilot and respond to the macOS prompt.</p></li>
+    </ol>
+  </section>
   <section class="product-faq page-width" aria-labelledby="faq-title">
-    <div><p class="eyebrow">Before you download</p><h2 id="faq-title">Good questions.</h2><p>Something else on your mind?<br><a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Ask me about {{ .Title }} <span aria-hidden="true">↗</span></a></p></div>
+    <div><p class="eyebrow">A few more details</p><h2 id="faq-title">Good questions.</h2><p>Something else on your mind?<br><a href="{{ .Params.cta_url | relURL }}" data-contact-cta>Ask me about {{ .Title }} <span aria-hidden="true">↗</span></a></p></div>
     <div class="product-faq-list">{{ range .Params.faq }}<details{{ with .id }} id="{{ . }}"{{ end }}><summary>{{ .question }}<span aria-hidden="true">+</span></summary><p>{{ $.RenderString (dict "display" "inline") .answer }}</p></details>{{ end }}</div>
   </section>
   {{ if not .Params.download_url }}
