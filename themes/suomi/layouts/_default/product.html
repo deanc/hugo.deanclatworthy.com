@@ -14,7 +14,7 @@
         <a class="product-text-link" href="#availability">Pricing <span aria-hidden="true">→</span></a>
       </div>
       {{ if .Params.trial_no_card }}<p class="product-trial-reassurance">No account or credit card needed.</p>{{ end }}
-      <p class="product-requirements">{{ .Params.platform }} <span aria-hidden="true">·</span> <a href="#installation">Installation &amp; macOS approval</a></p>
+      <p class="product-requirements">{{ .Params.platform }} <span aria-hidden="true">·</span> <a href="#installation">Installation &amp; macOS approval</a>{{ with .Params.changelog_url }} <span aria-hidden="true">·</span> <a href="{{ . | relURL }}">Changelog</a>{{ end }}</p>
     </header>
     <figure class="product-showcase">
       <a class="product-screenshot-window" href="{{ .Params.image | relURL }}" target="_blank" rel="noopener" aria-label="Open full-size SharePilot screenshot (opens in a new tab)">

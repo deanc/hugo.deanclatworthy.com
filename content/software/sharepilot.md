@@ -4,7 +4,7 @@ seo_title: SharePilot — Auto-mount network drives
 og_title: SharePilot — Automatically mount network drives on Mac
 description: "Automatically mount network drives on your Mac and reconnect after sleep or network changes. Set connection rules and try SharePilot free for 7 days."
 date: 2026-10-16
-lastmod: 2026-10-22
+lastmod: 2026-10-23
 url: /software/sharepilot/
 layout: product
 product_order: 1
@@ -36,9 +36,10 @@ privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
 refund_url: /software/sharepilot/refunds/
 preview_release: false
-download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.0-build15/SharePilot-macOS.zip"
+download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.0.1-build16/SharePilot-macOS.zip"
+changelog_url: /software/sharepilot/changelog/
 download_label: Try free for 7 days
-download_note: "Version 1.0 (build 15). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.0-build15) before installing."
+download_note: "Version 1.0.1 (build 16). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.0.1-build16) before installing. [Changelog](/software/sharepilot/changelog/)."
 purchase_url: "https://sharepilot-licensing.dclat.workers.dev/buy"
 purchase_label: Buy SharePilot 1
 features:
