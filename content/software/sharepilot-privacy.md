@@ -4,7 +4,7 @@ seo_title: SharePilot privacy policy
 description: "How SharePilot handles local settings, licence checks, purchases and support requests."
 eyebrow: SharePilot
 date: 2026-10-18
-lastmod: 2026-10-22
+lastmod: 2026-10-24
 url: /software/sharepilot/privacy/
 layout: single
 noindex: true
@@ -14,7 +14,7 @@ build:
   list: never
 ---
 
-Last updated: 22 October 2026.
+Last updated: 24 October 2026.
 
 I’m Dean Clatworthy, SharePilot’s developer and data controller, based in Helsinki, Finland. For privacy questions or requests, [contact me](/contact.html?subject=SharePilot%20privacy#my-form).
 
@@ -24,7 +24,7 @@ SharePilot has no analytics, telemetry or user accounts. Settings stay on your M
 
 ## Licensing, purchases and support
 
-The current app sends your licence key and installation/activation identifiers to a Cloudflare-hosted SharePilot licensing service when you activate or check a licence. Paddle purchase and refund notifications determine whether a licence is valid. The service stores licence-key hashes, purchase references, purchased major versions and activation records, and processes IP addresses to prevent abuse. Earlier trial-only previews don’t contact a licence server.
+The current app sends your licence key and installation/activation identifiers to a Cloudflare-hosted SharePilot licensing service when you activate or check a licence. Paddle purchase and refund notifications determine whether a licence is valid. The service stores licence-key hashes, purchase references, purchased major versions and activation records, and processes IP addresses to prevent abuse.
 
 Paddle handles payments as merchant of record. I can access purchase details to provide licences and support, but don’t receive full card details. Support uses the email address and message you provide; the contact form uses Formspree.
 

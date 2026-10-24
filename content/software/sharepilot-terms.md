@@ -4,7 +4,7 @@ seo_title: SharePilot terms of use
 description: "The terms for trying, purchasing and using SharePilot, including licensing, refunds and support."
 eyebrow: SharePilot
 date: 2026-10-18
-lastmod: 2026-10-22
+lastmod: 2026-10-24
 url: /software/sharepilot/terms/
 layout: single
 noindex: true
@@ -14,15 +14,13 @@ build:
   list: never
 ---
 
-Last updated: 22 October 2026.
+Last updated: 24 October 2026.
 
 These terms apply to SharePilot, developed by Dean Clatworthy in Helsinki, Finland. For questions or support, [contact me](/contact.html?subject=SharePilot%20support#my-form).
 
 ## Trial and licence
 
 The trial runs for seven days from first launch. After that, all SharePilot controls and background automations lock. Existing volumes remain mounted in macOS and can be managed in Finder. Updating or reinstalling preserves the original trial start.
-
-The current download supports licence activation. If you used an earlier trial-only preview, install the [current version](/software/sharepilot/) before activating a purchased licence. Your original trial start is preserved.
 
 A one-time purchase licenses SharePilot 1 for one Mac at a time, including all version 1 updates. You can move the licence to another Mac by deactivating it on the previous Mac first. The licence does not activate version 2 or later major versions; those require a separate licence, bought outright or through a paid upgrade if offered. Upgrading is optional. Version 1 remains usable on compatible macOS versions; indefinite maintenance or future compatibility aren’t promised. Your statutory rights to necessary updates and remedies remain unaffected.
 
