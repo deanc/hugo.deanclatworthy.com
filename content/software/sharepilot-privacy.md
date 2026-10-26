@@ -4,14 +4,9 @@ seo_title: SharePilot privacy policy
 description: "How SharePilot handles local settings, licence checks, purchases and support requests."
 eyebrow: SharePilot
 date: 2026-10-18
-lastmod: 2026-10-24
+lastmod: 2026-10-26
 url: /software/sharepilot/privacy/
 layout: single
-noindex: true
-sitemap:
-  disable: true
-build:
-  list: never
 ---
 
 Last updated: 24 October 2026.

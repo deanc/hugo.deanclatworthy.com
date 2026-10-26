@@ -2,14 +2,9 @@
 title: Software
 description: "Independent apps for everyday tasks from Dean Clatworthy. Start with SharePilot for Mac to automatically mount and reconnect your network drives."
 date: 2026-10-16
-lastmod: 2026-10-22
+lastmod: 2026-10-26
 url: /software/
 layout: software
-noindex: true
-sitemap:
-  disable: true
-build:
-  list: never
 products:
   - /software/sharepilot
 ---

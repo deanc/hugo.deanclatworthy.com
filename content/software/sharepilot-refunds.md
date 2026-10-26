@@ -4,14 +4,9 @@ seo_title: SharePilot refund policy
 description: "SharePilot purchases are normally final. Learn about exceptional refunds, your consumer rights and how to contact support or Paddle."
 eyebrow: SharePilot
 date: 2026-10-22
-lastmod: 2026-10-22
+lastmod: 2026-10-26
 url: /software/sharepilot/refunds/
 layout: single
-noindex: true
-sitemap:
-  disable: true
-build:
-  list: never
 ---
 
 Last updated: 22 October 2026.

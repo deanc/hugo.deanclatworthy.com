@@ -72,10 +72,9 @@ The catalogue is at `/software/`, with SharePilot at
 
 SharePilot is indexable and included in the sitemap and regular page collections.
 Its search and social metadata describe automatic mounting of network drives on Mac.
-The catalogue still sets `noindex: true`, `sitemap.disable: true`, and
-`build.list: never`, excluding it from indexing, the sitemap and regular collections.
-The catalogue's `products` list explicitly includes SharePilot so the unlisted
-catalogue still works by direct URL. These pages are publicly accessible.
+The catalogue, SharePilot privacy policy and refund policy are also indexable
+and included in the sitemap and regular page collections. The catalogue's
+`products` list explicitly includes SharePilot.
 
 The Software links in the header and footer and the homepage software feature
 are active. Both software pages are linked from `static/llms.txt`.
