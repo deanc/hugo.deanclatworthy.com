@@ -4,7 +4,7 @@ seo_title: SharePilot — Auto-mount network drives
 og_title: SharePilot — Automatically mount network drives on Mac
 description: "Automatically mount network drives on your Mac and reconnect after sleep or network changes. Set connection rules and try SharePilot free for 7 days."
 date: 2026-10-16
-lastmod: 2026-10-24
+lastmod: 2026-10-26
 url: /software/sharepilot/
 layout: product
 product_order: 1
@@ -35,10 +35,10 @@ license_summary: "One Mac per licence. Includes all version 1 updates. Future ma
 privacy_url: /software/sharepilot/privacy/
 terms_url: /software/sharepilot/terms/
 refund_url: /software/sharepilot/refunds/
-download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.1.0-build17/SharePilot-macOS.zip"
+download_url: "https://github.com/deanc/SharePilot-releases/releases/download/v1.2.0-build18/SharePilot-macOS.zip"
 changelog_url: "https://github.com/deanc/SharePilot-releases/blob/main/CHANGELOG.md"
 download_label: Try free for 7 days
-download_note: "Version 1.1.0 (build 17). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.1.0-build17) before installing. [Changelog](https://github.com/deanc/SharePilot-releases/blob/main/CHANGELOG.md)."
+download_note: "Version 1.2.0 (build 18). Not Developer ID signed or notarised; macOS may block first launch. Read the [installation notes](https://github.com/deanc/SharePilot-releases/releases/tag/v1.2.0-build18) before installing. [Changelog](https://github.com/deanc/SharePilot-releases/blob/main/CHANGELOG.md)."
 purchase_url: "https://sharepilot-licensing.dclat.workers.dev/buy"
 purchase_label: Buy SharePilot 1
 features:
@@ -70,7 +70,7 @@ faq:
   - question: How many Macs does a licence cover?
     answer: "One Mac at a time. Deactivate your licence in SharePilot’s licence settings before activating it on another Mac."
   - question: Which updates are included?
-    answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. A future 2.x release needs a separate licence, bought outright or through a paid upgrade if offered. You can keep using version 1 on compatible macOS versions. Updates are installed manually."
+    answer: "Your one-time purchase includes SharePilot 1 and all 1.x updates. From version 1.2.0, SharePilot checks for updates automatically and offers installation in the app. Use Update Settings to change checks or opt into automatic installation. A future 2.x release needs a separate licence, bought outright or through a paid upgrade if offered. It won’t replace version 1 automatically; you can keep using version 1 on compatible macOS versions."
   - question: Who handles payments and licence keys?
     answer: "Paddle handles checkout, payment receipts and refunds as merchant of record. Your licence key appears after checkout; save or download it for activation. Paddle emails your payment receipt separately. If you lose your key, [contact support](/contact.html?subject=SharePilot%20licence%20support#my-form) with your Paddle receipt reference."
   - question: Can I get a refund?
@@ -87,7 +87,7 @@ faq:
   - question: Can I move my settings to another Mac?
     answer: "Yes. Export and import share settings as JSON. Passwords aren’t included, and imported shares start with automatic connections off, so you can review them and add credentials before connecting."
   - question: Does SharePilot collect my data?
-    answer: "There are no analytics or telemetry. Passwords are stored in Keychain. Commercial builds contact the licensing service for activation and periodic checks, sending your licence key and a random installation identifier. Your configured servers and network checks still make their normal connections."
+    answer: "There are no analytics or telemetry. Passwords are stored in Keychain. Commercial builds contact the licensing service for activation and periodic checks, sending your licence key and a random installation identifier. Update checks and downloads connect to GitHub; automatic checks can be disabled in Update Settings. Your configured servers and network checks still make their normal connections."
   - question: Do connection rules need extra permissions?
     answer: "Wi-Fi name rules need Location permission on recent macOS versions. Focus rules need access to shared Focus status. SharePilot explains these requests in the app. Other rules can be used without granting either permission."
   - question: How do I buy and activate a licence?

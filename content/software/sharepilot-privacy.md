@@ -9,7 +9,7 @@ url: /software/sharepilot/privacy/
 layout: single
 ---
 
-Last updated: 24 October 2026.
+Last updated: 26 October 2026.
 
 I’m Dean Clatworthy, SharePilot’s developer and data controller, based in Helsinki, Finland. For privacy questions or requests, [contact me](/contact.html?subject=SharePilot%20privacy#my-form).
 
@@ -29,11 +29,13 @@ The checkout page stores a private purchase token in your browser so you can ret
 
 ## Website and service providers
 
+From version 1.2.0, production builds check a signed update feed on GitHub and download updates from GitHub Releases. These requests expose normal connection information, including your IP address and app update-client information, to GitHub. They do not send your licence key, configured shares, files or passwords. Sparkle system profiling is disabled. Automatic checks can be turned off in **Update Settings**; a manual check still connects when you request it. Personal and test builds do not use the production updater.
+
 The website separately uses Google Analytics, including cookies and page-interaction data, to understand visits. Hosting providers process connection information, including IP addresses, to deliver and secure services.
 
 The SharePilot product page loads Paddle to show local pricing. Paddle uses your IP address to estimate your country and return the price, currency and estimated tax. Your billing details determine the final amount at checkout.
 
-See the privacy policies of [Paddle](https://www.paddle.com/legal/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/), [Formspree](https://formspree.io/legal/privacy-policy/) and [Google](https://policies.google.com/privacy). Providers may process data outside the EEA under the transfer safeguards described in their policies. I don’t sell your personal data.
+See the privacy policies of [Paddle](https://www.paddle.com/legal/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/), [Formspree](https://formspree.io/legal/privacy-policy/), [GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) and [Google](https://policies.google.com/privacy). Providers may process data outside the EEA under the transfer safeguards described in their policies. I don’t sell your personal data.
 
 ## Retention and your rights
 
